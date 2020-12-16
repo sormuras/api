@@ -1,1 +1,0 @@
-moduleSearchIndex = [{"l":"com.github.sormuras.mainrunner.api"},{"l":"com.github.sormuras.mainrunner.engine"}];updateSearchResults();

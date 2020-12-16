@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"com.github.sormuras.mainrunner.api","l":"Java"},{"p":"com.github.sormuras.mainrunner.api","l":"Main"},{"p":"com.github.sormuras.mainrunner.api","l":"MainRepeatable"}];updateSearchResults();
