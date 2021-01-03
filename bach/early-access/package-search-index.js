@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.github.sormuras.bach","l":"com.github.sormuras.bach"},{"m":"com.github.sormuras.bach","l":"com.github.sormuras.bach.project"},{"m":"com.github.sormuras.bach","l":"com.github.sormuras.bach.tool"}];updateSearchResults();
