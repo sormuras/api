@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="ModuleLookups.JavaFX.html" title="class in com.github.sormuras.bach">ModuleLookups.JavaFX</a></code>, <code><a href="ModuleLookups.JUnit.html" title="enum class in com.github.sormuras.bach">ModuleLookups.JUnit</a></code>, <code><a href="ModuleLookups.JUnitJupiter.html" title="class in com.github.sormuras.bach">ModuleLookups.JUnitJupiter</a></code>, <code><a href="ModuleLookups.JUnitPlatform.html" title="class in com.github.sormuras.bach">ModuleLookups.JUnitPlatform</a></code>, <code><a href="ModuleLookups.LWJGL.html" title="class in com.github.sormuras.bach">ModuleLookups.LWJGL</a></code></dd>
+<dd><code><a href="ModuleLookups.GitHubReleases.html" title="class in com.github.sormuras.bach">ModuleLookups.GitHubReleases</a></code>, <code><a href="ModuleLookups.JavaFX.html" title="class in com.github.sormuras.bach">ModuleLookups.JavaFX</a></code>, <code><a href="ModuleLookups.JUnit.html" title="enum class in com.github.sormuras.bach">ModuleLookups.JUnit</a></code>, <code><a href="ModuleLookups.JUnitJupiter.html" title="class in com.github.sormuras.bach">ModuleLookups.JUnitJupiter</a></code>, <code><a href="ModuleLookups.JUnitPlatform.html" title="class in com.github.sormuras.bach">ModuleLookups.JUnitPlatform</a></code>, <code><a href="ModuleLookups.LWJGL.html" title="class in com.github.sormuras.bach">ModuleLookups.LWJGL</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Functional Interface:</dt>
@@ -135,6 +135,16 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ModuleLookup.html" title="interface in com.github.sormuras.bach">ModuleLookup</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#ofEmpty()">ofEmpty</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ModuleLookup.html" title="interface in com.github.sormuras.bach">ModuleLookup</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#ofMap(java.util.Map)">ofMap</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;map)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">
+<div class="block">Returns a module lookup that is backed by the given map.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ModuleLookup.html" title="interface in com.github.sormuras.bach">ModuleLookup</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#ofProvidersFoundInExternalModules()">ofProvidersFoundInExternalModules</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">
+<div class="block">Returns a module lookup that is backed by providers found among the external modules.</div>
+</div>
 </div>
 </div>
 </div>
@@ -182,6 +192,28 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an always empty-returning module lookup</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofMap(java.util.Map)">
+<h3>ofMap</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModuleLookup.html" title="interface in com.github.sormuras.bach">ModuleLookup</a></span>&nbsp;<span class="element-name">ofMap</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;map)</span></div>
+<div class="block">Returns a module lookup that is backed by the given map.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a module lookup that is backed by the given map</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ofProvidersFoundInExternalModules()">
+<h3>ofProvidersFoundInExternalModules</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModuleLookup.html" title="interface in com.github.sormuras.bach">ModuleLookup</a></span>&nbsp;<span class="element-name">ofProvidersFoundInExternalModules</span>()</div>
+<div class="block">Returns a module lookup that is backed by providers found among the external modules.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a module lookup that is backed by providers found among the external modules</dd>
 </dl>
 </section>
 </li>
