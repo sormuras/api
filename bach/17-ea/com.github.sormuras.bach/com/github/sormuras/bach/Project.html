@@ -79,7 +79,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Project</span>(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Project</span>(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version, <a href="Libraries.html" title="class in com.github.sormuras.bach">Libraries</a>&nbsp;libraries)
 <span class="extends-implements">extends <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </section>
 <section class="summary">
@@ -94,8 +94,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E()">Project</a></span>()</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.lang.String,java.lang.module.ModuleDescriptor.Version)">Project</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</code></div>
+<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.lang.String,java.lang.module.ModuleDescriptor.Version,com.github.sormuras.bach.Libraries)">Project</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version,
+ <a href="Libraries.html" title="class in com.github.sormuras.bach">Libraries</a>&nbsp;libraries)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Creates an instance of a <code>Project</code> record class.</div>
 </div>
@@ -123,6 +124,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Libraries.html" title="class in com.github.sormuras.bach">Libraries</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#libraries()">libraries</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <code>libraries</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#libraries(com.github.sormuras.bach.Libraries)">libraries</a></span>&#8203;(<a href="Libraries.html" title="class in com.github.sormuras.bach">Libraries</a>&nbsp;libraries)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#name()">name</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -131,33 +140,30 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#name(java.lang.String)">name</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link"><a href="#of(com.github.sormuras.bach.Bach)">of</a></span>&#8203;(<a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a>&nbsp;bach)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link"><a href="#toNumberAndPreRelease(java.lang.module.ModuleDescriptor.Version)">toNumberAndPreRelease</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link"><a href="#toNumberAndPreRelease(java.lang.module.ModuleDescriptor.Version)">toNumberAndPreRelease</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns a string containing the version number and, if present, the pre-release version.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#version()">version</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#version()">version</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <code>version</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#version(java.lang.module.ModuleDescriptor.Version)">version</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#version(java.lang.String)">version</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#version(java.lang.module.ModuleDescriptor.Version)">version</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#versionNumberAndPreRelease()">versionNumberAndPreRelease</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#version(java.lang.String)">version</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#versionNumberAndPreRelease()">versionNumberAndPreRelease</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -182,15 +188,17 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.module.ModuleDescriptor.Version)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.module.ModuleDescriptor.Version,com.github.sormuras.bach.Libraries)">
 <h3>Project</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Project</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</span></div>
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version,
+ <a href="Libraries.html" title="class in com.github.sormuras.bach">Libraries</a>&nbsp;libraries)</span></div>
 <div class="block">Creates an instance of a <code>Project</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - the value for the <code>name</code> record component</dd>
 <dd><code>version</code> - the value for the <code>version</code> record component</dd>
+<dd><code>libraries</code> - the value for the <code>libraries</code> record component</dd>
 </dl>
 </section>
 </li>
@@ -202,12 +210,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method.detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="of(com.github.sormuras.bach.Bach)">
-<h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">of</span>&#8203;<span class="parameters">(<a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a>&nbsp;bach)</span></div>
-</section>
-</li>
 <li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
@@ -230,6 +232,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="versionNumberAndPreRelease()">
 <h3>versionNumberAndPreRelease</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">versionNumberAndPreRelease</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="libraries(com.github.sormuras.bach.Libraries)">
+<h3>libraries</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">libraries</span>&#8203;<span class="parameters">(<a href="Libraries.html" title="class in com.github.sormuras.bach">Libraries</a>&nbsp;libraries)</span></div>
 </section>
 </li>
 <li>
@@ -305,6 +313,17 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <code>version</code> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="libraries()">
+<h3>libraries</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Libraries.html" title="class in com.github.sormuras.bach">Libraries</a></span>&nbsp;<span class="element-name">libraries</span>()</div>
+<div class="block">Returns the value of the <code>libraries</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>libraries</code> record component</dd>
 </dl>
 </section>
 </li>

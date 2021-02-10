@@ -82,6 +82,23 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested.class.summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Lookup.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Lookup</a></span></code></div>
+<div class="col-last even-row-color">
+<div class="block">An external module name to URI pair annotation.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- =========== ANNOTATION INTERFACE OPTIONAL MEMBER SUMMARY =========== -->
 <li>
 <section class="member-summary" id="annotation.interface.optional.element.summary">
@@ -91,12 +108,26 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Optional Element</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#name()">name</a></span></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="ProjectInfo.Lookup.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Lookup</a>[]</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#lookups()">lookups</a></span></code></div>
+<div class="col-last even-row-color">
+<div class="block">Returns an array of external module lookup.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#name()">name</a></span></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Returns the name of the project, defaults to <code>"*"</code>.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#requires()">requires</a></span></code></div>
+<div class="col-last even-row-color">
+<div class="block">Returns the array of required module names.</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#version()">version</a></span></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Returns the version of the project, defaults to <code>"0"</code>.</div>
+</div>
 </div>
 </section>
 </li>
@@ -113,9 +144,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="name()">
 <h3>name</h3>
 <div class="member-signature"><span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span></div>
+<div class="block">Returns the name of the project, defaults to <code>"*"</code>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the name of the project, defaults to <code>"*"</code></dd>
+<dt>See Also:</dt>
+<dd><a href="Project.html#name()"><code>Project.name()</code></a>, 
+<a href="ProjectBuilder.html#computeName()"><code>ProjectBuilder.computeName()</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -127,13 +162,46 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="version()">
 <h3>version</h3>
 <div class="member-signature"><span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">version</span></div>
+<div class="block">Returns the version of the project, defaults to <code>"0"</code>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the version of the project, defaults to <code>"0"</code></dd>
+<dt>See Also:</dt>
+<dd><a href="Project.html#version()"><code>Project.version()</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
 <dd>"0"</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="requires()">
+<h3>requires</h3>
+<div class="member-signature"><span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">requires</span></div>
+<div class="block">Returns the array of required module names.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the array of required module names</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="lookups()">
+<h3>lookups</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Lookup.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Lookup</a>[]</span>&nbsp;<span class="element-name">lookups</span></div>
+<div class="block">Returns an array of external module lookup.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>an array of external module lookup</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd>{}</dd>
 </dl>
 </section>
 </li>
