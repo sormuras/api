@@ -215,6 +215,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#values(com.github.sormuras.bach.Options.Property)">values</a></span>&#8203;(<a href="Options.Property.html" title="enum class in com.github.sormuras.bach">Options.Property</a>&nbsp;property)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#with(com.github.sormuras.bach.Options.Flag,com.github.sormuras.bach.Options.Flag...)">with</a></span>&#8203;(<a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a>&nbsp;flag,
+ <a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a>...&nbsp;more)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns new <code>Options</code> instance with the given flags added.</div>
+</div>
 </div>
 </div>
 </div>
@@ -261,6 +267,21 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method.detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="with(com.github.sormuras.bach.Options.Flag,com.github.sormuras.bach.Options.Flag...)">
+<h3>with</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></span>&nbsp;<span class="element-name">with</span>&#8203;<span class="parameters">(<a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a>&nbsp;flag,
+ <a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a>...&nbsp;more)</span></div>
+<div class="block">Returns new <code>Options</code> instance with the given flags added.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>flag</code> - a flag constant to add to the set of flags of this options object</dd>
+<dd><code>more</code> - more flags to add</dd>
+<dt>Returns:</dt>
+<dd>new <code>Options</code> instance with the given flags added</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="values(com.github.sormuras.bach.Options.Property)">
 <h3>values</h3>
