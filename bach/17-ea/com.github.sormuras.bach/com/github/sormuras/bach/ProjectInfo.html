@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Lookup.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Lookup</a></span></code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a></span></code></div>
 <div class="col-last even-row-color">
 <div class="block">An external module name to URI pair annotation.</div>
 </div>
@@ -108,8 +108,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Optional Element</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="ProjectInfo.Lookup.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Lookup</a>[]</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#lookups()">lookups</a></span></code></div>
+<div class="col-first even-row-color"><code><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#lookup()">lookup</a></span></code></div>
 <div class="col-last even-row-color">
 <div class="block">Returns an array of external module lookup.</div>
 </div>
@@ -183,6 +183,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the array of required module names</dd>
+<dt>See Also:</dt>
+<dd><a href="Libraries.html#requires()"><code>Libraries.requires()</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -191,13 +193,15 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="lookups()">
-<h3>lookups</h3>
-<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Lookup.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Lookup</a>[]</span>&nbsp;<span class="element-name">lookups</span></div>
+<section class="detail" id="lookup()">
+<h3>lookup</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</span>&nbsp;<span class="element-name">lookup</span></div>
 <div class="block">Returns an array of external module lookup.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an array of external module lookup</dd>
+<dt>See Also:</dt>
+<dd><a href="Libraries.html#lookup(java.lang.String)"><code>Libraries.lookup(String)</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>

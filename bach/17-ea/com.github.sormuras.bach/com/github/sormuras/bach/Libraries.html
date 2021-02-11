@@ -78,10 +78,15 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-requires">requires</span></code> - modules on which the current project has a dependence</dd>
+<dd><code><span id="param-lookups">lookups</span></code> - sequence of module lookup objects to query for uris</dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Libraries</span>(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;requires, <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a>&gt;&nbsp;lookups)
 <span class="extends-implements">extends <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
-<div class="block">A finder of external modules.</div>
+<div class="block">An external module manager.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -146,7 +151,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns a hash code value for this object.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="lookup/ExternalModuleLookupBuilder.html" title="class in com.github.sormuras.bach.lookup">ExternalModuleLookupBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link"><a href="#link(java.lang.String)">link</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link"><a href="#lookup(java.lang.String)">lookup</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link"><a href="#lookupJavaFX(java.lang.String)">lookupJavaFX</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
@@ -157,7 +162,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#lookups()">lookups</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>lookups</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-lookups"><code>lookups</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Libraries.html" title="class in com.github.sormuras.bach">Libraries</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link"><a href="#of(com.github.sormuras.bach.lookup.ModuleLookup...)">of</a></span>&#8203;(<a href="lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a>...&nbsp;lookups)</code></div>
@@ -165,7 +170,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#requires()">requires</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>requires</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-requires"><code>requires</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
@@ -203,8 +208,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>Libraries</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>requires</code> - the value for the <code>requires</code> record component</dd>
-<dd><code>lookups</code> - the value for the <code>lookups</code> record component</dd>
+<dd><code>requires</code> - the value for the <a href="#param-requires"><code>requires</code></a> record component</dd>
+<dd><code>lookups</code> - the value for the <a href="#param-lookups"><code>lookups</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -223,9 +228,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="link(java.lang.String)">
-<h3>link</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="lookup/ExternalModuleLookupBuilder.html" title="class in com.github.sormuras.bach.lookup">ExternalModuleLookupBuilder</a></span>&nbsp;<span class="element-name">link</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</span></div>
+<section class="detail" id="lookup(java.lang.String)">
+<h3>lookup</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="lookup/ExternalModuleLookupBuilder.html" title="class in com.github.sormuras.bach.lookup">ExternalModuleLookupBuilder</a></span>&nbsp;<span class="element-name">lookup</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</span></div>
 </section>
 </li>
 <li>
@@ -303,10 +308,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="requires()">
 <h3>requires</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">requires</span>()</div>
-<div class="block">Returns the value of the <code>requires</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-requires"><code>requires</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>requires</code> record component</dd>
+<dd>the value of the <a href="#param-requires"><code>requires</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -314,10 +319,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="lookups()">
 <h3>lookups</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a>&gt;</span>&nbsp;<span class="element-name">lookups</span>()</div>
-<div class="block">Returns the value of the <code>lookups</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-lookups"><code>lookups</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>lookups</code> record component</dd>
+<dd>the value of the <a href="#param-lookups"><code>lookups</code></a> record component</dd>
 </dl>
 </section>
 </li>
