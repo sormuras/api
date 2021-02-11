@@ -111,7 +111,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#lookup()">lookup</a></span></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns an array of external module lookup.</div>
+<div class="block">Returns an array of external module lookup annotations.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#name()">name</a></span></code></div>
@@ -121,7 +121,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#requires()">requires</a></span></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns the array of required module names.</div>
+<div class="block">Returns an array of external modules on which the project has a dependence.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#version()">version</a></span></code></div>
@@ -167,7 +167,8 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>the version of the project, defaults to <code>"0"</code></dd>
 <dt>See Also:</dt>
-<dd><a href="Project.html#version()"><code>Project.version()</code></a></dd>
+<dd><a href="Project.html#version()"><code>Project.version()</code></a>, 
+<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link"><code>ModuleDescriptor.Version</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -179,12 +180,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="requires()">
 <h3>requires</h3>
 <div class="member-signature"><span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">requires</span></div>
-<div class="block">Returns the array of required module names.</div>
+<div class="block">Returns an array of external modules on which the project has a dependence.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the array of required module names</dd>
+<dd>an array of external modules on which the project has a dependence</dd>
 <dt>See Also:</dt>
-<dd><a href="Libraries.html#requires()"><code>Libraries.requires()</code></a></dd>
+<dd><a href="Libraries.html#requires()"><code>Libraries.requires()</code></a>, 
+<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Requires.html" title="class or interface in java.lang.module" class="external-link"><code>ModuleDescriptor.Requires</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -196,10 +198,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="lookup()">
 <h3>lookup</h3>
 <div class="member-signature"><span class="return-type"><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</span>&nbsp;<span class="element-name">lookup</span></div>
-<div class="block">Returns an array of external module lookup.</div>
+<div class="block">Returns an array of external module lookup annotations.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>an array of external module lookup</dd>
+<dd>an array of external module lookup annotations</dd>
 <dt>See Also:</dt>
 <dd><a href="Libraries.html#lookup(java.lang.String)"><code>Libraries.lookup(String)</code></a></dd>
 </dl>
