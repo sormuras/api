@@ -75,6 +75,11 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="annotations"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/annotation/Target.html" title="class or interface in java.lang.annotation" class="external-link">@Target</a>({})
 </span><span class="modifiers">public static @interface </span><span class="element-name type-name-label">ProjectInfo.External</span></div>
 <div class="block">An external module name to URI pair annotation.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd><a href="lookup/ExternalModuleLookup.html" title="class in com.github.sormuras.bach.lookup"><code>ExternalModuleLookup</code></a>, 
+<a href="ProjectComputer.html#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.External)"><code>ProjectComputer.computeProjectModuleLookup(External)</code></a></dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -139,7 +144,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code><a href="ProjectInfo.External.Type.html" title="enum class in com.github.sormuras.bach">ProjectInfo.External.Type</a></code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#type()">type</a></span></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns the type of the string returned by <a href="#via()"><code>via()</code></a>, defaults to <a href="ProjectInfo.External.Type.html#AUTO"><code>ProjectInfo.External.Type.AUTO</code></a>.</div>
+<div class="block">Returns the type of the <a href="#via()"><code>via()</code></a> target string, defaults to <a href="ProjectInfo.External.Type.html#AUTO"><code>ProjectInfo.External.Type.AUTO</code></a>.</div>
 </div>
 </div>
 </section>
@@ -186,10 +191,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="type()">
 <h3>type</h3>
 <div class="member-signature"><span class="return-type"><a href="ProjectInfo.External.Type.html" title="enum class in com.github.sormuras.bach">ProjectInfo.External.Type</a></span>&nbsp;<span class="element-name">type</span></div>
-<div class="block">Returns the type of the string returned by <a href="#via()"><code>via()</code></a>, defaults to <a href="ProjectInfo.External.Type.html#AUTO"><code>ProjectInfo.External.Type.AUTO</code></a>.</div>
+<div class="block">Returns the type of the <a href="#via()"><code>via()</code></a> target string, defaults to <a href="ProjectInfo.External.Type.html#AUTO"><code>ProjectInfo.External.Type.AUTO</code></a>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the type of the string returned by <a href="#via()"><code>via()</code></a>, defaults to <a href="ProjectInfo.External.Type.html#AUTO"><code>ProjectInfo.External.Type.AUTO</code></a></dd>
+<dd>the type of the <a href="#via()"><code>via()</code></a> target string, defaults to <a href="ProjectInfo.External.Type.html#AUTO"><code>ProjectInfo.External.Type.AUTO</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>

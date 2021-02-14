@@ -150,7 +150,7 @@ loadScripts(document, 'script');</script>
 <dd>the name of the project, defaults to <code>"*"</code></dd>
 <dt>See Also:</dt>
 <dd><a href="Project.html#name()"><code>Project.name()</code></a>, 
-<a href="ProjectBuilder.html#computeName()"><code>ProjectBuilder.computeName()</code></a></dd>
+<a href="ProjectComputer.html#computeProjectName(com.github.sormuras.bach.ProjectInfo)"><code>ProjectComputer.computeProjectName(ProjectInfo)</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -168,6 +168,7 @@ loadScripts(document, 'script');</script>
 <dd>the version of the project, defaults to <code>"0"</code></dd>
 <dt>See Also:</dt>
 <dd><a href="Project.html#version()"><code>Project.version()</code></a>, 
+<a href="ProjectComputer.html#computeProjectVersion(com.github.sormuras.bach.ProjectInfo)"><code>ProjectComputer.computeProjectVersion(ProjectInfo)</code></a>, 
 <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link"><code>ModuleDescriptor.Version</code></a></dd>
 </dl>
 <dl class="notes">
@@ -186,6 +187,7 @@ loadScripts(document, 'script');</script>
 <dd>an array of external modules on which the project has a dependence</dd>
 <dt>See Also:</dt>
 <dd><a href="Libraries.html#requires()"><code>Libraries.requires()</code></a>, 
+<a href="ProjectComputer.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo)"><code>ProjectComputer.computeProjectLibraries(ProjectInfo)</code></a>, 
 <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Requires.html" title="class or interface in java.lang.module" class="external-link"><code>ModuleDescriptor.Requires</code></a></dd>
 </dl>
 <dl class="notes">
@@ -203,7 +205,8 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>an array of external module lookup annotations</dd>
 <dt>See Also:</dt>
-<dd><a href="Libraries.html#lookup(java.lang.String)"><code>Libraries.lookup(String)</code></a></dd>
+<dd><a href="Libraries.html#lookup(java.lang.String)"><code>Libraries.lookup(String)</code></a>, 
+<a href="ProjectComputer.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo)"><code>ProjectComputer.computeProjectLibraries(ProjectInfo)</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
