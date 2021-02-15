@@ -52,6 +52,7 @@ loadScripts(document, 'script');</script>
 <span class="package-hierarchy-label">Package Hierarchies:</span>
 <ul class="horizontal">
 <li><a href="com.github.sormuras.bach/com/github/sormuras/bach/package-tree.html">com.github.sormuras.bach</a>, </li>
+<li><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/package-tree.html">com.github.sormuras.bach.api</a>, </li>
 <li><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/package-tree.html">com.github.sormuras.bach.lookup</a>, </li>
 <li><a href="com.github.sormuras.bach/com/github/sormuras/bach/tool/package-tree.html">com.github.sormuras.bach.tool</a></li>
 </ul>
@@ -61,7 +62,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">java.lang.<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link"><span class="type-name-link">Object</span></a>
 <ul>
-<li class="circle">com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Bach</span></a> (implements com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectComputer.html" title="interface in com.github.sormuras.bach">ProjectComputer</a>)</li>
+<li class="circle">com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Bach</span></a> (implements com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/BachAPI.html" title="interface in com.github.sormuras.bach.api">BachAPI</a>)</li>
 <li class="circle">com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Browser.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Browser</span></a></li>
 <li class="circle">com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ExternalModuleLookupBuilder.html" title="class in com.github.sormuras.bach.lookup"><span class="type-name-link">ExternalModuleLookupBuilder</span></a></li>
 <li class="circle">com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/GitHubReleasesModuleLookup.html" title="class in com.github.sormuras.bach.lookup"><span class="type-name-link">GitHubReleasesModuleLookup</span></a> (implements com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a>)</li>
@@ -114,8 +115,22 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.Provider.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">Bach.Provider</span></a>&lt;B&gt;</li>
 <li class="circle">com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">Command</span></a>&lt;C&gt;</li>
+<li class="circle">com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ExternalModuleAPI.html" title="interface in com.github.sormuras.bach.api"><span class="type-name-link">ExternalModuleAPI</span></a>
+<ul>
+<li class="circle">com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/BachAPI.html" title="interface in com.github.sormuras.bach.api"><span class="type-name-link">BachAPI</span></a> (also extends com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a>, com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a>)</li>
+</ul>
+</li>
 <li class="circle">com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup"><span class="type-name-link">ModuleLookup</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectComputer.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">ProjectComputer</span></a></li>
+<li class="circle">com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api"><span class="type-name-link">ProjectBuilderAPI</span></a>
+<ul>
+<li class="circle">com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/BachAPI.html" title="interface in com.github.sormuras.bach.api"><span class="type-name-link">BachAPI</span></a> (also extends com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ExternalModuleAPI.html" title="interface in com.github.sormuras.bach.api">ExternalModuleAPI</a>, com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a>)</li>
+</ul>
+</li>
+<li class="circle">com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api"><span class="type-name-link">ToolProviderAPI</span></a>
+<ul>
+<li class="circle">com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/BachAPI.html" title="interface in com.github.sormuras.bach.api"><span class="type-name-link">BachAPI</span></a> (also extends com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ExternalModuleAPI.html" title="interface in com.github.sormuras.bach.api">ExternalModuleAPI</a>, com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a>)</li>
+</ul>
+</li>
 </ul>
 </section>
 <section class="hierarchy">
