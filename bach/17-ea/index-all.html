@@ -131,7 +131,9 @@ loadScripts(document, 'script');</script>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ToolProviderAPI.html#bach()">bach()</a></span> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#bach()">bach()</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns this.</div>
+</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Bach</span></a> - Class in <a href="com.github.sormuras.bach/com/github/sormuras/bach/package-summary.html">com.github.sormuras.bach</a></dt>
 <dd>
 <div class="block">Java Shell Builder.</div>
@@ -148,7 +150,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/BachAPI.html" title="interface in com.github.sormuras.bach.api"><span class="type-name-link">BachAPI</span></a> - Interface in <a href="com.github.sormuras.bach/com/github/sormuras/bach/api/package-summary.html">com.github.sormuras.bach.api</a></dt>
 <dd>
-<div class="block">Defines the Java Shell Builder API.</div>
+<div class="block">Defines the extensible API of the Java Shell Builder by combining overlay API declarations.</div>
 </dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#base()">base()</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
 <dd>&nbsp;</dd>
@@ -740,14 +742,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns a new instance of service-provider that extends <code>Bach</code>.</div>
 </dd>
-<dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#newBase()">newBase()</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#newBrowser()">newBrowser()</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#newHttpClient()">newHttpClient()</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns an instance of <code>HttpClient</code> that is memoized by this Bach object.</div>
+</dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#newProject()">newProject()</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns an instance of <code>Project</code> that is used as a component of this Bach object.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:O">O</h2>
 <dl class="index">
@@ -780,7 +782,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the value of the <code>option</code> record component.</div>
 </dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#options()">options()</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the options instance passed to the constructor of this Bach object.</div>
+</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Options.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Options</span></a> - Record Class in <a href="com.github.sormuras.bach/com/github/sormuras/bach/package-summary.html">com.github.sormuras.bach</a></dt>
 <dd>
 <div class="block">An options descriptor.</div>
