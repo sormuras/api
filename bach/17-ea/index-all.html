@@ -861,6 +861,8 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Browser.html#read(java.lang.String)">read(String)</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Browser.html" title="class in com.github.sormuras.bach">Browser</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#record(com.github.sormuras.bach.Recording)">record(Recording)</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Recording.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Recording</span></a> - Record Class in <a href="com.github.sormuras.bach/com/github/sormuras/bach/package-summary.html">com.github.sormuras.bach</a></dt>
 <dd>
 <div class="block">A recording of a tool run.</div>
@@ -905,8 +907,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ToolProviderAPI.html#run(java.util.spi.ToolProvider,java.util.List)">run(ToolProvider, List&lt;String&gt;)</a></span> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#run(java.util.spi.ToolProvider,java.util.List)">run(ToolProvider, List&lt;String&gt;)</a></span> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Options.Flag.html#RUN_COMMANDS_SEQUENTIALLY">RUN_COMMANDS_SEQUENTIALLY</a></span> - Enum constant in enum class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a></dt>
 <dd>
 <div class="block">Prevent parallel execution of commands.</div>
@@ -935,10 +935,6 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.html#toLine()">toLine()</a></span> - Method in interface com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.html" title="interface in com.github.sormuras.bach">Command</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Project.html#toNumberAndPreRelease(java.lang.module.ModuleDescriptor.Version)">toNumberAndPreRelease(ModuleDescriptor.Version)</a></span> - Static method in record class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Project.html" title="class in com.github.sormuras.bach">Project</a></dt>
-<dd>
-<div class="block">Returns a string containing the version number and, if present, the pre-release version.</div>
-</dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Options.html#tool()">tool()</a></span> - Method in record class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Options.html" title="class in com.github.sormuras.bach">Options</a></dt>
 <dd>
 <div class="block">Returns the value of the <a href="./com.github.sormuras.bach/com/github/sormuras/bach/#param-tool"><code>tool</code></a> record component.</div>
@@ -1034,6 +1030,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns a string representation of this record class.</div>
 </dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.html#toStrings()">toStrings()</a></span> - Method in interface com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.html" title="interface in com.github.sormuras.bach">Command</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Project.html#toVersionNumberAndPreRelease()">toVersionNumberAndPreRelease()</a></span> - Method in record class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Project.html" title="class in com.github.sormuras.bach">Project</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.External.html#type()">type()</a></span> - Element in annotation interface com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a></dt>
 <dd>
@@ -1137,8 +1135,6 @@ the order they are declared.</div>
 <dd>
 <div class="block">Print Bach's version and exit.</div>
 </dd>
-<dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/Project.html#versionNumberAndPreRelease()">versionNumberAndPreRelease()</a></span> - Method in record class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Project.html" title="class in com.github.sormuras.bach">Project</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.External.html#via()">via()</a></span> - Element in annotation interface com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a></dt>
 <dd>
 <div class="block">Returns the target of the lookup, usually resolvable to a remote JAR file.</div>

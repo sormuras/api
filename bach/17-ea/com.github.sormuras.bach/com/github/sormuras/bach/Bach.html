@@ -213,12 +213,11 @@ implements <a href="api/BachAPI.html" title="interface in com.github.sormuras.ba
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#project()">project</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Recording.html" title="class in com.github.sormuras.bach">Recording</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#recordings()">recordings</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#record(com.github.sormuras.bach.Recording)">record</a></span>&#8203;(<a href="Recording.html" title="class in com.github.sormuras.bach">Recording</a>&nbsp;recording)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Recording.html" title="class in com.github.sormuras.bach">Recording</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#run(java.util.spi.ToolProvider,java.util.List)">run</a></span>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/spi/ToolProvider.html" title="class or interface in java.util.spi" class="external-link">ToolProvider</a>&nbsp;provider,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;arguments)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Recording.html" title="class in com.github.sormuras.bach">Recording</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><span class="member-name-link"><a href="#recordings()">recordings</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><span class="member-name-link"><a href="#version()">version</a></span>()</code></div>
@@ -240,7 +239,7 @@ implements <a href="api/BachAPI.html" title="interface in com.github.sormuras.ba
 <code><a href="api/ProjectBuilderAPI.html#buildProject()">buildProject</a>, <a href="api/ProjectBuilderAPI.html#buildProjectMainSpace()">buildProjectMainSpace</a>, <a href="api/ProjectBuilderAPI.html#computeMainJarFileName(java.lang.String)">computeMainJarFileName</a>, <a href="api/ProjectBuilderAPI.html#computeProject()">computeProject</a>, <a href="api/ProjectBuilderAPI.html#computeProjectInfo()">computeProjectInfo</a>, <a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo)">computeProjectLibraries</a>, <a href="api/ProjectBuilderAPI.html#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.External)">computeProjectModuleLookup</a>, <a href="api/ProjectBuilderAPI.html#computeProjectName(com.github.sormuras.bach.ProjectInfo)">computeProjectName</a>, <a href="api/ProjectBuilderAPI.html#computeProjectVersion(com.github.sormuras.bach.ProjectInfo)">computeProjectVersion</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.github.sormuras.bach.api.ToolProviderAPI">Methods inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a></h3>
-<code><a href="api/ToolProviderAPI.html#computeToolProvider(java.lang.String)">computeToolProvider</a>, <a href="api/ToolProviderAPI.html#computeToolProviders()">computeToolProviders</a>, <a href="api/ToolProviderAPI.html#run(com.github.sormuras.bach.Command)">run</a>, <a href="api/ToolProviderAPI.html#run(com.github.sormuras.bach.Command,com.github.sormuras.bach.Command...)">run</a>, <a href="api/ToolProviderAPI.html#run(java.util.List)">run</a></code></div>
+<code><a href="api/ToolProviderAPI.html#computeToolProvider(java.lang.String)">computeToolProvider</a>, <a href="api/ToolProviderAPI.html#computeToolProviders()">computeToolProviders</a>, <a href="api/ToolProviderAPI.html#run(com.github.sormuras.bach.Command)">run</a>, <a href="api/ToolProviderAPI.html#run(com.github.sormuras.bach.Command,com.github.sormuras.bach.Command...)">run</a>, <a href="api/ToolProviderAPI.html#run(java.util.List)">run</a>, <a href="api/ToolProviderAPI.html#run(java.util.spi.ToolProvider,java.util.List)">run</a></code></div>
 </section>
 </li>
 </ul>
@@ -339,26 +338,50 @@ implements <a href="api/BachAPI.html" title="interface in com.github.sormuras.ba
 <li>
 <section class="detail" id="options()">
 <h3>options</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></span>&nbsp;<span class="element-name">options</span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></span>&nbsp;<span class="element-name">options</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="base()">
+<h3>base</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Base.html" title="class in com.github.sormuras.bach">Base</a></span>&nbsp;<span class="element-name">base</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="recordings()">
+<h3>recordings</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Recording.html" title="class in com.github.sormuras.bach">Recording</a>&gt;</span>&nbsp;<span class="element-name">recordings</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="browser()">
+<h3>browser</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Browser.html" title="class in com.github.sormuras.bach">Browser</a></span>&nbsp;<span class="element-name">browser</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="project()">
+<h3>project</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">project</span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="is(com.github.sormuras.bach.Options.Flag)">
 <h3>is</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">is</span>&#8203;<span class="parameters">(<a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a>&nbsp;flag)</span></div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">is</span>&#8203;<span class="parameters">(<a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a>&nbsp;flag)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="get(com.github.sormuras.bach.Options.Property,java.lang.String)">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">get</span>&#8203;<span class="parameters">(<a href="Options.Property.html" title="enum class in com.github.sormuras.bach">Options.Property</a>&nbsp;property,
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">get</span>&#8203;<span class="parameters">(<a href="Options.Property.html" title="enum class in com.github.sormuras.bach">Options.Property</a>&nbsp;property,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="get(com.github.sormuras.bach.Options.Property)">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">get</span>&#8203;<span class="parameters">(<a href="Options.Property.html" title="enum class in com.github.sormuras.bach">Options.Property</a>&nbsp;property)</span></div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">get</span>&#8203;<span class="parameters">(<a href="Options.Property.html" title="enum class in com.github.sormuras.bach">Options.Property</a>&nbsp;property)</span></div>
 </section>
 </li>
 <li>
@@ -386,34 +409,10 @@ implements <a href="api/BachAPI.html" title="interface in com.github.sormuras.ba
 </section>
 </li>
 <li>
-<section class="detail" id="base()">
-<h3>base</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Base.html" title="class in com.github.sormuras.bach">Base</a></span>&nbsp;<span class="element-name">base</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="browser()">
-<h3>browser</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Browser.html" title="class in com.github.sormuras.bach">Browser</a></span>&nbsp;<span class="element-name">browser</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="recordings()">
-<h3>recordings</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Recording.html" title="class in com.github.sormuras.bach">Recording</a>&gt;</span>&nbsp;<span class="element-name">recordings</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="project()">
-<h3>project</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">project</span>()</div>
-</section>
-</li>
-<li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">build</span>()
-           throws <span class="exceptions"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">build</span>()
+                 throws <span class="exceptions"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code></dd>
@@ -423,8 +422,8 @@ implements <a href="api/BachAPI.html" title="interface in com.github.sormuras.ba
 <li>
 <section class="detail" id="clean()">
 <h3>clean</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clean</span>()
-           throws <span class="exceptions"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clean</span>()
+                 throws <span class="exceptions"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code></dd>
@@ -434,32 +433,27 @@ implements <a href="api/BachAPI.html" title="interface in com.github.sormuras.ba
 <li>
 <section class="detail" id="debug(java.lang.String,java.lang.Object...)">
 <h3>debug</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">debug</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">debug</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="print(java.lang.String,java.lang.Object...)">
 <h3>print</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">print</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">print</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="info()">
 <h3>info</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">info</span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">info</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="run(java.util.spi.ToolProvider,java.util.List)">
-<h3>run</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Recording.html" title="class in com.github.sormuras.bach">Recording</a></span>&nbsp;<span class="element-name">run</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/spi/ToolProvider.html" title="class or interface in java.util.spi" class="external-link">ToolProvider</a>&nbsp;provider,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;arguments)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="api/ToolProviderAPI.html#run(java.util.spi.ToolProvider,java.util.List)">run</a></code>&nbsp;in interface&nbsp;<code><a href="api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a></code></dd>
-</dl>
+<section class="detail" id="record(com.github.sormuras.bach.Recording)">
+<h3>record</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">record</span>&#8203;<span class="parameters">(<a href="Recording.html" title="class in com.github.sormuras.bach">Recording</a>&nbsp;recording)</span></div>
 </section>
 </li>
 </ul>
