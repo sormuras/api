@@ -44,7 +44,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -87,6 +87,21 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested.class.summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static class&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="CodeFormatterAPI.Mode.html" class="type-name-link" title="enum class in com.github.sormuras.bach.api">CodeFormatterAPI.Mode</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method.summary">
@@ -101,11 +116,18 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#bach()" class="member-name-link">bach</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Command.html" title="interface in com.github.sormuras.bach">Command</a>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeJavaSourceFilesFormatCommand(java.util.List,com.github.sormuras.bach.api.CodeFormatterAPI.Mode)" class="member-name-link">computeJavaSourceFilesFormatCommand</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;files,
+ <a href="CodeFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">CodeFormatterAPI.Mode</a>&nbsp;mode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeJavaSourceFilesToFormat()" class="member-name-link">computeJavaSourceFilesToFormat</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#formatJavaSourceFiles()" class="member-name-link">formatJavaSourceFiles</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#verifyFormatOfJavaSourceFiles()" class="member-name-link">verifyFormatOfJavaSourceFiles</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#formatJavaSourceFiles(com.github.sormuras.bach.api.CodeFormatterAPI.Mode)" class="member-name-link">formatJavaSourceFiles</a>&#8203;(<a href="CodeFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">CodeFormatterAPI.Mode</a>&nbsp;mode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 </div>
 </div>
@@ -128,15 +150,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="computeJavaSourceFilesToFormat()">
+<h3>computeJavaSourceFilesToFormat</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;</span>&nbsp;<span class="element-name">computeJavaSourceFilesToFormat</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="computeJavaSourceFilesFormatCommand(java.util.List,com.github.sormuras.bach.api.CodeFormatterAPI.Mode)">
+<h3>computeJavaSourceFilesFormatCommand</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../Command.html" title="interface in com.github.sormuras.bach">Command</a>&lt;?&gt;</span>&nbsp;<span class="element-name">computeJavaSourceFilesFormatCommand</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;files,
+ <a href="CodeFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">CodeFormatterAPI.Mode</a>&nbsp;mode)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="formatJavaSourceFiles()">
 <h3>formatJavaSourceFiles</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">formatJavaSourceFiles</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="verifyFormatOfJavaSourceFiles()">
-<h3>verifyFormatOfJavaSourceFiles</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">verifyFormatOfJavaSourceFiles</span>()</div>
+<section class="detail" id="formatJavaSourceFiles(com.github.sormuras.bach.api.CodeFormatterAPI.Mode)">
+<h3>formatJavaSourceFiles</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">formatJavaSourceFiles</span>&#8203;<span class="parameters">(<a href="CodeFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">CodeFormatterAPI.Mode</a>&nbsp;mode)</span></div>
 </section>
 </li>
 </ul>
