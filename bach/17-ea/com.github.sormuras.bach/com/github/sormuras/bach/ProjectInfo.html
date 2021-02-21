@@ -108,24 +108,29 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Optional Element</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</code></div>
-<div class="col-second even-row-color"><code><a href="#lookup()" class="member-name-link">lookup</a></code></div>
+<div class="col-first even-row-color"><code><a href="project/JavaStyle.html" title="enum class in com.github.sormuras.bach.project">JavaStyle</a></code></div>
+<div class="col-second even-row-color"><code><a href="#format()" class="member-name-link">format</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Returns the style to format Java source-code files with, defaults to <a href="project/JavaStyle.html#FREE"><code>JavaStyle.FREE</code></a>.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</code></div>
+<div class="col-second odd-row-color"><code><a href="#lookup()" class="member-name-link">lookup</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Returns an array of external module lookup annotations.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Returns the name of the project, defaults to <code>"*"</code>.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
-<div class="col-second even-row-color"><code><a href="#requires()" class="member-name-link">requires</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
+<div class="col-second odd-row-color"><code><a href="#requires()" class="member-name-link">requires</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Returns an array of external modules on which the project has a dependence.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Returns the version of the project, defaults to <code>"0"</code>.</div>
 </div>
 </div>
@@ -178,6 +183,24 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="format()">
+<h3>format</h3>
+<div class="member-signature"><span class="return-type"><a href="project/JavaStyle.html" title="enum class in com.github.sormuras.bach.project">JavaStyle</a></span>&nbsp;<span class="element-name">format</span></div>
+<div class="block">Returns the style to format Java source-code files with, defaults to <a href="project/JavaStyle.html#FREE"><code>JavaStyle.FREE</code></a>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the style to format Java source-code files with, defaults to <a href="project/JavaStyle.html#FREE"><code>JavaStyle.FREE</code></a></dd>
+<dt>See Also:</dt>
+<dd><a href="Project.html#spaces()"><code>Project.spaces()</code></a>, 
+<a href="api/ProjectBuilderAPI.html#computeProjectSpaces(com.github.sormuras.bach.ProjectInfo)"><code>ProjectBuilderAPI.computeProjectSpaces(ProjectInfo)</code></a></dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd>FREE</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="requires()">
 <h3>requires</h3>
 <div class="member-signature"><span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">requires</span></div>
@@ -186,7 +209,7 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>an array of external modules on which the project has a dependence</dd>
 <dt>See Also:</dt>
-<dd><a href="Libraries.html#requires()"><code>Libraries.requires()</code></a>, 
+<dd><a href="project/Libraries.html#requires()"><code>Libraries.requires()</code></a>, 
 <a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo)</code></a>, 
 <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Requires.html" title="class or interface in java.lang.module" class="external-link"><code>ModuleDescriptor.Requires</code></a></dd>
 </dl>
@@ -205,7 +228,7 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>an array of external module lookup annotations</dd>
 <dt>See Also:</dt>
-<dd><a href="Libraries.html#lookup(java.lang.String)"><code>Libraries.lookup(String)</code></a>, 
+<dd><a href="project/Libraries.html#lookup(java.lang.String)"><code>Libraries.lookup(String)</code></a>, 
 <a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo)</code></a></dd>
 </dl>
 <dl class="notes">
