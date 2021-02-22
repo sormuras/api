@@ -40,13 +40,13 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Required&nbsp;|&nbsp;</li>
 <li><a href="#annotation.interface.optional.element.summary">Optional</a></li>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#annotation.interface.element.detail">Element</a></li>
 </ul>
 </div>
@@ -136,10 +136,46 @@ loadScripts(document, 'script');</script>
 </div>
 </section>
 </li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li>
+<section class="field-summary" id="field.summary">
+<h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODULE" class="member-name-link">MODULE</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Default name of the module that is usually annotated with <code>@ProjectInfo</code>.</div>
+</div>
+</div>
+</section>
+</li>
 </ul>
 </section>
 <section class="details" id="annotation.interface.element.detail">
 <ul class="details-list">
+<!-- ============ FIELD DETAIL =========== -->
+<li>
+<section class="field-details" id="field.detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="MODULE">
+<h3>MODULE</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">MODULE</span></div>
+<div class="block">Default name of the module that is usually annotated with <code>@ProjectInfo</code>.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd><a href="../../../../../constant-values.html#com.github.sormuras.bach.ProjectInfo.MODULE">Constant Field Values</a></dd>
+</dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ============ ANNOTATION INTERFACE MEMBER DETAIL =========== -->
 <li>
 <section class="member-details">
@@ -192,7 +228,8 @@ loadScripts(document, 'script');</script>
 <dd>the style to format Java source-code files with, defaults to <a href="project/JavaStyle.html#FREE"><code>JavaStyle.FREE</code></a></dd>
 <dt>See Also:</dt>
 <dd><a href="Project.html#spaces()"><code>Project.spaces()</code></a>, 
-<a href="api/ProjectBuilderAPI.html#computeProjectSpaces(com.github.sormuras.bach.ProjectInfo)"><code>ProjectBuilderAPI.computeProjectSpaces(ProjectInfo)</code></a></dd>
+<a href="api/ProjectBuilderAPI.html#computeProjectSpaces(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings,com.github.sormuras.bach.project.Libraries)"><code>ProjectBuilderAPI.computeProjectSpaces(ProjectInfo,
+     com.github.sormuras.bach.project.Settings, Libraries)</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -210,7 +247,8 @@ loadScripts(document, 'script');</script>
 <dd>an array of external modules on which the project has a dependence</dd>
 <dt>See Also:</dt>
 <dd><a href="project/Libraries.html#requires()"><code>Libraries.requires()</code></a>, 
-<a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo)</code></a>, 
+<a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo,
+     com.github.sormuras.bach.project.Settings)</code></a>, 
 <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Requires.html" title="class or interface in java.lang.module" class="external-link"><code>ModuleDescriptor.Requires</code></a></dd>
 </dl>
 <dl class="notes">
@@ -229,7 +267,8 @@ loadScripts(document, 'script');</script>
 <dd>an array of external module lookup annotations</dd>
 <dt>See Also:</dt>
 <dd><a href="project/Libraries.html#lookup(java.lang.String)"><code>Libraries.lookup(String)</code></a>, 
-<a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo)</code></a></dd>
+<a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo,
+     com.github.sormuras.bach.project.Settings)</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>

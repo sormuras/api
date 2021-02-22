@@ -78,9 +78,16 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-settings">settings</span></code> - fundamental properties</dd>
+<dd><code><span id="param-libraries">libraries</span></code> - external module manager</dd>
+<dd><code><span id="param-spaces">spaces</span></code> - code spaces</dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Project</span>(<a href="project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings, <a href="project/Libraries.html" title="class in com.github.sormuras.bach.project">Libraries</a>&nbsp;libraries, <a href="project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a>&nbsp;spaces)
 <span class="extends-implements">extends <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Bach's project model.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -92,12 +99,10 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Project</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.github.sormuras.bach.project.Settings,com.github.sormuras.bach.project.Libraries,com.github.sormuras.bach.project.Spaces)" class="member-name-link">Project</a>&#8203;(<a href="project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.sormuras.bach.project.Settings,com.github.sormuras.bach.project.Libraries,com.github.sormuras.bach.project.Spaces)" class="member-name-link">Project</a>&#8203;(<a href="project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
  <a href="project/Libraries.html" title="class in com.github.sormuras.bach.project">Libraries</a>&nbsp;libraries,
  <a href="project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a>&nbsp;spaces)</code></div>
-<div class="col-last odd-row-color">
+<div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Project</code> record class.</div>
 </div>
 </div>
@@ -127,26 +132,42 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="project/Libraries.html" title="class in com.github.sormuras.bach.project">Libraries</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#libraries()" class="member-name-link">libraries</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>libraries</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-libraries"><code>libraries</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#libraries(com.github.sormuras.bach.project.Libraries)" class="member-name-link">libraries</a>&#8203;(<a href="project/Libraries.html" title="class in com.github.sormuras.bach.project">Libraries</a>&nbsp;libraries)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name()" class="member-name-link">name</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the name of this project.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(java.lang.String)" class="member-name-link">name</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#settings()" class="member-name-link">settings</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>settings</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-settings"><code>settings</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spaces()" class="member-name-link">spaces</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#settings(com.github.sormuras.bach.project.Settings)" class="member-name-link">settings</a>&#8203;(<a href="project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>spaces</code> record component.</div>
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spaces()" class="member-name-link">spaces</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <a href="#param-spaces"><code>spaces</code></a> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spaces(com.github.sormuras.bach.project.Spaces)" class="member-name-link">spaces</a>&#8203;(<a href="project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a>&nbsp;spaces)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -155,13 +176,19 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version()" class="member-name-link">version</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a string containing the full version.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.String)" class="member-name-link">version</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#versionNumberAndPreRelease()" class="member-name-link">versionNumberAndPreRelease</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a string containing only the version number and, if present, the pre-release version.</div>
+</div>
 </div>
 </div>
 </div>
@@ -180,12 +207,6 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;()">
-<h3>Project</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Project</span>()</div>
-</section>
-</li>
-<li>
 <section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.project.Settings,com.github.sormuras.bach.project.Libraries,com.github.sormuras.bach.project.Spaces)">
 <h3>Project</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Project</span>&#8203;<span class="parameters">(<a href="project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
@@ -194,9 +215,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>Project</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>settings</code> - the value for the <code>settings</code> record component</dd>
-<dd><code>libraries</code> - the value for the <code>libraries</code> record component</dd>
-<dd><code>spaces</code> - the value for the <code>spaces</code> record component</dd>
+<dd><code>settings</code> - the value for the <a href="#param-settings"><code>settings</code></a> record component</dd>
+<dd><code>libraries</code> - the value for the <a href="#param-libraries"><code>libraries</code></a> record component</dd>
+<dd><code>spaces</code> - the value for the <a href="#param-spaces"><code>spaces</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -212,36 +233,94 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">name</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a copy of this instance with the given component replaced</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.String)">
 <h3>version</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">version</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</span></div>
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a copy of this instance with the given component replaced</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="settings(com.github.sormuras.bach.project.Settings)">
+<h3>settings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">settings</span>&#8203;<span class="parameters">(<a href="project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings)</span></div>
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a copy of this instance with the given component replaced</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="libraries(com.github.sormuras.bach.project.Libraries)">
 <h3>libraries</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">libraries</span>&#8203;<span class="parameters">(<a href="project/Libraries.html" title="class in com.github.sormuras.bach.project">Libraries</a>&nbsp;libraries)</span></div>
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a copy of this instance with the given component replaced</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="spaces(com.github.sormuras.bach.project.Spaces)">
+<h3>spaces</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">spaces</span>&#8203;<span class="parameters">(<a href="project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a>&nbsp;spaces)</span></div>
+<div class="block">Returns a copy of this instance with the given component replaced.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a copy of this instance with the given component replaced</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="name()">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span>()</div>
+<div class="block">Returns the name of this project.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the name of this project</dd>
+<dt>See Also:</dt>
+<dd><a href="project/Settings.html#name()"><code>Settings.name()</code></a></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="version()">
 <h3>version</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">version</span>()</div>
+<div class="block">Returns a string containing the full version.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a string containing the full version</dd>
+<dt>See Also:</dt>
+<dd><a href="project/Settings.html#version()"><code>Settings.version()</code></a></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="versionNumberAndPreRelease()">
 <h3>versionNumberAndPreRelease</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">versionNumberAndPreRelease</span>()</div>
+<div class="block">Returns a string containing only the version number and, if present, the pre-release version.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a string containing only the version number and, if present, the pre-release version</dd>
+<dt>See Also:</dt>
+<dd><a href="project/Settings.html#version()"><code>Settings.version()</code></a></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -289,10 +368,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="settings()">
 <h3>settings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></span>&nbsp;<span class="element-name">settings</span>()</div>
-<div class="block">Returns the value of the <code>settings</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-settings"><code>settings</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>settings</code> record component</dd>
+<dd>the value of the <a href="#param-settings"><code>settings</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -300,10 +379,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="libraries()">
 <h3>libraries</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="project/Libraries.html" title="class in com.github.sormuras.bach.project">Libraries</a></span>&nbsp;<span class="element-name">libraries</span>()</div>
-<div class="block">Returns the value of the <code>libraries</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-libraries"><code>libraries</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>libraries</code> record component</dd>
+<dd>the value of the <a href="#param-libraries"><code>libraries</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -311,10 +390,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="spaces()">
 <h3>spaces</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a></span>&nbsp;<span class="element-name">spaces</span>()</div>
-<div class="block">Returns the value of the <code>spaces</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-spaces"><code>spaces</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>spaces</code> record component</dd>
+<dd>the value of the <a href="#param-spaces"><code>spaces</code></a> record component</dd>
 </dl>
 </section>
 </li>
