@@ -118,19 +118,24 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Returns an array of external module lookup annotations.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
+<div class="col-first even-row-color"><code><a href="lookup/JUnit.html" title="enum class in com.github.sormuras.bach.lookup">JUnit</a></code></div>
+<div class="col-second even-row-color"><code><a href="#lookupJUnit()" class="member-name-link">lookupJUnit</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Returns the version of JUnit modules to lookup.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Returns the name of the project, defaults to <code>"*"</code>.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
-<div class="col-second odd-row-color"><code><a href="#requires()" class="member-name-link">requires</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
+<div class="col-second even-row-color"><code><a href="#requires()" class="member-name-link">requires</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Returns an array of external modules on which the project has a dependence.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Returns the version of the project, defaults to <code>"0"</code>.</div>
 </div>
 </div>
@@ -274,6 +279,21 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Default:</dt>
 <dd>{}</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="lookupJUnit()">
+<h3>lookupJUnit</h3>
+<div class="member-signature"><span class="return-type"><a href="lookup/JUnit.html" title="enum class in com.github.sormuras.bach.lookup">JUnit</a></span>&nbsp;<span class="element-name">lookupJUnit</span></div>
+<div class="block">Returns the version of JUnit modules to lookup.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the version of JUnit modules to lookup</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd>V_5_7_1</dd>
 </dl>
 </section>
 </li>
