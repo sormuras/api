@@ -91,7 +91,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ExternalModuleLookup</span>(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module, <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)
 <span class="extends-implements">extends <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></span></div>
-<div class="block">A module lookup for an external module.</div>
+<div class="block">A stable module lookup for an external module.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -132,22 +132,29 @@ implements <a href="ModuleLookup.html" title="interface in com.github.sormuras.b
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lookupUri(java.lang.String)" class="member-name-link">lookupUri</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#module()" class="member-name-link">module</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LookupStability.html" title="enum class in com.github.sormuras.bach.lookup">LookupStability</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lookupStability()" class="member-name-link">lookupStability</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a classification of the stability for this module lookup implementation.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lookupUri(java.lang.String)" class="member-name-link">lookupUri</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <a href="#param-module"><code>module</code></a> record component.</div>
+<div class="block">Returns an optional string-representation of the given module name.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#module()" class="member-name-link">module</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns a string representation of this record class.</div>
+<div class="block">Returns the value of the <a href="#param-module"><code>module</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uri()" class="member-name-link">uri</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a string representation of this record class.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#uri()" class="member-name-link">uri</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-uri"><code>uri</code></a> record component.</div>
 </div>
 </div>
@@ -189,12 +196,34 @@ implements <a href="ModuleLookup.html" title="interface in com.github.sormuras.b
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="lookupStability()">
+<h3>lookupStability</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LookupStability.html" title="enum class in com.github.sormuras.bach.lookup">LookupStability</a></span>&nbsp;<span class="element-name">lookupStability</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ModuleLookup.html#lookupStability()">ModuleLookup</a></code></span></div>
+<div class="block">Returns a classification of the stability for this module lookup implementation.
+
+ <p>Defaults to <a href="LookupStability.html#UNKNOWN"><code>LookupStability.UNKNOWN</code></a>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ModuleLookup.html#lookupStability()">lookupStability</a></code>&nbsp;in interface&nbsp;<code><a href="ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></code></dd>
+<dt>Returns:</dt>
+<dd>a classification of the stability for this module lookup implementation</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="lookupUri(java.lang.String)">
 <h3>lookupUri</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">lookupUri</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ModuleLookup.html#lookupUri(java.lang.String)">ModuleLookup</a></code></span></div>
+<div class="block">Returns an optional string-representation of the given module name.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ModuleLookup.html#lookupUri(java.lang.String)">lookupUri</a></code>&nbsp;in interface&nbsp;<code><a href="ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>module</code> - the name of the module to lookup</dd>
+<dt>Returns:</dt>
+<dd>an optional string-representation of the given module name</dd>
 </dl>
 </section>
 </li>

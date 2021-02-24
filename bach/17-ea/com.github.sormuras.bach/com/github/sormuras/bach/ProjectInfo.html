@@ -96,6 +96,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">An external module name to URI pair annotation.</div>
 </div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="ProjectInfo.Externals.html" class="type-name-link" title="annotation in com.github.sormuras.bach">ProjectInfo.Externals</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">An external source of modules that lookup by a built-in module lookup implementation.</div>
+</div>
 </div>
 </section>
 </li>
@@ -114,14 +119,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the style to format Java source-code files with, defaults to <a href="project/JavaStyle.html#FREE"><code>JavaStyle.FREE</code></a>.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</code></div>
-<div class="col-second odd-row-color"><code><a href="#lookup()" class="member-name-link">lookup</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#lookupExternal()" class="member-name-link">lookupExternal</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">Returns an array of external module lookup annotations.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="lookup/JUnit.html" title="enum class in com.github.sormuras.bach.lookup">JUnit</a></code></div>
-<div class="col-second even-row-color"><code><a href="#lookupJUnit()" class="member-name-link">lookupJUnit</a></code></div>
+<div class="col-first even-row-color"><code><a href="ProjectInfo.Externals.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Externals</a>[]</code></div>
+<div class="col-second even-row-color"><code><a href="#lookupExternals()" class="member-name-link">lookupExternals</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns the version of JUnit modules to lookup.</div>
+<div class="block">Returns the version constant of the .</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
@@ -195,8 +200,8 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>the name of the project, defaults to <code>"*"</code></dd>
 <dt>See Also:</dt>
-<dd><a href="Project.html#name()"><code>Project.name()</code></a>, 
-<a href="api/ProjectBuilderAPI.html#computeProjectName(com.github.sormuras.bach.ProjectInfo,java.lang.String)"><code>ProjectBuilderAPI.computeProjectName(ProjectInfo, String)</code></a></dd>
+<dd><a href="api/ProjectBuilderAPI.html#computeProjectName(com.github.sormuras.bach.ProjectInfo,java.lang.String)"><code>ProjectBuilderAPI.computeProjectName(ProjectInfo, String)</code></a>, 
+<a href="Project.html#name()"><code>Project.name()</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -213,8 +218,8 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>the version of the project, defaults to <code>"0"</code></dd>
 <dt>See Also:</dt>
-<dd><a href="Project.html#version()"><code>Project.version()</code></a>, 
-<a href="api/ProjectBuilderAPI.html#computeProjectVersion(com.github.sormuras.bach.ProjectInfo)"><code>ProjectBuilderAPI.computeProjectVersion(ProjectInfo)</code></a>, 
+<dd><a href="api/ProjectBuilderAPI.html#computeProjectVersion(com.github.sormuras.bach.ProjectInfo)"><code>ProjectBuilderAPI.computeProjectVersion(ProjectInfo)</code></a>, 
+<a href="Project.html#version()"><code>Project.version()</code></a>, 
 <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link"><code>ModuleDescriptor.Version</code></a></dd>
 </dl>
 <dl class="notes">
@@ -232,9 +237,8 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>the style to format Java source-code files with, defaults to <a href="project/JavaStyle.html#FREE"><code>JavaStyle.FREE</code></a></dd>
 <dt>See Also:</dt>
-<dd><a href="Project.html#spaces()"><code>Project.spaces()</code></a>, 
-<a href="api/ProjectBuilderAPI.html#computeProjectSpaces(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings,com.github.sormuras.bach.project.Libraries)"><code>ProjectBuilderAPI.computeProjectSpaces(ProjectInfo,
-     com.github.sormuras.bach.project.Settings, com.github.sormuras.bach.project.Libraries)</code></a></dd>
+<dd><a href="api/ProjectBuilderAPI.html#computeProjectSpaces(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings,com.github.sormuras.bach.project.Libraries)"><code>ProjectBuilderAPI.computeProjectSpaces(ProjectInfo, Settings, Libraries)</code></a>, 
+<a href="Project.html#spaces()"><code>Project.spaces()</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -251,9 +255,8 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>an array of external modules on which the project has a dependence</dd>
 <dt>See Also:</dt>
-<dd><a href="project/Libraries.html#requires()"><code>Libraries.requires()</code></a>, 
-<a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo,
-     com.github.sormuras.bach.project.Settings)</code></a>, 
+<dd><a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo, Settings)</code></a>, 
+<a href="project/Libraries.html#requires()"><code>Libraries.requires()</code></a>, 
 <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Requires.html" title="class or interface in java.lang.module" class="external-link"><code>ModuleDescriptor.Requires</code></a></dd>
 </dl>
 <dl class="notes">
@@ -263,18 +266,17 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="lookup()">
-<h3>lookup</h3>
-<div class="member-signature"><span class="return-type"><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</span>&nbsp;<span class="element-name">lookup</span></div>
+<section class="detail" id="lookupExternal()">
+<h3>lookupExternal</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>[]</span>&nbsp;<span class="element-name">lookupExternal</span></div>
 <div class="block">Returns an array of external module lookup annotations.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>an array of external module lookup annotations</dd>
 <dt>See Also:</dt>
-<dd><a href="project/Libraries.html#find(java.lang.String)"><code>Libraries.find(String)</code></a>, 
-<a href="lookup/ModuleLookup.html#lookupUri(java.lang.String)"><code>ModuleLookup.lookupUri(String)</code></a>, 
-<a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo,
-     com.github.sormuras.bach.project.Settings)</code></a></dd>
+<dd><a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo, Settings)</code></a>, 
+<a href="project/Libraries.html#find(java.lang.String)"><code>Libraries.find(String)</code></a>, 
+<a href="lookup/ModuleLookup.html#lookupUri(java.lang.String)"><code>ModuleLookup.lookupUri(String)</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
@@ -283,17 +285,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="lookupJUnit()">
-<h3>lookupJUnit</h3>
-<div class="member-signature"><span class="return-type"><a href="lookup/JUnit.html" title="enum class in com.github.sormuras.bach.lookup">JUnit</a></span>&nbsp;<span class="element-name">lookupJUnit</span></div>
-<div class="block">Returns the version of JUnit modules to lookup.</div>
+<section class="detail" id="lookupExternals()">
+<h3>lookupExternals</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Externals.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Externals</a>[]</span>&nbsp;<span class="element-name">lookupExternals</span></div>
+<div class="block">Returns the version constant of the .</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the version of JUnit modules to lookup</dd>
+<dd>the version constant of the </dd>
+<dt>See Also:</dt>
+<dd><a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo, Settings)</code></a>, 
+<a href="lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup"><code>ModuleLookup</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
-<dd>V_5_7_1</dd>
+<dd>{}</dd>
 </dl>
 </section>
 </li>
