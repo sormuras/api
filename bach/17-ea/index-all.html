@@ -279,7 +279,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.External)" class="member-name-link">computeProjectModuleLookup(ProjectInfo.External)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.Externals)" class="member-name-link">computeProjectModuleLookup(ProjectInfo.Externals)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.Externals,com.github.sormuras.bach.project.Settings)" class="member-name-link">computeProjectModuleLookup(ProjectInfo.Externals, Settings)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#computeProjectName(com.github.sormuras.bach.ProjectInfo,java.lang.String)" class="member-name-link">computeProjectName(ProjectInfo, String)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
 <dd>&nbsp;</dd>
@@ -320,6 +320,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ExternalModuleLookup.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ExternalModuleLookup.html" title="class in com.github.sormuras.bach.lookup">ExternalModuleLookup</a></dt>
+<dd>
+<div class="block">Indicates whether some other object is "equal to" this one.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a></dt>
 <dd>
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </dd>
@@ -519,6 +523,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns a hash code value for this object.</div>
 </dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ExternalModuleLookup.html#hashCode()" class="member-name-link">hashCode()</a> - Method in record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ExternalModuleLookup.html" title="class in com.github.sormuras.bach.lookup">ExternalModuleLookup</a></dt>
+<dd>
+<div class="block">Returns a hash code value for this object.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html#hashCode()" class="member-name-link">hashCode()</a> - Method in record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a></dt>
 <dd>
 <div class="block">Returns a hash code value for this object.</div>
 </dd>
@@ -786,6 +794,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/LWJGLModuleLookup.html#lookupStability()" class="member-name-link">lookupStability()</a> - Method in class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/LWJGLModuleLookup.html" title="class in com.github.sormuras.bach.lookup">LWJGLModuleLookup</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html#lookupStability()" class="member-name-link">lookupStability()</a> - Method in record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html#lookupStability()" class="member-name-link">lookupStability()</a> - Method in interface com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></dt>
 <dd>
 <div class="block">Returns a classification of the stability for this module lookup implementation.</div>
@@ -809,6 +819,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/JUnitPlatformModuleLookup.html#lookupUri(java.lang.String)" class="member-name-link">lookupUri(String)</a> - Method in class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/JUnitPlatformModuleLookup.html" title="class in com.github.sormuras.bach.lookup">JUnitPlatformModuleLookup</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/LWJGLModuleLookup.html#lookupUri(java.lang.String)" class="member-name-link">lookupUri(String)</a> - Method in class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/LWJGLModuleLookup.html" title="class in com.github.sormuras.bach.lookup">LWJGLModuleLookup</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html#lookupUri(java.lang.String)" class="member-name-link">lookupUri(String)</a> - Method in record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html#lookupUri(java.lang.String)" class="member-name-link">lookupUri(String)</a> - Method in interface com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></dt>
 <dd>
@@ -846,6 +858,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Main.html#%3Cinit%3E()" class="member-name-link">Main()</a> - Constructor for class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Main.html" title="class in com.github.sormuras.bach">Main</a></dt>
 <dd>
 <div class="block">Default constructor usually used by the ServiceLoader facility.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html" class="type-name-link" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a> - Record Class in <a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/package-summary.html">com.github.sormuras.bach.lookup</a></dt>
+<dd>
+<div class="block">A stable module lookup for a set of external modules.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html#%3Cinit%3E(java.util.Map)" class="member-name-link">MappedModuleLookup(Map&lt;String, String&gt;)</a> - Constructor for record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a></dt>
+<dd>
+<div class="block">Creates an instance of a <code>MappedModuleLookup</code> record class.</div>
 </dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/Maven.html" class="type-name-link" title="class in com.github.sormuras.bach.lookup">Maven</a> - Class in <a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/package-summary.html">com.github.sormuras.bach.lookup</a></dt>
 <dd>
@@ -981,6 +1001,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns an instance with default values resolved to the given root directory.</div>
 </dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html#ofGitHubReleases(com.github.sormuras.bach.Bach)" class="member-name-link">ofGitHubReleases(Bach)</a> - Static method in interface com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html#ofJavaFX(java.lang.String)" class="member-name-link">ofJavaFX(String)</a> - Static method in interface com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html#ofJUnit(java.lang.String)" class="member-name-link">ofJUnit(String)</a> - Static method in interface com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></dt>
@@ -988,6 +1010,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html#ofJUnit(java.lang.String,java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">ofJUnit(String, String, String, String)</a> - Static method in interface com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html#ofLWJGL(java.lang.String)" class="member-name-link">ofLWJGL(String)</a> - Static method in interface com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html#ofSormurasModules(com.github.sormuras.bach.Bach,com.github.sormuras.bach.project.Settings,java.lang.String)" class="member-name-link">ofSormurasModules(Bach, Settings, String)</a> - Static method in interface com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.Argument.html#option()" class="member-name-link">option()</a> - Method in record class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.Argument.html" title="class in com.github.sormuras.bach">Command.Argument</a></dt>
 <dd>
@@ -1184,6 +1208,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Skip all executions for the specified tool, this option is repeatable</div>
 </dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.Externals.Name.html#SORMURAS_MODULES" class="member-name-link">SORMURAS_MODULES</a> - Enum constant in enum class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.Externals.Name.html" title="enum class in com.github.sormuras.bach">ProjectInfo.Externals.Name</a></dt>
+<dd>
+<div class="block">Look up unique modules published at Maven Central.</div>
+</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Project.html#spaces()" class="member-name-link">spaces()</a> - Method in record class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Project.html" title="class in com.github.sormuras.bach">Project</a></dt>
 <dd>
 <div class="block">Returns the value of the <a href="./com.github.sormuras.bach/com/github/sormuras/bach/#param-spaces"><code>spaces</code></a> record component.</div>
@@ -1263,6 +1291,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/LWJGLModuleLookup.html#toString()" class="member-name-link">toString()</a> - Method in class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/LWJGLModuleLookup.html" title="class in com.github.sormuras.bach.lookup">LWJGLModuleLookup</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html#toString()" class="member-name-link">toString()</a> - Method in record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a></dt>
+<dd>
+<div class="block">Returns a string representation of this record class.</div>
+</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/Maven.Joiner.html#toString()" class="member-name-link">toString()</a> - Method in class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/Maven.Joiner.html" title="class in com.github.sormuras.bach.lookup">Maven.Joiner</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ToolProvidersModuleLookup.html#toString()" class="member-name-link">toString()</a> - Method in class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/ToolProvidersModuleLookup.html" title="class in com.github.sormuras.bach.lookup">ToolProvidersModuleLookup</a></dt>
@@ -1353,6 +1385,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.External.Type.html#URI" class="member-name-link">URI</a> - Enum constant in enum class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.External.Type.html" title="enum class in com.github.sormuras.bach">ProjectInfo.External.Type</a></dt>
 <dd>
 <div class="block">Uniform Resource Identifier (<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/net/URI.html" title="class or interface in java.net" class="external-link"><code>URI</code></a>) reference as-is.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html#uris()" class="member-name-link">uris()</a> - Method in record class com.github.sormuras.bach.lookup.<a href="com.github.sormuras.bach/com/github/sormuras/bach/lookup/MappedModuleLookup.html" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a></dt>
+<dd>
+<div class="block">Returns the value of the <a href="./com.github.sormuras.bach/com/github/sormuras/bach/lookup/#param-uris"><code>uris</code></a> record component.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:V">V</h2>
