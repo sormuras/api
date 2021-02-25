@@ -75,7 +75,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="ExternalModuleLookup.html" title="class in com.github.sormuras.bach.lookup">ExternalModuleLookup</a></code>, <code><a href="GitHubReleasesModuleLookup.html" title="class in com.github.sormuras.bach.lookup">GitHubReleasesModuleLookup</a></code>, <code><a href="JavaFXModuleLookup.html" title="class in com.github.sormuras.bach.lookup">JavaFXModuleLookup</a></code>, <code><a href="JUnit.html" title="enum class in com.github.sormuras.bach.lookup">JUnit</a></code>, <code><a href="JUnitJupiterModuleLookup.html" title="class in com.github.sormuras.bach.lookup">JUnitJupiterModuleLookup</a></code>, <code><a href="JUnitPlatformModuleLookup.html" title="class in com.github.sormuras.bach.lookup">JUnitPlatformModuleLookup</a></code>, <code><a href="LWJGLModuleLookup.html" title="class in com.github.sormuras.bach.lookup">LWJGLModuleLookup</a></code>, <code><a href="MappedModuleLookup.html" title="class in com.github.sormuras.bach.lookup">MappedModuleLookup</a></code></dd>
+<dd><code><a href="ExternalModuleLookup.html" title="class in com.github.sormuras.bach.lookup">ExternalModuleLookup</a></code>, <code><a href="GitHubReleasesModuleLookup.html" title="class in com.github.sormuras.bach.lookup">GitHubReleasesModuleLookup</a></code>, <code><a href="JavaFXModuleLookup.html" title="class in com.github.sormuras.bach.lookup">JavaFXModuleLookup</a></code>, <code><a href="JUnit.html" title="enum class in com.github.sormuras.bach.lookup">JUnit</a></code>, <code><a href="JUnitJupiterModuleLookup.html" title="class in com.github.sormuras.bach.lookup">JUnitJupiterModuleLookup</a></code>, <code><a href="JUnitPlatformModuleLookup.html" title="class in com.github.sormuras.bach.lookup">JUnitPlatformModuleLookup</a></code>, <code><a href="LWJGLModuleLookup.html" title="class in com.github.sormuras.bach.lookup">LWJGLModuleLookup</a></code>, <code><a href="SormurasModulesModuleLookup.html" title="class in com.github.sormuras.bach.lookup">SormurasModulesModuleLookup</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Functional Interface:</dt>
@@ -140,9 +140,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#ofLWJGL(java.lang.String)" class="member-name-link">ofLWJGL</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#ofSormurasModules(com.github.sormuras.bach.Bach,com.github.sormuras.bach.project.Settings,java.lang.String)" class="member-name-link">ofSormurasModules</a>&#8203;(<a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a>&nbsp;bach,
- <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#ofSormurasModules(com.github.sormuras.bach.Bach,java.lang.String)" class="member-name-link">ofSormurasModules</a>&#8203;(<a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a>&nbsp;bach,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#requireValidModuleName(java.lang.String)" class="member-name-link">requireValidModuleName</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#requireValidUri(java.lang.String)" class="member-name-link">requireValidUri</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 </div>
 </div>
@@ -198,11 +203,22 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="ofSormurasModules(com.github.sormuras.bach.Bach,com.github.sormuras.bach.project.Settings,java.lang.String)">
+<section class="detail" id="ofSormurasModules(com.github.sormuras.bach.Bach,java.lang.String)">
 <h3>ofSormurasModules</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></span>&nbsp;<span class="element-name">ofSormurasModules</span>&#8203;<span class="parameters">(<a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a>&nbsp;bach,
- <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="requireValidModuleName(java.lang.String)">
+<h3>requireValidModuleName</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">requireValidModuleName</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="requireValidUri(java.lang.String)">
+<h3>requireValidUri</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">requireValidUri</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</span></div>
 </section>
 </li>
 <li>
