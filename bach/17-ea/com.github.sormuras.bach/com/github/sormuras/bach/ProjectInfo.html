@@ -101,6 +101,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">An external source of modules that lookup by a built-in module lookup implementation.</div>
 </div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="ProjectInfo.Metadata.html" class="type-name-link" title="annotation in com.github.sormuras.bach">ProjectInfo.Metadata</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">An external module metadata configuration annotation.</div>
+</div>
 </div>
 </section>
 </li>
@@ -128,19 +133,22 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Returns the version constant of the.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first odd-row-color"><code><a href="ProjectInfo.Metadata.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Metadata</a>[]</code></div>
+<div class="col-second odd-row-color"><code><a href="#metadata()" class="member-name-link">metadata</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Returns the name of the project, defaults to <code>"*"</code>.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
-<div class="col-second even-row-color"><code><a href="#requires()" class="member-name-link">requires</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
+<div class="col-second odd-row-color"><code><a href="#requires()" class="member-name-link">requires</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Returns an array of external modules on which the project has a dependence.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Returns the version of the project, defaults to <code>"0"</code>.</div>
 </div>
 </div>
@@ -296,6 +304,16 @@ loadScripts(document, 'script');</script>
 <dd><a href="api/ProjectBuilderAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)"><code>ProjectBuilderAPI.computeProjectLibraries(ProjectInfo, Settings)</code></a>, 
 <a href="lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup"><code>ModuleLookup</code></a></dd>
 </dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd>{}</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="metadata()">
+<h3>metadata</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Metadata.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Metadata</a>[]</span>&nbsp;<span class="element-name">metadata</span></div>
 <dl class="notes">
 <dt>Default:</dt>
 <dd>{}</dd>
