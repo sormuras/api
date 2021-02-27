@@ -226,7 +226,21 @@ the order they are declared.</div>
 <section class="detail" id="STRICT">
 <h3>STRICT</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a></span>&nbsp;<span class="element-name">STRICT</span></div>
-<div class="block">Activate all verification measures available.</div>
+<div class="block">Activate all verification measures available.
+
+ <p>When Bach runs in strict mode the following default implementations change their behaviour
+ into a more defensive way of doing things:
+
+ <ul>
+   <li>Source code style is checked via running a formatter in `VERIFY` mode.
+   <li>Only explicitly declared requires are considered when downloading external modules.
+   <li>All external modular JAR files are verified to conform with expected metadata.
+ </ul></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd><a href="ProjectInfo.html#format()"><code>ProjectInfo.format()</code></a>, 
+<a href="ProjectInfo.html#metadata()"><code>ProjectInfo.metadata()</code></a></dd>
+</dl>
 </section>
 </li>
 <li>
