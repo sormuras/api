@@ -152,13 +152,18 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns an array of external modules on which the project has a dependence.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</code></div>
-<div class="col-second even-row-color"><code><a href="#tweaks()" class="member-name-link">tweaks</a></code></div>
+<div class="col-second even-row-color"><code><a href="#testTweaks()" class="member-name-link">testTweaks</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns the additional arguments to be passed on a per-tool basis.</div>
+<div class="block">Returns the additional test space arguments to be passed on a per-tool basis.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
+<div class="col-first odd-row-color"><code><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</code></div>
+<div class="col-second odd-row-color"><code><a href="#tweaks()" class="member-name-link">tweaks</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Returns the additional main space arguments to be passed on a per-tool basis.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Returns the version of the project, defaults to <code>"0"</code>.</div>
 </div>
 </div>
@@ -334,14 +339,29 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="tweaks()">
 <h3>tweaks</h3>
 <div class="member-signature"><span class="return-type"><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</span>&nbsp;<span class="element-name">tweaks</span></div>
-<div class="block">Returns the additional arguments to be passed on a per-tool basis.</div>
+<div class="block">Returns the additional main space arguments to be passed on a per-tool basis.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the additional arguments to be passed on a per-tool basis</dd>
+<dd>the additional main space arguments to be passed on a per-tool basis</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
-<dd>{@com.github.sormuras.bach.ProjectInfo.Tweak(tool="javac", with={"-encoding", "UTF-8"}), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", with={"--compress", "2", "--no-header-files", "--no-man-pages", "--strip-debug"})}</dd>
+<dd>{@com.github.sormuras.bach.ProjectInfo.Tweak(tool="javac", option="-encoding", value={"UTF-8"}), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="javadoc", option="-encoding", value={"UTF-8"}), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", option="--compress", value={"2"}), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", option="--no-header-files"), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", option="--no-man-pages"), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", option="--strip-debug")}</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="testTweaks()">
+<h3>testTweaks</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</span>&nbsp;<span class="element-name">testTweaks</span></div>
+<div class="block">Returns the additional test space arguments to be passed on a per-tool basis.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the additional test space arguments to be passed on a per-tool basis</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd>{@com.github.sormuras.bach.ProjectInfo.Tweak(tool="javac", option="-encoding", value={"UTF-8"})}</dd>
 </dl>
 </section>
 </li>
