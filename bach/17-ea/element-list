@@ -4,3 +4,4 @@ com.github.sormuras.bach.api
 com.github.sormuras.bach.lookup
 com.github.sormuras.bach.project
 com.github.sormuras.bach.tool
+com.github.sormuras.bach.util

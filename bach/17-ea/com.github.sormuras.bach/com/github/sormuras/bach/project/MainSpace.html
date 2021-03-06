@@ -79,14 +79,21 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-declarations">declarations</span></code> - the list of main modules to compile</dd>
+<dd><code><span id="param-modulePaths">modulePaths</span></code> - the list of module paths</dd>
+<dd><code><span id="param-release">release</span></code> - the Java version (release feature number) to compile for</dd>
+<dd><code><span id="param-tweaks">tweaks</span></code> - the additional arguments to be passed on a per-tool basis</dd>
+</dl>
+<dl class="notes">
 <dt>All Implemented Interfaces:</dt>
 <dd><code><a href="Space.html" title="interface in com.github.sormuras.bach.project">Space</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">MainSpace</span>(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;modules, <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;modulePaths, int&nbsp;release, <a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a>&nbsp;tweaks)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">MainSpace</span>(<a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a>&nbsp;declarations, <a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a>&nbsp;modulePaths, int&nbsp;release, <a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a>&nbsp;tweaks)
 <span class="extends-implements">extends <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="Space.html" title="interface in com.github.sormuras.bach.project">Space</a></span></div>
-<div class="block">Main code space.</div>
+<div class="block">A code space for main modules.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -98,8 +105,8 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.List,java.util.List,int,com.github.sormuras.bach.project.Tweaks)" class="member-name-link">MainSpace</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;modules,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;modulePaths,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.sormuras.bach.project.ModuleDeclarations,com.github.sormuras.bach.project.ModulePaths,int,com.github.sormuras.bach.project.Tweaks)" class="member-name-link">MainSpace</a>&#8203;(<a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a>&nbsp;declarations,
+ <a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a>&nbsp;modulePaths,
  int&nbsp;release,
  <a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a>&nbsp;tweaks)</code></div>
 <div class="col-last even-row-color">
@@ -119,25 +126,25 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#declarations()" class="member-name-link">declarations</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <a href="#param-declarations"><code>declarations</code></a> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code value for this object.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#modulePaths()" class="member-name-link">modulePaths</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>modulePaths</code> record component.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#modules()" class="member-name-link">modules</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#modulePaths()" class="member-name-link">modulePaths</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>modules</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-modulePaths"><code>modulePaths</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name()" class="member-name-link">name</a>()</code></div>
@@ -147,7 +154,7 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#release()" class="member-name-link">release</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>release</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-release"><code>release</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -157,7 +164,7 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tweaks()" class="member-name-link">tweaks</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>tweaks</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-tweaks"><code>tweaks</code></a> record component.</div>
 </div>
 </div>
 </div>
@@ -177,19 +184,19 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.List,java.util.List,int,com.github.sormuras.bach.project.Tweaks)">
+<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.project.ModuleDeclarations,com.github.sormuras.bach.project.ModulePaths,int,com.github.sormuras.bach.project.Tweaks)">
 <h3>MainSpace</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MainSpace</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;modules,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;modulePaths,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">MainSpace</span>&#8203;<span class="parameters">(<a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a>&nbsp;declarations,
+ <a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a>&nbsp;modulePaths,
  int&nbsp;release,
  <a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a>&nbsp;tweaks)</span></div>
 <div class="block">Creates an instance of a <code>MainSpace</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>modules</code> - the value for the <code>modules</code> record component</dd>
-<dd><code>modulePaths</code> - the value for the <code>modulePaths</code> record component</dd>
-<dd><code>release</code> - the value for the <code>release</code> record component</dd>
-<dd><code>tweaks</code> - the value for the <code>tweaks</code> record component</dd>
+<dd><code>declarations</code> - the value for the <a href="#param-declarations"><code>declarations</code></a> record component</dd>
+<dd><code>modulePaths</code> - the value for the <a href="#param-modulePaths"><code>modulePaths</code></a> record component</dd>
+<dd><code>release</code> - the value for the <a href="#param-release"><code>release</code></a> record component</dd>
+<dd><code>tweaks</code> - the value for the <a href="#param-tweaks"><code>tweaks</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -257,24 +264,24 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 </section>
 </li>
 <li>
-<section class="detail" id="modules()">
-<h3>modules</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">modules</span>()</div>
-<div class="block">Returns the value of the <code>modules</code> record component.</div>
+<section class="detail" id="declarations()">
+<h3>declarations</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a></span>&nbsp;<span class="element-name">declarations</span>()</div>
+<div class="block">Returns the value of the <a href="#param-declarations"><code>declarations</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>modules</code> record component</dd>
+<dd>the value of the <a href="#param-declarations"><code>declarations</code></a> record component</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="modulePaths()">
 <h3>modulePaths</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;</span>&nbsp;<span class="element-name">modulePaths</span>()</div>
-<div class="block">Returns the value of the <code>modulePaths</code> record component.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a></span>&nbsp;<span class="element-name">modulePaths</span>()</div>
+<div class="block">Returns the value of the <a href="#param-modulePaths"><code>modulePaths</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>modulePaths</code> record component</dd>
+<dd>the value of the <a href="#param-modulePaths"><code>modulePaths</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -282,10 +289,10 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <section class="detail" id="release()">
 <h3>release</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">release</span>()</div>
-<div class="block">Returns the value of the <code>release</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-release"><code>release</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>release</code> record component</dd>
+<dd>the value of the <a href="#param-release"><code>release</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -293,12 +300,12 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <section class="detail" id="tweaks()">
 <h3>tweaks</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a></span>&nbsp;<span class="element-name">tweaks</span>()</div>
-<div class="block">Returns the value of the <code>tweaks</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-tweaks"><code>tweaks</code></a> record component.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Space.html#tweaks()">tweaks</a></code>&nbsp;in interface&nbsp;<code><a href="Space.html" title="interface in com.github.sormuras.bach.project">Space</a></code></dd>
 <dt>Returns:</dt>
-<dd>the value of the <code>tweaks</code> record component</dd>
+<dd>the value of the <a href="#param-tweaks"><code>tweaks</code></a> record component</dd>
 </dl>
 </section>
 </li>
