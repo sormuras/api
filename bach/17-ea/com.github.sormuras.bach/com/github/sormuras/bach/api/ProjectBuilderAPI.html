@@ -108,14 +108,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectJarFileName(java.lang.String)" class="member-name-link">buildProjectJarFileName</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectMainJar(com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)" class="member-name-link">buildProjectMainJar</a>&#8203;(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;module,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectMainJar(com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)" class="member-name-link">buildProjectMainJar</a>&#8203;(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../tool/Javac.html" title="class in com.github.sormuras.bach.tool">Javac</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectMainJavac(int,java.nio.file.Path)" class="member-name-link">buildProjectMainJavac</a>&#8203;(int&nbsp;release,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">Returns the <code>javac</code> call to compile all modules of the main space.</div>
+<div class="block">Returns the <code>javac</code> call to compile all configured modules of the main space.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectMainSpace()" class="member-name-link">buildProjectMainSpace</a>()</code></div>
@@ -123,6 +123,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectTestSpace()" class="member-name-link">buildProjectTestSpace</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../tool/Javac.html" title="class in com.github.sormuras.bach.tool">Javac</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeMainJavacCall(com.github.sormuras.bach.project.ModuleDeclaration,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)" class="member-name-link">computeMainJavacCall</a>&#8203;(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
+ <a href="../project/SourceFolder.html" title="class in com.github.sormuras.bach.project">SourceFolder</a>&nbsp;folder,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;baseClasses)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Returns the <code>javac</code> call to compile a specific version of a multi-release module.</div>
+</div>
 </div>
 </div>
 </div>
@@ -170,19 +177,32 @@ loadScripts(document, 'script');</script>
 <h3>buildProjectMainJavac</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Javac.html" title="class in com.github.sormuras.bach.tool">Javac</a></span>&nbsp;<span class="element-name">buildProjectMainJavac</span>&#8203;<span class="parameters">(int&nbsp;release,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</span></div>
-<div class="block">Returns the <code>javac</code> call to compile all modules of the main space.</div>
+<div class="block">Returns the <code>javac</code> call to compile all configured modules of the main space.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>release</code> - the release</dd>
 <dt>Returns:</dt>
-<dd>the <code>javac</code> call to compile all modules of the main space</dd>
+<dd>the <code>javac</code> call to compile all configured modules of the main space</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="computeMainJavacCall(com.github.sormuras.bach.project.ModuleDeclaration,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)">
+<h3>computeMainJavacCall</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Javac.html" title="class in com.github.sormuras.bach.tool">Javac</a></span>&nbsp;<span class="element-name">computeMainJavacCall</span>&#8203;<span class="parameters">(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
+ <a href="../project/SourceFolder.html" title="class in com.github.sormuras.bach.project">SourceFolder</a>&nbsp;folder,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;baseClasses)</span></div>
+<div class="block">Returns the <code>javac</code> call to compile a specific version of a multi-release module.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the <code>javac</code> call to compile a specific version of a multi-release module</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="buildProjectMainJar(com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)">
 <h3>buildProjectMainJar</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></span>&nbsp;<span class="element-name">buildProjectMainJar</span>&#8203;<span class="parameters">(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;module,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></span>&nbsp;<span class="element-name">buildProjectMainJar</span>&#8203;<span class="parameters">(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</span></div>
 </section>
 </li>
