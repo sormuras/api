@@ -154,7 +154,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
 <div class="col-second even-row-color"><code><a href="#modules()" class="member-name-link">modules</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns the names of the main modules to compile.</div>
+<div class="block">Returns an array of path matcher patterns for finding main module declarations.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#name()" class="member-name-link">name</a></code></div>
@@ -174,7 +174,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
 <div class="col-second even-row-color"><code><a href="#testModules()" class="member-name-link">testModules</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns the names of the test modules to compile.</div>
+<div class="block">Returns an array of path matcher patterns for finding test module declarations.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</code></div>
 <div class="col-second odd-row-color"><code><a href="#testTweaks()" class="member-name-link">testTweaks</a></code></div>
@@ -362,14 +362,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="modules()">
 <h3>modules</h3>
 <div class="member-signature"><span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">modules</span></div>
-<div class="block">Returns the names of the main modules to compile.</div>
+<div class="block">Returns an array of path matcher patterns for finding main module declarations.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the names of the main modules to compile</dd>
+<dd>an array of path matcher patterns for finding main module declarations</dd>
+<dt>See Also:</dt>
+<dd><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)" title="class or interface in java.nio.file" class="external-link"><code>FileSystem.getPathMatcher(String)</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
-<dd>{"*"}</dd>
+<dd>{"**module-info.java"}</dd>
 </dl>
 </section>
 </li>
@@ -492,14 +494,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="testModules()">
 <h3>testModules</h3>
 <div class="member-signature"><span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">testModules</span></div>
-<div class="block">Returns the names of the test modules to compile.</div>
+<div class="block">Returns an array of path matcher patterns for finding test module declarations.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the names of the test modules to compile</dd>
+<dd>an array of path matcher patterns for finding test module declarations</dd>
+<dt>See Also:</dt>
+<dd><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)" title="class or interface in java.nio.file" class="external-link"><code>FileSystem.getPathMatcher(String)</code></a></dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
-<dd>{"*"}</dd>
+<dd>{"**/test/**"}</dd>
 </dl>
 </section>
 </li>
