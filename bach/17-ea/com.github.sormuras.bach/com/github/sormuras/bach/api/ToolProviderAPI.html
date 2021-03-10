@@ -124,12 +124,17 @@ loadScripts(document, 'script');</script>
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;roots)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Recording.html" title="class in com.github.sormuras.bach">Recording</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#run(java.util.spi.ToolProvider,java.util.List)" class="member-name-link">run</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/spi/ToolProvider.html" title="class or interface in java.util.spi" class="external-link">ToolProvider</a>&nbsp;provider,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;arguments)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#run(com.github.sormuras.bach.Command,java.lang.String)" class="member-name-link">run</a>&#8203;(<a href="../Command.html" title="interface in com.github.sormuras.bach">Command</a>&lt;?&gt;&nbsp;command,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Recordings.html" title="class in com.github.sormuras.bach">Recordings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#run(java.util.stream.Stream)" class="member-name-link">run</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;? extends <a href="../Command.html" title="interface in com.github.sormuras.bach">Command</a>&lt;?&gt;&gt;&nbsp;commands)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Recording.html" title="class in com.github.sormuras.bach">Recording</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#run(java.util.spi.ToolProvider,java.util.List,java.lang.String)" class="member-name-link">run</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/spi/ToolProvider.html" title="class or interface in java.util.spi" class="external-link">ToolProvider</a>&nbsp;provider,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;arguments,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Recordings.html" title="class in com.github.sormuras.bach">Recordings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#run(java.util.stream.Stream)" class="member-name-link">run</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;? extends <a href="../Command.html" title="interface in com.github.sormuras.bach">Command</a>&lt;?&gt;&gt;&nbsp;commands)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -176,6 +181,13 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="run(com.github.sormuras.bach.Command,java.lang.String)">
+<h3>run</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../Recording.html" title="class in com.github.sormuras.bach">Recording</a></span>&nbsp;<span class="element-name">run</span>&#8203;<span class="parameters">(<a href="../Command.html" title="interface in com.github.sormuras.bach">Command</a>&lt;?&gt;&nbsp;command,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="run(com.github.sormuras.bach.Command,com.github.sormuras.bach.Command...)">
 <h3>run</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../Recordings.html" title="class in com.github.sormuras.bach">Recordings</a></span>&nbsp;<span class="element-name">run</span>&#8203;<span class="parameters">(<a href="../Command.html" title="interface in com.github.sormuras.bach">Command</a>&lt;?&gt;&nbsp;command,
@@ -197,10 +209,11 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="run(java.util.spi.ToolProvider,java.util.List)">
+<section class="detail" id="run(java.util.spi.ToolProvider,java.util.List,java.lang.String)">
 <h3>run</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../Recording.html" title="class in com.github.sormuras.bach">Recording</a></span>&nbsp;<span class="element-name">run</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/spi/ToolProvider.html" title="class or interface in java.util.spi" class="external-link">ToolProvider</a>&nbsp;provider,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;arguments)</span></div>
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;arguments,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</span></div>
 </section>
 </li>
 </ul>
