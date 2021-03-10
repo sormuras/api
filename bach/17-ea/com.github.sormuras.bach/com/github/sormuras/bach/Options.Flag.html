@@ -110,32 +110,36 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Enum Constant</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="#HELP" class="member-name-link">HELP</a></code></div>
+<div class="col-first even-row-color"><code><a href="#GUESS" class="member-name-link">GUESS</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Activate all best-effort guessing magic.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="#HELP" class="member-name-link">HELP</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Print usage information and exit.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#RUN_COMMANDS_SEQUENTIALLY" class="member-name-link">RUN_COMMANDS_SEQUENTIALLY</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#RUN_COMMANDS_SEQUENTIALLY" class="member-name-link">RUN_COMMANDS_SEQUENTIALLY</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Prevent parallel execution of commands.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#SHOW_VERSION" class="member-name-link">SHOW_VERSION</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#SHOW_VERSION" class="member-name-link">SHOW_VERSION</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Print Bach's version and continue.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#SILENT" class="member-name-link">SILENT</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#SILENT" class="member-name-link">SILENT</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Mute all normal (expected) printouts.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#STRICT" class="member-name-link">STRICT</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#STRICT" class="member-name-link">STRICT</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Activate all verification measures available.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#VERBOSE" class="member-name-link">VERBOSE</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#VERBOSE" class="member-name-link">VERBOSE</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Print messages about what Bach is doing.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#VERSION" class="member-name-link">VERSION</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#VERSION" class="member-name-link">VERSION</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Print Bach's version and exit.</div>
 </div>
 </div>
@@ -220,6 +224,23 @@ the order they are declared.</div>
 <h3>HELP</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a></span>&nbsp;<span class="element-name">HELP</span></div>
 <div class="block">Print usage information and exit.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="GUESS">
+<h3>GUESS</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Options.Flag.html" title="enum class in com.github.sormuras.bach">Options.Flag</a></span>&nbsp;<span class="element-name">GUESS</span></div>
+<div class="block">Activate all best-effort guessing magic.
+
+ <ul>
+   <li>Lookup external modules via `sormuras/modules`
+   <li>Lookup external modules via GitHub releases
+ </ul></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd><a href="lookup/SormurasModulesModuleLookup.html" title="class in com.github.sormuras.bach.lookup"><code>SormurasModulesModuleLookup</code></a>, 
+<a href="lookup/GitHubReleasesModuleLookup.html" title="class in com.github.sormuras.bach.lookup"><code>GitHubReleasesModuleLookup</code></a></dd>
+</dl>
 </section>
 </li>
 <li>
