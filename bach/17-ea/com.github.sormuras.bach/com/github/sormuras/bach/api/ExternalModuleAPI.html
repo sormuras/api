@@ -100,7 +100,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#bach()" class="member-name-link">bach</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeExternalModuleFile(java.lang.String)" class="member-name-link">computeExternalModuleFile</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
@@ -129,12 +131,24 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#loadMissingExternalModules()" class="member-name-link">loadMissingExternalModules</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/TreeSet.html" title="class or interface in java.util" class="external-link">TreeSet</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#required(java.lang.module.ModuleFinder)" class="member-name-link">required</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleFinder.html" title="class or interface in java.lang.module" class="external-link">ModuleFinder</a>&nbsp;finder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#log(java.lang.String,java.lang.Object...)" class="member-name-link">log</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/TreeSet.html" title="class or interface in java.util" class="external-link">TreeSet</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#required(java.util.stream.Stream)" class="member-name-link">required</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor</a>&gt;&nbsp;descriptors)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#required(java.lang.module.ModuleFinder)" class="member-name-link">required</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleFinder.html" title="class or interface in java.lang.module" class="external-link">ModuleFinder</a>&nbsp;finder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/TreeSet.html" title="class or interface in java.util" class="external-link">TreeSet</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#required(java.util.stream.Stream)" class="member-name-link">required</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor</a>&gt;&nbsp;descriptors)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#say(java.lang.String,java.lang.Object...)" class="member-name-link">say</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#verifyExternalModule(java.lang.module.ModuleDescriptor,java.nio.file.Path)" class="member-name-link">verifyExternalModule</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor</a>&nbsp;module,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;jar)</code></div>
@@ -156,12 +170,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="bach()">
-<h3>bach</h3>
-<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
-</section>
-</li>
 <li>
 <section class="detail" id="computeExternalModuleUri(java.lang.String)">
 <h3>computeExternalModuleUri</h3>
@@ -255,6 +263,33 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="required(java.util.stream.Stream)">
 <h3>required</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/TreeSet.html" title="class or interface in java.util" class="external-link">TreeSet</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">required</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor</a>&gt;&nbsp;descriptors)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="bach()">
+<h3>bach</h3>
+<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the underlying instance of <code>Bach</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="log(java.lang.String,java.lang.Object...)">
+<h3>log</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">log</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="say(java.lang.String,java.lang.Object...)">
+<h3>say</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">say</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
 </section>
 </li>
 </ul>

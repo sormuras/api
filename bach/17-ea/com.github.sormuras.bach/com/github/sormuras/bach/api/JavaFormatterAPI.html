@@ -115,7 +115,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#bach()" class="member-name-link">bach</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Command.html" title="interface in com.github.sormuras.bach">Command</a>&lt;?&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeJavaSourceFilesFormatCommand(java.util.List,com.github.sormuras.bach.api.JavaFormatterAPI.Mode,com.github.sormuras.bach.project.JavaStyle)" class="member-name-link">computeJavaSourceFilesFormatCommand</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&gt;&nbsp;files,
  <a href="JavaFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">JavaFormatterAPI.Mode</a>&nbsp;mode,
@@ -130,6 +132,18 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#formatJavaSourceFiles(com.github.sormuras.bach.api.JavaFormatterAPI.Mode)" class="member-name-link">formatJavaSourceFiles</a>&#8203;(<a href="JavaFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">JavaFormatterAPI.Mode</a>&nbsp;mode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#log(java.lang.String,java.lang.Object...)" class="member-name-link">log</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#say(java.lang.String,java.lang.Object...)" class="member-name-link">say</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
+</div>
 </div>
 </div>
 </div>
@@ -144,12 +158,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="bach()">
-<h3>bach</h3>
-<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
-</section>
-</li>
 <li>
 <section class="detail" id="computeJavaSourceFilesToFormat()">
 <h3>computeJavaSourceFilesToFormat</h3>
@@ -174,6 +182,33 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="formatJavaSourceFiles(com.github.sormuras.bach.api.JavaFormatterAPI.Mode)">
 <h3>formatJavaSourceFiles</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">formatJavaSourceFiles</span>&#8203;<span class="parameters">(<a href="JavaFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">JavaFormatterAPI.Mode</a>&nbsp;mode)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="bach()">
+<h3>bach</h3>
+<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the underlying instance of <code>Bach</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="log(java.lang.String,java.lang.Object...)">
+<h3>log</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">log</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="say(java.lang.String,java.lang.Object...)">
+<h3>say</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">say</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
 </section>
 </li>
 </ul>

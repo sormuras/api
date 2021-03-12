@@ -100,7 +100,21 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#bach()" class="member-name-link">bach</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#log(java.lang.String,java.lang.Object...)" class="member-name-link">log</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#say(java.lang.String,java.lang.Object...)" class="member-name-link">say</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbook()" class="member-name-link">writeLogbook</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
@@ -108,16 +122,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookLines(java.time.LocalDateTime)" class="member-name-link">writeLogbookLines</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a>&nbsp;now)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookModulesOverviewLines()" class="member-name-link">writeLogbookModulesOverviewLines</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookMessages()" class="member-name-link">writeLogbookMessages</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookProjectConfiguration()" class="member-name-link">writeLogbookProjectConfiguration</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookModulesOverview()" class="member-name-link">writeLogbookModulesOverview</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookRecordingsDetailLines()" class="member-name-link">writeLogbookRecordingsDetailLines</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookToolRunDetails()" class="member-name-link">writeLogbookToolRunDetails</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookRecordingsOverviewLines()" class="member-name-link">writeLogbookRecordingsOverviewLines</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#writeLogbookToolRunOverview()" class="member-name-link">writeLogbookToolRunOverview</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 </div>
 </div>
@@ -133,12 +147,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="bach()">
-<h3>bach</h3>
-<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
-</section>
-</li>
 <li>
 <section class="detail" id="writeLogbook()">
 <h3>writeLogbook</h3>
@@ -157,27 +165,54 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="writeLogbookModulesOverviewLines()">
-<h3>writeLogbookModulesOverviewLines</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">writeLogbookModulesOverviewLines</span>()</div>
+<section class="detail" id="writeLogbookModulesOverview()">
+<h3>writeLogbookModulesOverview</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">writeLogbookModulesOverview</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="writeLogbookRecordingsOverviewLines()">
-<h3>writeLogbookRecordingsOverviewLines</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">writeLogbookRecordingsOverviewLines</span>()</div>
+<section class="detail" id="writeLogbookToolRunOverview()">
+<h3>writeLogbookToolRunOverview</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">writeLogbookToolRunOverview</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="writeLogbookRecordingsDetailLines()">
-<h3>writeLogbookRecordingsDetailLines</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">writeLogbookRecordingsDetailLines</span>()</div>
+<section class="detail" id="writeLogbookToolRunDetails()">
+<h3>writeLogbookToolRunDetails</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">writeLogbookToolRunDetails</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="writeLogbookProjectConfiguration()">
-<h3>writeLogbookProjectConfiguration</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">writeLogbookProjectConfiguration</span>()</div>
+<section class="detail" id="writeLogbookMessages()">
+<h3>writeLogbookMessages</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">writeLogbookMessages</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="bach()">
+<h3>bach</h3>
+<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the underlying instance of <code>Bach</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="log(java.lang.String,java.lang.Object...)">
+<h3>log</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">log</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="say(java.lang.String,java.lang.Object...)">
+<h3>say</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">say</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
 </section>
 </li>
 </ul>

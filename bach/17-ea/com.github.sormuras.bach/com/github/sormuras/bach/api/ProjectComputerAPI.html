@@ -100,7 +100,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#bach()" class="member-name-link">bach</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeProject()" class="member-name-link">computeProject</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
@@ -131,7 +133,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeProjectName(com.github.sormuras.bach.ProjectInfo,java.lang.String)" class="member-name-link">computeProjectName</a>&#8203;(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;base)</code></div>
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;root)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeProjectSettings(com.github.sormuras.bach.ProjectInfo)" class="member-name-link">computeProjectSettings</a>&#8203;(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info)</code></div>
@@ -157,6 +159,18 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#computeProjectVersion(com.github.sormuras.bach.ProjectInfo)" class="member-name-link">computeProjectVersion</a>&#8203;(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#log(java.lang.String,java.lang.Object...)" class="member-name-link">log</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#say(java.lang.String,java.lang.Object...)" class="member-name-link">say</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
+</div>
 </div>
 </div>
 </div>
@@ -171,12 +185,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="bach()">
-<h3>bach</h3>
-<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
-</section>
-</li>
 <li>
 <section class="detail" id="computeProject()">
 <h3>computeProject</h3>
@@ -199,7 +207,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="computeProjectName(com.github.sormuras.bach.ProjectInfo,java.lang.String)">
 <h3>computeProjectName</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">computeProjectName</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;base)</span></div>
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;root)</span></div>
 </section>
 </li>
 <li>
@@ -279,6 +287,33 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="computeProjectTweaks(com.github.sormuras.bach.ProjectInfo.Tweak...)">
 <h3>computeProjectTweaks</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../project/Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a></span>&nbsp;<span class="element-name">computeProjectTweaks</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>...&nbsp;infos)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="bach()">
+<h3>bach</h3>
+<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the underlying instance of <code>Bach</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="log(java.lang.String,java.lang.Object...)">
+<h3>log</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">log</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="say(java.lang.String,java.lang.Object...)">
+<h3>say</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">say</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
 </section>
 </li>
 </ul>

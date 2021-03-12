@@ -100,7 +100,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#bach()" class="member-name-link">bach</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProject()" class="member-name-link">buildProject</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
@@ -143,7 +145,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../tool/Javac.html" title="class in com.github.sormuras.bach.tool">Javac</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectTestJavac(java.nio.file.Path)" class="member-name-link">buildProjectTestJavac</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Recording.html" title="class in com.github.sormuras.bach">Recording</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../Logbook.Run.html" title="class in com.github.sormuras.bach">Logbook.Run</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectTestJUnitRun(java.nio.file.Path,java.lang.String)" class="member-name-link">buildProjectTestJUnitRun</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
@@ -151,6 +153,18 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#buildProjectTestSpace()" class="member-name-link">buildProjectTestSpace</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Build modules of the test code space and launch JUnit Platform for each of them.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#log(java.lang.String,java.lang.Object...)" class="member-name-link">log</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#say(java.lang.String,java.lang.Object...)" class="member-name-link">say</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
 </div>
 </div>
 </div>
@@ -166,12 +180,6 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="bach()">
-<h3>bach</h3>
-<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
-</section>
-</li>
 <li>
 <section class="detail" id="buildProject()">
 <h3>buildProject</h3>
@@ -284,8 +292,35 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="buildProjectTestJUnitRun(java.nio.file.Path,java.lang.String)">
 <h3>buildProjectTestJUnitRun</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../Recording.html" title="class in com.github.sormuras.bach">Recording</a></span>&nbsp;<span class="element-name">buildProjectTestJUnitRun</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../Logbook.Run.html" title="class in com.github.sormuras.bach">Logbook.Run</a></span>&nbsp;<span class="element-name">buildProjectTestJUnitRun</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="bach()">
+<h3>bach</h3>
+<div class="member-signature"><span class="return-type"><a href="../Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
+<div class="block">Returns the underlying instance of <code>Bach</code>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the underlying instance of <code>Bach</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="log(java.lang.String,java.lang.Object...)">
+<h3>log</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">log</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="say(java.lang.String,java.lang.Object...)">
+<h3>say</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">say</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
+<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
 </section>
 </li>
 </ul>
