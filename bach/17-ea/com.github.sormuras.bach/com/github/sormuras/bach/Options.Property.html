@@ -113,21 +113,25 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Name of the module to load on startup passed via <code>--bach-info MODULE</code>.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#PROJECT_NAME" class="member-name-link">PROJECT_NAME</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#LIMIT_TOOLS" class="member-name-link">LIMIT_TOOLS</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Add specified tool to the universe of executable tools.</div>
+</div>
+<div class="col-first even-row-color"><code><a href="#PROJECT_NAME" class="member-name-link">PROJECT_NAME</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Project's name passed via <code>--project-name NAME</code>.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#PROJECT_TARGETS_JAVA" class="member-name-link">PROJECT_TARGETS_JAVA</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#PROJECT_TARGETS_JAVA" class="member-name-link">PROJECT_TARGETS_JAVA</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Compile main modules for specified Java release.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#PROJECT_VERSION" class="member-name-link">PROJECT_VERSION</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#PROJECT_VERSION" class="member-name-link">PROJECT_VERSION</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Project's version passed via <code>--project-version VERSION</code>.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#SKIP_TOOL" class="member-name-link">SKIP_TOOL</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">Skip all executions for the specified tool, this option is repeatable</div>
+<div class="col-first odd-row-color"><code><a href="#SKIP_TOOLS" class="member-name-link">SKIP_TOOLS</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Skip all executions for the specified tool, this option is repeatable.</div>
 </div>
 </div>
 </section>
@@ -215,10 +219,17 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="SKIP_TOOL">
-<h3>SKIP_TOOL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Options.Property.html" title="enum class in com.github.sormuras.bach">Options.Property</a></span>&nbsp;<span class="element-name">SKIP_TOOL</span></div>
-<div class="block">Skip all executions for the specified tool, this option is repeatable</div>
+<section class="detail" id="LIMIT_TOOLS">
+<h3>LIMIT_TOOLS</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Options.Property.html" title="enum class in com.github.sormuras.bach">Options.Property</a></span>&nbsp;<span class="element-name">LIMIT_TOOLS</span></div>
+<div class="block">Add specified tool to the universe of executable tools.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="SKIP_TOOLS">
+<h3>SKIP_TOOLS</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Options.Property.html" title="enum class in com.github.sormuras.bach">Options.Property</a></span>&nbsp;<span class="element-name">SKIP_TOOLS</span></div>
+<div class="block">Skip all executions for the specified tool, this option is repeatable.</div>
 </section>
 </li>
 </ul>

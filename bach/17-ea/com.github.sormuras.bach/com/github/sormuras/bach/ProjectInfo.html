@@ -106,8 +106,13 @@ loadScripts(document, 'script');</script>
 <div class="block">An external module metadata configuration annotation.</div>
 </div>
 <div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="ProjectInfo.Tweak.html" class="type-name-link" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a></code></div>
+<div class="col-second odd-row-color"><code><a href="ProjectInfo.Tools.html" class="type-name-link" title="annotation in com.github.sormuras.bach">ProjectInfo.Tools</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Tools-related settings.</div>
+</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="ProjectInfo.Tweak.html" class="type-name-link" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Tool name-args pair annotation.</div>
 </div>
 </div>
@@ -180,14 +185,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Returns the additional test space arguments to be passed on a per-tool basis.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</code></div>
-<div class="col-second even-row-color"><code><a href="#tweaks()" class="member-name-link">tweaks</a></code></div>
+<div class="col-first even-row-color"><code><a href="ProjectInfo.Tools.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tools</a></code></div>
+<div class="col-second even-row-color"><code><a href="#tools()" class="member-name-link">tools</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Returns the tools-releated settings.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</code></div>
+<div class="col-second odd-row-color"><code><a href="#tweaks()" class="member-name-link">tweaks</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Returns the additional main space arguments to be passed on a per-tool basis.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><a href="#version()" class="member-name-link">version</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Returns the version of the project, defaults to <code>"0"</code>.</div>
 </div>
 </div>
@@ -533,6 +543,21 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Default:</dt>
 <dd>{@com.github.sormuras.bach.ProjectInfo.Tweak(tool="javac", option="-encoding", value={"UTF-8"})}</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="tools()">
+<h3>tools</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Tools.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tools</a></span>&nbsp;<span class="element-name">tools</span></div>
+<div class="block">Returns the tools-releated settings.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the tools-releated settings</dd>
+</dl>
+<dl class="notes">
+<dt>Default:</dt>
+<dd>@com.github.sormuras.bach.ProjectInfo.Tools</dd>
 </dl>
 </section>
 </li>

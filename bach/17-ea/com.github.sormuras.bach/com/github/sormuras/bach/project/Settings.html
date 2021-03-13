@@ -79,12 +79,13 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>Record Components:</dt>
-<dd><code><span id="param-folders">folders</span></code> - well-known directories</dd>
 <dd><code><span id="param-name">name</span></code> - the name of the project</dd>
 <dd><code><span id="param-version">version</span></code> - the version of the project</dd>
+<dd><code><span id="param-folders">folders</span></code> - well-known directories</dd>
+<dd><code><span id="param-tools">tools</span></code> - tool-related settings</dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Settings</span>(<a href="Folders.html" title="class in com.github.sormuras.bach.project">Folders</a>&nbsp;folders, <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Settings</span>(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name, <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version, <a href="Folders.html" title="class in com.github.sormuras.bach.project">Folders</a>&nbsp;folders, <a href="Tools.html" title="class in com.github.sormuras.bach.project">Tools</a>&nbsp;tools)
 <span class="extends-implements">extends <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">Fundamental project properties.</div>
 </section>
@@ -98,9 +99,10 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.github.sormuras.bach.project.Folders,java.lang.String,java.lang.module.ModuleDescriptor.Version)" class="member-name-link">Settings</a>&#8203;(<a href="Folders.html" title="class in com.github.sormuras.bach.project">Folders</a>&nbsp;folders,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.module.ModuleDescriptor.Version,com.github.sormuras.bach.project.Folders,com.github.sormuras.bach.project.Tools)" class="member-name-link">Settings</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version,
+ <a href="Folders.html" title="class in com.github.sormuras.bach.project">Folders</a>&nbsp;folders,
+ <a href="Tools.html" title="class in com.github.sormuras.bach.project">Tools</a>&nbsp;tools)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Settings</code> record class.</div>
 </div>
@@ -149,30 +151,36 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns a copy of this instance with the given component replaced.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">of</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;root,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.lang.String,java.lang.String,java.lang.String,com.github.sormuras.bach.project.Tools)" class="member-name-link">of</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;root,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version,
+ <a href="Tools.html" title="class in com.github.sormuras.bach.project">Tools</a>&nbsp;tools)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns a <code>Settings</code> instance based on the given components.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Tools.html" title="class in com.github.sormuras.bach.project">Tools</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tools()" class="member-name-link">tools</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the value of the <a href="#param-tools"><code>tools</code></a> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version()" class="member-name-link">version</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version()" class="member-name-link">version</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns the value of the <a href="#param-version"><code>version</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.module.ModuleDescriptor.Version)" class="member-name-link">version</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.module.ModuleDescriptor.Version)" class="member-name-link">version</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a copy of this instance with the given component replaced.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.String)" class="member-name-link">version</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.String)" class="member-name-link">version</a>&#8203;(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a copy of this instance with the given component replaced.</div>
 </div>
 </div>
@@ -193,17 +201,19 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.project.Folders,java.lang.String,java.lang.module.ModuleDescriptor.Version)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.module.ModuleDescriptor.Version,com.github.sormuras.bach.project.Folders,com.github.sormuras.bach.project.Tools)">
 <h3>Settings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Settings</span>&#8203;<span class="parameters">(<a href="Folders.html" title="class in com.github.sormuras.bach.project">Folders</a>&nbsp;folders,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Settings</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html" title="class or interface in java.lang.module" class="external-link">ModuleDescriptor.Version</a>&nbsp;version,
+ <a href="Folders.html" title="class in com.github.sormuras.bach.project">Folders</a>&nbsp;folders,
+ <a href="Tools.html" title="class in com.github.sormuras.bach.project">Tools</a>&nbsp;tools)</span></div>
 <div class="block">Creates an instance of a <code>Settings</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>folders</code> - the value for the <a href="#param-folders"><code>folders</code></a> record component</dd>
 <dd><code>name</code> - the value for the <a href="#param-name"><code>name</code></a> record component</dd>
 <dd><code>version</code> - the value for the <a href="#param-version"><code>version</code></a> record component</dd>
+<dd><code>folders</code> - the value for the <a href="#param-folders"><code>folders</code></a> record component</dd>
+<dd><code>tools</code> - the value for the <a href="#param-tools"><code>tools</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -216,11 +226,12 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="of(java.lang.String,java.lang.String,java.lang.String)">
+<section class="detail" id="of(java.lang.String,java.lang.String,java.lang.String,com.github.sormuras.bach.project.Tools)">
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Settings.html" title="class in com.github.sormuras.bach.project">Settings</a></span>&nbsp;<span class="element-name">of</span>&#8203;<span class="parameters">(<a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;root,
  <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name,
- <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</span></div>
+ <a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version,
+ <a href="Tools.html" title="class in com.github.sormuras.bach.project">Tools</a>&nbsp;tools)</span></div>
 <div class="block">Returns a <code>Settings</code> instance based on the given components.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -314,17 +325,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="folders()">
-<h3>folders</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Folders.html" title="class in com.github.sormuras.bach.project">Folders</a></span>&nbsp;<span class="element-name">folders</span>()</div>
-<div class="block">Returns the value of the <a href="#param-folders"><code>folders</code></a> record component.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the value of the <a href="#param-folders"><code>folders</code></a> record component</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="name()">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://download.java.net/java/early_access/jdk17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span>()</div>
@@ -343,6 +343,28 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the value of the <a href="#param-version"><code>version</code></a> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="folders()">
+<h3>folders</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Folders.html" title="class in com.github.sormuras.bach.project">Folders</a></span>&nbsp;<span class="element-name">folders</span>()</div>
+<div class="block">Returns the value of the <a href="#param-folders"><code>folders</code></a> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <a href="#param-folders"><code>folders</code></a> record component</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="tools()">
+<h3>tools</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Tools.html" title="class in com.github.sormuras.bach.project">Tools</a></span>&nbsp;<span class="element-name">tools</span>()</div>
+<div class="block">Returns the value of the <a href="#param-tools"><code>tools</code></a> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <a href="#param-tools"><code>tools</code></a> record component</dd>
 </dl>
 </section>
 </li>
