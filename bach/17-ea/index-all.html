@@ -155,7 +155,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:B">B</h2>
 <dl class="index">
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#bach()" class="member-name-link">bach()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/JavaFormatterAPI.html#bach()" class="member-name-link">bach()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/JavaFormatterAPI.html" title="interface in com.github.sormuras.bach.api">JavaFormatterAPI</a></dt>
 <dd>
 <div class="block">Returns the underlying instance of <code>Bach</code>.</div>
 </dd>
@@ -197,45 +197,59 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#build()" class="member-name-link">build()</a> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProject()" class="member-name-link">buildProject()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainBuildModules()" class="member-name-link">buildProjectMainBuildModules()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
+<dd>
+<div class="block">Compile and jar main modules.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainCheckModules()" class="member-name-link">buildProjectMainCheckModules()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
+<dd>
+<div class="block">Check main modules.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainGenerateAPIDocumentation()" class="member-name-link">buildProjectMainGenerateAPIDocumentation()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
+<dd>
+<div class="block">Generate HTML pages of API documentation from main modules' source files.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainGenerateCustomRuntimeImage()" class="member-name-link">buildProjectMainGenerateCustomRuntimeImage()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
+<dd>
+<div class="block">Assemble and optimize main modules and their dependencies into a custom runtime image.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainJar(com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)" class="member-name-link">buildProjectMainJar(ModuleDeclaration, Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainJar(com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)" class="member-name-link">buildProjectMainJar(ModuleDeclaration, Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainJarFileName(java.lang.String)" class="member-name-link">buildProjectMainJarFileName(String)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainJarFileName(java.lang.String)" class="member-name-link">buildProjectMainJarFileName(String)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainJavac(int,java.nio.file.Path)" class="member-name-link">buildProjectMainJavac(int, Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainJavac(int,java.nio.file.Path)" class="member-name-link">buildProjectMainJavac(int, Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>
 <div class="block">Returns the <code>javac</code> call to compile all configured modules of the main space.</div>
 </dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainJavac(com.github.sormuras.bach.project.ModuleDeclaration,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)" class="member-name-link">buildProjectMainJavac(ModuleDeclaration, SourceFolder, Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainJavac(com.github.sormuras.bach.project.ModuleDeclaration,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)" class="member-name-link">buildProjectMainJavac(ModuleDeclaration, SourceFolder, Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>
 <div class="block">Returns the <code>javac</code> call to compile a specific version of a multi-release module.</div>
 </dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainJavadoc(java.nio.file.Path)" class="member-name-link">buildProjectMainJavadoc(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainJavadoc(java.nio.file.Path)" class="member-name-link">buildProjectMainJavadoc(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainJavadocJar(java.nio.file.Path)" class="member-name-link">buildProjectMainJavadocJar(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainJavadocJar(java.nio.file.Path)" class="member-name-link">buildProjectMainJavadocJar(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>
 <div class="block">Returns the jar call generating the API documentation archive.</div>
 </dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainJDeps(com.github.sormuras.bach.project.ModuleDeclaration)" class="member-name-link">buildProjectMainJDeps(ModuleDeclaration)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainJDeps(com.github.sormuras.bach.project.ModuleDeclaration)" class="member-name-link">buildProjectMainJDeps(ModuleDeclaration)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainJLink(java.nio.file.Path)" class="member-name-link">buildProjectMainJLink(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainJLink(java.nio.file.Path)" class="member-name-link">buildProjectMainJLink(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainSpace()" class="member-name-link">buildProjectMainSpace()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainSpace()" class="member-name-link">buildProjectMainSpace()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>
-<div class="block">Build modules of the main code space.</div>
+<div class="block">Build all assets of the main code space.</div>
 </dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectMainSpaceClassesForJava8(java.nio.file.Path)" class="member-name-link">buildProjectMainSpaceClassesForJava8(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html#buildProjectMainSpaceClassesForJava8(java.nio.file.Path)" class="member-name-link">buildProjectMainSpaceClassesForJava8(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectTestJar(java.nio.file.Path,java.lang.String,java.nio.file.Path)" class="member-name-link">buildProjectTestJar(Path, String, Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html#buildProjectTestJar(java.nio.file.Path,java.lang.String,java.nio.file.Path)" class="member-name-link">buildProjectTestJar(Path, String, Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildTestSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectTestJarFileName(java.lang.String)" class="member-name-link">buildProjectTestJarFileName(String)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html#buildProjectTestJarFileName(java.lang.String)" class="member-name-link">buildProjectTestJarFileName(String)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildTestSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectTestJavac(java.nio.file.Path)" class="member-name-link">buildProjectTestJavac(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html#buildProjectTestJavac(java.nio.file.Path)" class="member-name-link">buildProjectTestJavac(Path)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildTestSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectTestJUnitRun(java.nio.file.Path,java.lang.String)" class="member-name-link">buildProjectTestJUnitRun(Path, String)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html#buildProjectTestJUnitRun(java.nio.file.Path,java.lang.String)" class="member-name-link">buildProjectTestJUnitRun(Path, String)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildTestSpaceAPI</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html#buildProjectTestSpace()" class="member-name-link">buildProjectTestSpace()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html#buildProjectTestSpace()" class="member-name-link">buildProjectTestSpace()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html" title="interface in com.github.sormuras.bach.api">ProjectBuildTestSpaceAPI</a></dt>
 <dd>
 <div class="block">Build modules of the test code space and launch JUnit Platform for each of them.</div>
 </dd>
@@ -1539,9 +1553,13 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Project's version passed via <code>--project-version VERSION</code>.</div>
 </dd>
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuilderAPI.html" class="type-name-link" title="interface in com.github.sormuras.bach.api">ProjectBuilderAPI</a> - Interface in <a href="com.github.sormuras.bach/com/github/sormuras/bach/api/package-summary.html">com.github.sormuras.bach.api</a></dt>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildMainSpaceAPI.html" class="type-name-link" title="interface in com.github.sormuras.bach.api">ProjectBuildMainSpaceAPI</a> - Interface in <a href="com.github.sormuras.bach/com/github/sormuras/bach/api/package-summary.html">com.github.sormuras.bach.api</a></dt>
 <dd>
 <div class="block">Methods related to building projects.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectBuildTestSpaceAPI.html" class="type-name-link" title="interface in com.github.sormuras.bach.api">ProjectBuildTestSpaceAPI</a> - Interface in <a href="com.github.sormuras.bach/com/github/sormuras/bach/api/package-summary.html">com.github.sormuras.bach.api</a></dt>
+<dd>
+<div class="block">Methods related to building and running test modules.</div>
 </dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html" class="type-name-link" title="interface in com.github.sormuras.bach.api">ProjectComputerAPI</a> - Interface in <a href="com.github.sormuras.bach/com/github/sormuras/bach/api/package-summary.html">com.github.sormuras.bach.api</a></dt>
 <dd>
