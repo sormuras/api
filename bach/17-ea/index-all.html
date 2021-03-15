@@ -348,6 +348,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html#computeProjectInfo()" class="member-name-link">computeProjectInfo()</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html" title="interface in com.github.sormuras.bach.api">ProjectComputerAPI</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html#computeProjectJarWithSources(com.github.sormuras.bach.ProjectInfo)" class="member-name-link">computeProjectJarWithSources(ProjectInfo)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html" title="interface in com.github.sormuras.bach.api">ProjectComputerAPI</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)" class="member-name-link">computeProjectLibraries(ProjectInfo, Settings)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html" title="interface in com.github.sormuras.bach.api">ProjectComputerAPI</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html#computeProjectModuleDeclaration(java.nio.file.Path,java.nio.file.Path,boolean)" class="member-name-link">computeProjectModuleDeclaration(Path, Path, boolean)</a> - Method in interface com.github.sormuras.bach.api.<a href="com.github.sormuras.bach/com/github/sormuras/bach/api/ProjectComputerAPI.html" title="interface in com.github.sormuras.bach.api">ProjectComputerAPI</a></dt>
@@ -864,6 +866,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.html#ifTrue(boolean,java.util.function.UnaryOperator)" class="member-name-link">ifTrue(boolean, UnaryOperator&lt;C&gt;)</a> - Method in interface com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Command.html" title="interface in com.github.sormuras.bach">Command</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.html#includeSourceFilesIntoModules()" class="member-name-link">includeSourceFilesIntoModules()</a> - Element in annotation interface com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a></dt>
+<dd>
+<div class="block">Returns <code>true</code> in order to include all files found in source folders into their modules.</div>
+</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html#info()" class="member-name-link">info()</a> - Method in class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Bach.html" title="class in com.github.sormuras.bach">Bach</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/Options.html#info()" class="member-name-link">info()</a> - Method in record class com.github.sormuras.bach.<a href="com.github.sormuras.bach/com/github/sormuras/bach/Options.html" title="class in com.github.sormuras.bach">Options</a></dt>
@@ -936,6 +942,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/tool/Jar.html#%3Cinit%3E(java.util.List)" class="member-name-link">Jar(List&lt;String&gt;)</a> - Constructor for record class com.github.sormuras.bach.tool.<a href="com.github.sormuras.bach/com/github/sormuras/bach/tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></dt>
 <dd>
 <div class="block">Creates an instance of a <code>Jar</code> record class.</div>
+</dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/project/Flag.html#JAR_WITH_SOURCES" class="member-name-link">JAR_WITH_SOURCES</a> - Enum constant in enum class com.github.sormuras.bach.project.<a href="com.github.sormuras.bach/com/github/sormuras/bach/project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a></dt>
+<dd>
+<div class="block">Include all files found in source folders into their modular JAR files.</div>
 </dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/tool/ExecutableJar.html#java()" class="member-name-link">java()</a> - Method in interface com.github.sormuras.bach.tool.<a href="com.github.sormuras.bach/com/github/sormuras/bach/tool/ExecutableJar.html" title="interface in com.github.sormuras.bach.tool">ExecutableJar</a></dt>
 <dd>&nbsp;</dd>
@@ -1813,6 +1823,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">The module lookup always returns the same URI for a given module name.</div>
 </dd>
+<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/project/SourceFolders.html#stream(int)" class="member-name-link">stream(int)</a> - Method in record class com.github.sormuras.bach.project.<a href="com.github.sormuras.bach/com/github/sormuras/bach/project/SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a></dt>
+<dd>
+<div class="block">Returns a stream of source folders that target the specified release.</div>
+</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/project/Flag.html#STRICT" class="member-name-link">STRICT</a> - Enum constant in enum class com.github.sormuras.bach.project.<a href="com.github.sormuras.bach/com/github/sormuras/bach/project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a></dt>
 <dd>
 <div class="block">Activate all verification measures available.</div>
@@ -1824,10 +1838,6 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:T">T</h2>
 <dl class="index">
-<dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/project/SourceFolders.html#targets(int)" class="member-name-link">targets(int)</a> - Method in record class com.github.sormuras.bach.project.<a href="com.github.sormuras.bach/com/github/sormuras/bach/project/SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a></dt>
-<dd>
-<div class="block">Returns the first source folder that targets the specified release.</div>
-</dd>
 <dt><a href="com.github.sormuras.bach/com/github/sormuras/bach/project/Spaces.html#test()" class="member-name-link">test()</a> - Method in record class com.github.sormuras.bach.project.<a href="com.github.sormuras.bach/com/github/sormuras/bach/project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a></dt>
 <dd>
 <div class="block">Returns the value of the <code>test</code> record component.</div>
