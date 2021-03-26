@@ -106,8 +106,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the underlying instance of <code>Bach</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectTestJar(java.nio.file.Path,java.lang.String,java.nio.file.Path)">buildProjectTestJar</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module,
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectTestJar(java.nio.file.Path,com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)">buildProjectTestJar</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
+ <a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
@@ -125,8 +125,8 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectTestRuns(java.nio.file.Path,java.util.List)">buildProjectTestRuns</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;names)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectTestRuns(java.nio.file.Path,com.github.sormuras.bach.project.ModuleDeclarations)">buildProjectTestRuns</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
+ <a href="../project/ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a>&nbsp;modules)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default void</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectTestSpace()">buildProjectTestSpace</a></span>()</code></div>
@@ -186,18 +186,18 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="buildProjectTestJar(java.nio.file.Path,java.lang.String,java.nio.file.Path)">
+<section class="detail" id="buildProjectTestJar(java.nio.file.Path,com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)">
 <h3>buildProjectTestJar</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></span>&nbsp;<span class="element-name">buildProjectTestJar</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;module,
+ <a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="buildProjectTestRuns(java.nio.file.Path,java.util.List)">
+<section class="detail" id="buildProjectTestRuns(java.nio.file.Path,com.github.sormuras.bach.project.ModuleDeclarations)">
 <h3>buildProjectTestRuns</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">buildProjectTestRuns</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;testModules,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;names)</span></div>
+ <a href="../project/ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a>&nbsp;modules)</span></div>
 </section>
 </li>
 <li>
