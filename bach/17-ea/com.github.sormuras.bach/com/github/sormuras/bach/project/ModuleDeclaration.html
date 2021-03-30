@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>Record Components:</dt>
+<dd><code><span id="param-root">root</span></code> - the content root directory</dd>
 <dd><code><span id="param-reference">reference</span></code> - the module info reference</dd>
 <dd><code><span id="param-sources">sources</span></code> - the source folders</dd>
 <dd><code><span id="param-resources">resources</span></code> - the resource folders</dd>
@@ -91,7 +92,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ModuleDeclaration</span>(<a href="ModuleInfoReference.html" title="class in com.github.sormuras.bach.project">ModuleInfoReference</a>&nbsp;reference, <a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a>&nbsp;sources, <a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a>&nbsp;resources)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">ModuleDeclaration</span>(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root, <a href="ModuleInfoReference.html" title="class in com.github.sormuras.bach.project">ModuleInfoReference</a>&nbsp;reference, <a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a>&nbsp;sources, <a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a>&nbsp;resources)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;<a href="ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&gt;</span></div>
 <div class="block">A module declaration connects a module compilation unit with source folders and resource folders.</div>
@@ -106,7 +107,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(com.github.sormuras.bach.project.ModuleInfoReference,com.github.sormuras.bach.project.SourceFolders,com.github.sormuras.bach.project.SourceFolders)">ModuleDeclaration</a></span>&#8203;(<a href="ModuleInfoReference.html" title="class in com.github.sormuras.bach.project">ModuleInfoReference</a>&nbsp;reference,
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.nio.file.Path,com.github.sormuras.bach.project.ModuleInfoReference,com.github.sormuras.bach.project.SourceFolders,com.github.sormuras.bach.project.SourceFolders)">ModuleDeclaration</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
+ <a href="ModuleInfoReference.html" title="class in com.github.sormuras.bach.project">ModuleInfoReference</a>&nbsp;reference,
  <a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a>&nbsp;sources,
  <a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a>&nbsp;resources)</code></div>
 <div class="col-last even-row-color">
@@ -154,14 +156,19 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns the value of the <a href="#param-resources"><code>resources</code></a> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#sources()">sources</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#root()">root</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns the value of the <a href="#param-root"><code>root</code></a> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#sources()">sources</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns the value of the <a href="#param-sources"><code>sources</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
 </div>
@@ -182,14 +189,16 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.project.ModuleInfoReference,com.github.sormuras.bach.project.SourceFolders,com.github.sormuras.bach.project.SourceFolders)">
+<section class="detail" id="&lt;init&gt;(java.nio.file.Path,com.github.sormuras.bach.project.ModuleInfoReference,com.github.sormuras.bach.project.SourceFolders,com.github.sormuras.bach.project.SourceFolders)">
 <h3>ModuleDeclaration</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ModuleDeclaration</span>&#8203;<span class="parameters">(<a href="ModuleInfoReference.html" title="class in com.github.sormuras.bach.project">ModuleInfoReference</a>&nbsp;reference,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ModuleDeclaration</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
+ <a href="ModuleInfoReference.html" title="class in com.github.sormuras.bach.project">ModuleInfoReference</a>&nbsp;reference,
  <a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a>&nbsp;sources,
  <a href="SourceFolders.html" title="class in com.github.sormuras.bach.project">SourceFolders</a>&nbsp;resources)</span></div>
 <div class="block">Creates an instance of a <code>ModuleDeclaration</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
+<dd><code>root</code> - the value for the <a href="#param-root"><code>root</code></a> record component</dd>
 <dd><code>reference</code> - the value for the <a href="#param-reference"><code>reference</code></a> record component</dd>
 <dd><code>sources</code> - the value for the <a href="#param-sources"><code>sources</code></a> record component</dd>
 <dd><code>resources</code> - the value for the <a href="#param-resources"><code>resources</code></a> record component</dd>
@@ -263,6 +272,17 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <dd><code>o</code> - the object with which to compare</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if this object is the same as the <code>o</code> argument; <code>false</code> otherwise.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="root()">
+<h3>root</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">root</span>()</div>
+<div class="block">Returns the value of the <a href="#param-root"><code>root</code></a> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <a href="#param-root"><code>root</code></a> record component</dd>
 </dl>
 </section>
 </li>
