@@ -126,7 +126,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Assemble and optimize main modules and their dependencies into a custom runtime image.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectMainJar(com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)">buildProjectMainJar</a></span>&#8203;(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectMainJar(com.github.sormuras.bach.project.LocalModule,java.nio.file.Path)">buildProjectMainJar</a></span>&#8203;(<a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a>&nbsp;local,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
@@ -139,7 +139,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the <code>javac</code> call to compile all configured modules of the main space.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../tool/Javac.html" title="class in com.github.sormuras.bach.tool">Javac</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectMainJavac(com.github.sormuras.bach.project.ModuleDeclaration,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)">buildProjectMainJavac</a></span>&#8203;(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectMainJavac(com.github.sormuras.bach.project.LocalModule,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)">buildProjectMainJavac</a></span>&#8203;(<a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a>&nbsp;local,
  <a href="../project/SourceFolder.html" title="class in com.github.sormuras.bach.project">SourceFolder</a>&nbsp;folder,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
@@ -154,7 +154,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the jar call generating the API documentation archive.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../tool/JDeps.html" title="class in com.github.sormuras.bach.tool">JDeps</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectMainJDeps(com.github.sormuras.bach.project.ModuleDeclaration)">buildProjectMainJDeps</a></span>&#8203;(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectMainJDeps(com.github.sormuras.bach.project.LocalModule)">buildProjectMainJDeps</a></span>&#8203;(<a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a>&nbsp;local)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../tool/JLink.html" title="class in com.github.sormuras.bach.tool">JLink</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#buildProjectMainJLink(java.nio.file.Path)">buildProjectMainJLink</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;image)</code></div>
@@ -266,9 +266,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="buildProjectMainJavac(com.github.sormuras.bach.project.ModuleDeclaration,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)">
+<section class="detail" id="buildProjectMainJavac(com.github.sormuras.bach.project.LocalModule,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)">
 <h3>buildProjectMainJavac</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Javac.html" title="class in com.github.sormuras.bach.tool">Javac</a></span>&nbsp;<span class="element-name">buildProjectMainJavac</span>&#8203;<span class="parameters">(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Javac.html" title="class in com.github.sormuras.bach.tool">Javac</a></span>&nbsp;<span class="element-name">buildProjectMainJavac</span>&#8203;<span class="parameters">(<a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a>&nbsp;local,
  <a href="../project/SourceFolder.html" title="class in com.github.sormuras.bach.project">SourceFolder</a>&nbsp;folder,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</span></div>
 <div class="block">Returns the <code>javac</code> call to compile a specific version of a multi-release module.</div>
@@ -279,9 +279,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="buildProjectMainJar(com.github.sormuras.bach.project.ModuleDeclaration,java.nio.file.Path)">
+<section class="detail" id="buildProjectMainJar(com.github.sormuras.bach.project.LocalModule,java.nio.file.Path)">
 <h3>buildProjectMainJar</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></span>&nbsp;<span class="element-name">buildProjectMainJar</span>&#8203;<span class="parameters">(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/Jar.html" title="class in com.github.sormuras.bach.tool">Jar</a></span>&nbsp;<span class="element-name">buildProjectMainJar</span>&#8203;<span class="parameters">(<a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a>&nbsp;local,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;classes)</span></div>
 </section>
 </li>
@@ -292,9 +292,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="buildProjectMainJDeps(com.github.sormuras.bach.project.ModuleDeclaration)">
+<section class="detail" id="buildProjectMainJDeps(com.github.sormuras.bach.project.LocalModule)">
 <h3>buildProjectMainJDeps</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/JDeps.html" title="class in com.github.sormuras.bach.tool">JDeps</a></span>&nbsp;<span class="element-name">buildProjectMainJDeps</span>&#8203;<span class="parameters">(<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&nbsp;declaration)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../tool/JDeps.html" title="class in com.github.sormuras.bach.tool">JDeps</a></span>&nbsp;<span class="element-name">buildProjectMainJDeps</span>&#8203;<span class="parameters">(<a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a>&nbsp;local)</span></div>
 </section>
 </li>
 <li>

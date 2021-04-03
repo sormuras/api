@@ -91,7 +91,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Space.html" title="interface in com.github.sormuras.bach.project">Space</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">TestSpace</span>(<a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a>&nbsp;declarations, <a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a>&nbsp;modulePaths, <a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a>&nbsp;tweaks)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">TestSpace</span>(<a href="LocalModules.html" title="class in com.github.sormuras.bach.project">LocalModules</a>&nbsp;declarations, <a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a>&nbsp;modulePaths, <a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a>&nbsp;tweaks)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="Space.html" title="interface in com.github.sormuras.bach.project">Space</a></span></div>
 <div class="block">A code space for test modules.</div>
@@ -106,7 +106,7 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(com.github.sormuras.bach.project.ModuleDeclarations,com.github.sormuras.bach.project.ModulePaths,com.github.sormuras.bach.project.Tweaks)">TestSpace</a></span>&#8203;(<a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a>&nbsp;declarations,
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(com.github.sormuras.bach.project.LocalModules,com.github.sormuras.bach.project.ModulePaths,com.github.sormuras.bach.project.Tweaks)">TestSpace</a></span>&#8203;(<a href="LocalModules.html" title="class in com.github.sormuras.bach.project">LocalModules</a>&nbsp;declarations,
  <a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a>&nbsp;modulePaths,
  <a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a>&nbsp;tweaks)</code></div>
 <div class="col-last even-row-color">
@@ -126,7 +126,7 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a></code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="LocalModules.html" title="class in com.github.sormuras.bach.project">LocalModules</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#declarations()">declarations</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns the value of the <a href="#param-declarations"><code>declarations</code></a> record component.</div>
@@ -179,9 +179,9 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.project.ModuleDeclarations,com.github.sormuras.bach.project.ModulePaths,com.github.sormuras.bach.project.Tweaks)">
+<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.project.LocalModules,com.github.sormuras.bach.project.ModulePaths,com.github.sormuras.bach.project.Tweaks)">
 <h3>TestSpace</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TestSpace</span>&#8203;<span class="parameters">(<a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a>&nbsp;declarations,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TestSpace</span>&#8203;<span class="parameters">(<a href="LocalModules.html" title="class in com.github.sormuras.bach.project">LocalModules</a>&nbsp;declarations,
  <a href="ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a>&nbsp;modulePaths,
  <a href="Tweaks.html" title="class in com.github.sormuras.bach.project">Tweaks</a>&nbsp;tweaks)</span></div>
 <div class="block">Creates an instance of a <code>TestSpace</code> record class.</div>
@@ -259,7 +259,7 @@ implements <a href="Space.html" title="interface in com.github.sormuras.bach.pro
 <li>
 <section class="detail" id="declarations()">
 <h3>declarations</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ModuleDeclarations.html" title="class in com.github.sormuras.bach.project">ModuleDeclarations</a></span>&nbsp;<span class="element-name">declarations</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocalModules.html" title="class in com.github.sormuras.bach.project">LocalModules</a></span>&nbsp;<span class="element-name">declarations</span>()</div>
 <div class="block">Returns the value of the <a href="#param-declarations"><code>declarations</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>

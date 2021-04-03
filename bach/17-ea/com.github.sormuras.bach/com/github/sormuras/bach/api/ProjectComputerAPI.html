@@ -118,24 +118,24 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)">computeProjectLibraries</a></span>&#8203;(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info,
  <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModuleDeclaration(java.nio.file.Path,java.nio.file.Path,boolean)">computeProjectModuleDeclaration</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectLocalModule(java.nio.file.Path,java.nio.file.Path,boolean)">computeProjectLocalModule</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
  boolean&nbsp;treatSourcesAsResources)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../project/ModuleLauncher.html" title="class in com.github.sormuras.bach.project">ModuleLauncher</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModuleLauncher(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings,java.util.stream.Stream)">computeProjectModuleLauncher</a></span>&#8203;(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info,
  <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&gt;&nbsp;declarations)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a>&gt;&nbsp;declarations)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.External)">computeProjectModuleLookup</a></span>&#8203;(<a href="../ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>&nbsp;external)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.Libraries.ExternalLibrary)">computeProjectModuleLookup</a></span>&#8203;(<a href="../ProjectInfo.Libraries.ExternalLibrary.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries.ExternalLibrary</a>&nbsp;library)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.Externals)">computeProjectModuleLookup</a></span>&#8203;(<a href="../ProjectInfo.Externals.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Externals</a>&nbsp;externals)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.Libraries.ExternalModule)">computeProjectModuleLookup</a></span>&#8203;(<a href="../ProjectInfo.Libraries.ExternalModule.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries.ExternalModule</a>&nbsp;external)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../lookup/ModuleMetadata.html" title="class in com.github.sormuras.bach.lookup">ModuleMetadata</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModuleMetadata(com.github.sormuras.bach.ProjectInfo.Metadata)">computeProjectModuleMetadata</a></span>&#8203;(<a href="../ProjectInfo.Metadata.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Metadata</a>&nbsp;metadata)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModuleMetadata(com.github.sormuras.bach.ProjectInfo.Libraries.Metadata)">computeProjectModuleMetadata</a></span>&#8203;(<a href="../ProjectInfo.Libraries.Metadata.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries.Metadata</a>&nbsp;metadata)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../project/ModulePaths.html" title="class in com.github.sormuras.bach.project">ModulePaths</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectModulePaths(java.nio.file.Path,java.lang.String...)">computeProjectModulePaths</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
@@ -156,9 +156,8 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;namePrefix)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectSpaces(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings,com.github.sormuras.bach.project.Libraries)">computeProjectSpaces</a></span>&#8203;(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info,
- <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
- <a href="../project/Libraries.html" title="class in com.github.sormuras.bach.project">Libraries</a>&nbsp;libraries)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectSpaces(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)">computeProjectSpaces</a></span>&#8203;(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info,
+ <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#computeProjectTargetsJava(com.github.sormuras.bach.ProjectInfo)">computeProjectTargetsJava</a></span>&#8203;(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info)</code></div>
@@ -264,29 +263,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.External)">
+<section class="detail" id="computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.Libraries.ExternalModule)">
 <h3>computeProjectModuleLookup</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></span>&nbsp;<span class="element-name">computeProjectModuleLookup</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.External.html" title="annotation in com.github.sormuras.bach">ProjectInfo.External</a>&nbsp;external)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></span>&nbsp;<span class="element-name">computeProjectModuleLookup</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.Libraries.ExternalModule.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries.ExternalModule</a>&nbsp;external)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.Externals)">
+<section class="detail" id="computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.Libraries.ExternalLibrary)">
 <h3>computeProjectModuleLookup</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></span>&nbsp;<span class="element-name">computeProjectModuleLookup</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.Externals.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Externals</a>&nbsp;externals)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../lookup/ModuleLookup.html" title="interface in com.github.sormuras.bach.lookup">ModuleLookup</a></span>&nbsp;<span class="element-name">computeProjectModuleLookup</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.Libraries.ExternalLibrary.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries.ExternalLibrary</a>&nbsp;library)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="computeProjectModuleMetadata(com.github.sormuras.bach.ProjectInfo.Metadata)">
+<section class="detail" id="computeProjectModuleMetadata(com.github.sormuras.bach.ProjectInfo.Libraries.Metadata)">
 <h3>computeProjectModuleMetadata</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../lookup/ModuleMetadata.html" title="class in com.github.sormuras.bach.lookup">ModuleMetadata</a></span>&nbsp;<span class="element-name">computeProjectModuleMetadata</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.Metadata.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Metadata</a>&nbsp;metadata)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../lookup/ModuleMetadata.html" title="class in com.github.sormuras.bach.lookup">ModuleMetadata</a></span>&nbsp;<span class="element-name">computeProjectModuleMetadata</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.Libraries.Metadata.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries.Metadata</a>&nbsp;metadata)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="computeProjectSpaces(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings,com.github.sormuras.bach.project.Libraries)">
+<section class="detail" id="computeProjectSpaces(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)">
 <h3>computeProjectSpaces</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../project/Spaces.html" title="class in com.github.sormuras.bach.project">Spaces</a></span>&nbsp;<span class="element-name">computeProjectSpaces</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info,
- <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
- <a href="../project/Libraries.html" title="class in com.github.sormuras.bach.project">Libraries</a>&nbsp;libraries)</span></div>
+ <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings)</span></div>
 </section>
 </li>
 <li>
@@ -303,9 +301,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="computeProjectModuleDeclaration(java.nio.file.Path,java.nio.file.Path,boolean)">
-<h3>computeProjectModuleDeclaration</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a></span>&nbsp;<span class="element-name">computeProjectModuleDeclaration</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
+<section class="detail" id="computeProjectLocalModule(java.nio.file.Path,java.nio.file.Path,boolean)">
+<h3>computeProjectLocalModule</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a></span>&nbsp;<span class="element-name">computeProjectLocalModule</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;path,
  boolean&nbsp;treatSourcesAsResources)</span></div>
 </section>
@@ -322,7 +320,7 @@ loadScripts(document, 'script');</script>
 <h3>computeProjectModuleLauncher</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="../project/ModuleLauncher.html" title="class in com.github.sormuras.bach.project">ModuleLauncher</a>&gt;</span>&nbsp;<span class="element-name">computeProjectModuleLauncher</span>&#8203;<span class="parameters">(<a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info,
  <a href="../project/Settings.html" title="class in com.github.sormuras.bach.project">Settings</a>&nbsp;settings,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../project/ModuleDeclaration.html" title="class in com.github.sormuras.bach.project">ModuleDeclaration</a>&gt;&nbsp;declarations)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/stream/Stream.html" title="class or interface in java.util.stream" class="external-link">Stream</a>&lt;<a href="../project/LocalModule.html" title="class in com.github.sormuras.bach.project">LocalModule</a>&gt;&nbsp;declarations)</span></div>
 </section>
 </li>
 <li>
