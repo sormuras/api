@@ -94,14 +94,54 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Launcher.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Launcher</a></span></code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Checksum.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Checksum</a></span></code></div>
 <div class="col-last even-row-color">
-<div class="block">Module launcher configuration.</div>
+<div class="block">A checksum configuration.</div>
 </div>
 <div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Libraries.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries</a></span></code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="ProjectInfo.ExternalLibrary.html" title="annotation in com.github.sormuras.bach">ProjectInfo.ExternalLibrary</a></span></code></div>
 <div class="col-last odd-row-color">
+<div class="block">An external source of modules that lookup by a built-in module lookup implementation.</div>
+</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.ExternalModule.html" title="annotation in com.github.sormuras.bach">ProjectInfo.ExternalModule</a></span></code></div>
+<div class="col-last even-row-color">
+<div class="block">An external module name to URI pair annotation.</div>
+</div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Launcher.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Launcher</a></span></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Module launcher configuration.</div>
+</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Libraries.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries</a></span></code></div>
+<div class="col-last even-row-color">
 <div class="block">Libraries configuration.</div>
+</div>
+<div class="col-first odd-row-color"><code>static class&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="ProjectInfo.LibraryName.html" title="enum class in com.github.sormuras.bach">ProjectInfo.LibraryName</a></span></code></div>
+<div class="col-last odd-row-color">
+<div class="block">The name of the module lookup, usually a name of a modular library or a framework.</div>
+</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.MainSpace.html" title="annotation in com.github.sormuras.bach">ProjectInfo.MainSpace</a></span></code></div>
+<div class="col-last even-row-color">
+<div class="block">Main space configuration.</div>
+</div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Metadata.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Metadata</a></span></code></div>
+<div class="col-last odd-row-color">
+<div class="block">An external module metadata configuration annotation.</div>
+</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Options.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Options</a></span></code></div>
+<div class="col-last even-row-color">
+<div class="block">An options configuration.</div>
+</div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="ProjectInfo.TestSpace.html" title="annotation in com.github.sormuras.bach">ProjectInfo.TestSpace</a></span></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Test space configuration.</div>
 </div>
 <div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="ProjectInfo.Tools.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tools</a></span></code></div>
@@ -125,70 +165,30 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Optional Element</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>int</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#compileModulesForJavaRelease()">compileModulesForJavaRelease</a></span></code></div>
-<div class="col-last even-row-color">
-<div class="block">Returns the Java version (release feature number) to compile main modules for.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="project/CodeStyle.html" title="enum class in com.github.sormuras.bach.project">CodeStyle</a></code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#formatSourceFilesWithCodeStyle()">formatSourceFilesWithCodeStyle</a></span></code></div>
-<div class="col-last odd-row-color">
-<div class="block">Returns the style to format Java source-code files with, defaults to <a href="project/CodeStyle.html#FREE"><code>CodeStyle.FREE</code></a>.</div>
-</div>
-<div class="col-first even-row-color"><code>boolean</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#includeSourceFilesIntoModules()">includeSourceFilesIntoModules</a></span></code></div>
-<div class="col-last even-row-color">
-<div class="block">Returns <code>true</code> in order to include all files found in source folders into their modules.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="ProjectInfo.Launcher.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Launcher</a></code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#launcher()">launcher</a></span></code></div>
-<div class="col-last odd-row-color">
-<div class="block">Returns the launcher option value for the custom runtime image generated by <code>jlink</code>.</div>
-</div>
 <div class="col-first even-row-color"><code><a href="ProjectInfo.Libraries.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries</a></code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#libraries()">libraries</a></span></code></div>
 <div class="col-last even-row-color">
 <div class="block">Returns libraries configuration.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#modulePaths()">modulePaths</a></span></code></div>
+<div class="col-first odd-row-color"><code><a href="ProjectInfo.MainSpace.html" title="annotation in com.github.sormuras.bach">ProjectInfo.MainSpace</a></code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#main()">main</a></span></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Returns the module path elements for main modules.</div>
+<div class="block">Returns main code space configuration.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#modules()">modules</a></span></code></div>
+<div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#name()">name</a></span></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns an array of path matcher patterns for finding main module declarations.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#name()">name</a></span></code></div>
-<div class="col-last odd-row-color">
 <div class="block">Returns the name of the project, defaults to <code>"*"</code>.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#testModulePaths()">testModulePaths</a></span></code></div>
-<div class="col-last even-row-color">
-<div class="block">Returns the module path elements for compiling and running test modules.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#testModules()">testModules</a></span></code></div>
+<div class="col-first odd-row-color"><code><a href="ProjectInfo.Options.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Options</a></code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#options()">options</a></span></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Returns an array of path matcher patterns for finding test module declarations.</div>
+<div class="block">Returns options configuration.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#testTweaks()">testTweaks</a></span></code></div>
+<div class="col-first even-row-color"><code><a href="ProjectInfo.TestSpace.html" title="annotation in com.github.sormuras.bach">ProjectInfo.TestSpace</a></code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#test()">test</a></span></code></div>
 <div class="col-last even-row-color">
-<div class="block">Returns the additional test space arguments to be passed on a per-tool basis.</div>
-</div>
-<div class="col-first odd-row-color"><code><a href="ProjectInfo.Tools.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tools</a></code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#tools()">tools</a></span></code></div>
-<div class="col-last odd-row-color">
-<div class="block">Returns the tools-releated settings.</div>
-</div>
-<div class="col-first even-row-color"><code><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#tweaks()">tweaks</a></span></code></div>
-<div class="col-last even-row-color">
-<div class="block">Returns the additional main space arguments to be passed on a per-tool basis.</div>
+<div class="block">Returns test code space configuration.</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#version()">version</a></span></code></div>
@@ -345,109 +345,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="formatSourceFilesWithCodeStyle()">
-<h3>formatSourceFilesWithCodeStyle</h3>
-<div class="member-signature"><span class="return-type"><a href="project/CodeStyle.html" title="enum class in com.github.sormuras.bach.project">CodeStyle</a></span>&nbsp;<span class="element-name">formatSourceFilesWithCodeStyle</span></div>
-<div class="block">Returns the style to format Java source-code files with, defaults to <a href="project/CodeStyle.html#FREE"><code>CodeStyle.FREE</code></a>.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the style to format Java source-code files with, defaults to <a href="project/CodeStyle.html#FREE"><code>CodeStyle.FREE</code></a></dd>
-<dt>See Also:</dt>
-<dd><a href="Project.html#spaces()"><code>Project.spaces()</code></a></dd>
-</dl>
-<dl class="notes">
-<dt>Default:</dt>
-<dd>FREE</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="modules()">
-<h3>modules</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">modules</span></div>
-<div class="block">Returns an array of path matcher patterns for finding main module declarations.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>an array of path matcher patterns for finding main module declarations</dd>
-<dt>See Also:</dt>
-<dd><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)" title="class or interface in java.nio.file" class="external-link"><code>FileSystem.getPathMatcher(String)</code></a></dd>
-</dl>
-<dl class="notes">
-<dt>Default:</dt>
-<dd>{"**module-info.java"}</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="modulePaths()">
-<h3>modulePaths</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">modulePaths</span></div>
-<div class="block">Returns the module path elements for main modules.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the module path elements for main modules</dd>
-</dl>
-<dl class="notes">
-<dt>Default:</dt>
-<dd>{".bach/external-modules"}</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="compileModulesForJavaRelease()">
-<h3>compileModulesForJavaRelease</h3>
-<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">compileModulesForJavaRelease</span></div>
-<div class="block">Returns the Java version (release feature number) to compile main modules for.
-
- <p>For a value of <code>0</code>, the default value, the <code>--release</code> option is omitted.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the Java version (release feature number) to compile main modules for</dd>
-<dt>See Also:</dt>
-<dd><a href="project/Property.html#PROJECT_TARGETS_JAVA"><code>Property.PROJECT_TARGETS_JAVA</code></a></dd>
-</dl>
-<dl class="notes">
-<dt>Default:</dt>
-<dd>0</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="includeSourceFilesIntoModules()">
-<h3>includeSourceFilesIntoModules</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">includeSourceFilesIntoModules</span></div>
-<div class="block">Returns <code>true</code> in order to include all files found in source folders into their modules.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd><code>true</code> in order to include all files found in source folders into their modules</dd>
-<dt>See Also:</dt>
-<dd><a href="project/Flag.html#JAR_WITH_SOURCES"><code>Flag.JAR_WITH_SOURCES</code></a></dd>
-</dl>
-<dl class="notes">
-<dt>Default:</dt>
-<dd>false</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="launcher()">
-<h3>launcher</h3>
-<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Launcher.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Launcher</a></span>&nbsp;<span class="element-name">launcher</span></div>
-<div class="block">Returns the launcher option value for the custom runtime image generated by <code>jlink</code>.
-
- <p>Defaults to <code>"*"</code> which triggers auto-detection of the value based on this project's
- name and a unique main module providing a main class.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the launcher option value for the custom runtime image generated by <code>jlink</code></dd>
-</dl>
-<dl class="notes">
-<dt>Default:</dt>
-<dd>@com.github.sormuras.bach.ProjectInfo.Launcher(module="*")</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="libraries()">
 <h3>libraries</h3>
 <div class="member-signature"><span class="return-type"><a href="ProjectInfo.Libraries.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Libraries</a></span>&nbsp;<span class="element-name">libraries</span></div>
@@ -463,79 +360,47 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="tweaks()">
-<h3>tweaks</h3>
-<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</span>&nbsp;<span class="element-name">tweaks</span></div>
-<div class="block">Returns the additional main space arguments to be passed on a per-tool basis.</div>
+<section class="detail" id="main()">
+<h3>main</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.MainSpace.html" title="annotation in com.github.sormuras.bach">ProjectInfo.MainSpace</a></span>&nbsp;<span class="element-name">main</span></div>
+<div class="block">Returns main code space configuration.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the additional main space arguments to be passed on a per-tool basis</dd>
+<dd>main code space configuration</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
-<dd>{@com.github.sormuras.bach.ProjectInfo.Tweak(tool="javac", option="-encoding", value={"UTF-8"}), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="javadoc", option="-encoding", value={"UTF-8"}), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", option="--compress", value={"2"}), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", option="--no-header-files"), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", option="--no-man-pages"), @com.github.sormuras.bach.ProjectInfo.Tweak(tool="jlink", option="--strip-debug")}</dd>
+<dd>@com.github.sormuras.bach.ProjectInfo.MainSpace</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="testModules()">
-<h3>testModules</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">testModules</span></div>
-<div class="block">Returns an array of path matcher patterns for finding test module declarations.</div>
+<section class="detail" id="options()">
+<h3>options</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Options.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Options</a></span>&nbsp;<span class="element-name">options</span></div>
+<div class="block">Returns options configuration.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>an array of path matcher patterns for finding test module declarations</dd>
-<dt>See Also:</dt>
-<dd><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/FileSystem.html#getPathMatcher(java.lang.String)" title="class or interface in java.nio.file" class="external-link"><code>FileSystem.getPathMatcher(String)</code></a></dd>
+<dd>options configuration</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
-<dd>{"**/test/**"}</dd>
+<dd>@com.github.sormuras.bach.ProjectInfo.Options</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="testModulePaths()">
-<h3>testModulePaths</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]</span>&nbsp;<span class="element-name">testModulePaths</span></div>
-<div class="block">Returns the module path elements for compiling and running test modules.</div>
+<section class="detail" id="test()">
+<h3>test</h3>
+<div class="member-signature"><span class="return-type"><a href="ProjectInfo.TestSpace.html" title="annotation in com.github.sormuras.bach">ProjectInfo.TestSpace</a></span>&nbsp;<span class="element-name">test</span></div>
+<div class="block">Returns test code space configuration.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the module path elements for compiling and running test modules</dd>
+<dd>test code space configuration</dd>
 </dl>
 <dl class="notes">
 <dt>Default:</dt>
-<dd>{".bach/workspace/modules", ".bach/external-modules"}</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="testTweaks()">
-<h3>testTweaks</h3>
-<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tweak</a>[]</span>&nbsp;<span class="element-name">testTweaks</span></div>
-<div class="block">Returns the additional test space arguments to be passed on a per-tool basis.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the additional test space arguments to be passed on a per-tool basis</dd>
-</dl>
-<dl class="notes">
-<dt>Default:</dt>
-<dd>{@com.github.sormuras.bach.ProjectInfo.Tweak(tool="javac", option="-encoding", value={"UTF-8"})}</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="tools()">
-<h3>tools</h3>
-<div class="member-signature"><span class="return-type"><a href="ProjectInfo.Tools.html" title="annotation in com.github.sormuras.bach">ProjectInfo.Tools</a></span>&nbsp;<span class="element-name">tools</span></div>
-<div class="block">Returns the tools-releated settings.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>the tools-releated settings</dd>
-</dl>
-<dl class="notes">
-<dt>Default:</dt>
-<dd>@com.github.sormuras.bach.ProjectInfo.Tools</dd>
+<dd>@com.github.sormuras.bach.ProjectInfo.TestSpace</dd>
 </dl>
 </section>
 </li>
