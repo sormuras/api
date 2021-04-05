@@ -82,15 +82,17 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>Record Components:</dt>
+<dd><code><span id="param-layer">layer</span></code> - the module layer to use at runtime</dd>
 <dd><code><span id="param-info">info</span></code> - an optional project declaration instance, may be <code>null</code></dd>
 <dd><code><span id="param-out">out</span></code> - a stream to which "expected" output should be written</dd>
 <dd><code><span id="param-err">err</span></code> - a stream to which any error messages should be written</dd>
 <dd><code><span id="param-flags">flags</span></code> - a set of feature toggles passed individually like <code>--verbose --help ...</code></dd>
+<dd><code><span id="param-properties">properties</span></code> - a map of key-value pairs passed nominally like <code>--project-targets-java 8</code></dd>
 <dd><code><span id="param-actions">actions</span></code> - the list of actions to execute passed individually like <code>info build ...</code></dd>
 <dd><code><span id="param-tool">tool</span></code> - an optional command to execute passed via <code>tool NAME [ARGS...]</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Options</span>(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&gt;&nbsp;info, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;out, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;err, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>&gt;&nbsp;flags, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="project/Property.html" title="enum class in com.github.sormuras.bach.project">Property</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;&nbsp;properties, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;actions, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="tool/Tool.html" title="class in com.github.sormuras.bach.tool">Tool</a>&gt;&nbsp;tool)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Options</span>(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/ModuleLayer.html" title="class or interface in java.lang" class="external-link">ModuleLayer</a>&nbsp;layer, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&gt;&nbsp;info, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;out, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;err, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>&gt;&nbsp;flags, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="project/Property.html" title="enum class in com.github.sormuras.bach.project">Property</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;&nbsp;properties, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;actions, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="tool/Tool.html" title="class in com.github.sormuras.bach.tool">Tool</a>&gt;&nbsp;tool)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 <div class="block">An options descriptor.</div>
 </section>
@@ -104,7 +106,8 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.Optional,java.io.PrintWriter,java.io.PrintWriter,java.util.Set,java.util.Map,java.util.List,java.util.Optional)">Options</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&gt;&nbsp;info,
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.lang.ModuleLayer,java.util.Optional,java.io.PrintWriter,java.io.PrintWriter,java.util.Set,java.util.Map,java.util.List,java.util.Optional)">Options</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/ModuleLayer.html" title="class or interface in java.lang" class="external-link">ModuleLayer</a>&nbsp;layer,
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&gt;&nbsp;info,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;out,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;err,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>&gt;&nbsp;flags,
@@ -176,49 +179,57 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static &lt;E extends <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;E&gt;&gt;<br><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#key(E)">key</a></span>&#8203;(E&nbsp;constant)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#list(com.github.sormuras.bach.project.Property)">list</a></span>&#8203;(<a href="project/Property.html" title="enum class in com.github.sormuras.bach.project">Property</a>&nbsp;property)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(java.io.PrintWriter,java.io.PrintWriter,java.lang.String...)">of</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;out,
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/ModuleLayer.html" title="class or interface in java.lang" class="external-link">ModuleLayer</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#layer()">layer</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns the value of the <a href="#param-layer"><code>layer</code></a> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#list(com.github.sormuras.bach.project.Property)">list</a></span>&#8203;(<a href="project/Property.html" title="enum class in com.github.sormuras.bach.project">Property</a>&nbsp;property)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(java.io.PrintWriter,java.io.PrintWriter,java.lang.String...)">of</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;out,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;err,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns an instance of <code>Options</code> parsed from the given command-line arguments.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(java.lang.String...)">of</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns an instance of <code>Options</code> parsed from the given command-line arguments.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#out()">out</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(java.lang.String...)">of</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns an instance of <code>Options</code> parsed from the given command-line arguments.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#out()">out</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns the value of the <a href="#param-out"><code>out</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="project/Property.html" title="enum class in com.github.sormuras.bach.project">Property</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#properties()">properties</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns the value of the <code>properties</code> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="tool/Tool.html" title="class in com.github.sormuras.bach.tool">Tool</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#tool()">tool</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="project/Property.html" title="enum class in com.github.sormuras.bach.project">Property</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#properties()">properties</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns the value of the <a href="#param-properties"><code>properties</code></a> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="tool/Tool.html" title="class in com.github.sormuras.bach.tool">Tool</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#tool()">tool</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns the value of the <a href="#param-tool"><code>tool</code></a> record component.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns a string representation of this record class.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with(com.github.sormuras.bach.project.Flag,com.github.sormuras.bach.project.Flag...)">with</a></span>&#8203;(<a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>&nbsp;flag,
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with(com.github.sormuras.bach.project.Flag,com.github.sormuras.bach.project.Flag...)">with</a></span>&#8203;(<a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>&nbsp;flag,
  <a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>...&nbsp;more)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">Returns new <code>Options</code> instance with the given flags added.</div>
 </div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with(com.github.sormuras.bach.ProjectInfo)">with</a></span>&#8203;(<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with(com.github.sormuras.bach.ProjectInfo)">with</a></span>&#8203;(<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&nbsp;info)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#with(java.lang.ModuleLayer)">with</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/ModuleLayer.html" title="class or interface in java.lang" class="external-link">ModuleLayer</a>&nbsp;layer)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
@@ -238,9 +249,10 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.Optional,java.io.PrintWriter,java.io.PrintWriter,java.util.Set,java.util.Map,java.util.List,java.util.Optional)">
+<section class="detail" id="&lt;init&gt;(java.lang.ModuleLayer,java.util.Optional,java.io.PrintWriter,java.io.PrintWriter,java.util.Set,java.util.Map,java.util.List,java.util.Optional)">
 <h3>Options</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Options</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&gt;&nbsp;info,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Options</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/ModuleLayer.html" title="class or interface in java.lang" class="external-link">ModuleLayer</a>&nbsp;layer,
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&gt;&nbsp;info,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;out,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/PrintWriter.html" title="class or interface in java.io" class="external-link">PrintWriter</a>&nbsp;err,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>&gt;&nbsp;flags,
@@ -250,11 +262,12 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>Options</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
+<dd><code>layer</code> - the value for the <a href="#param-layer"><code>layer</code></a> record component</dd>
 <dd><code>info</code> - the value for the <a href="#param-info"><code>info</code></a> record component</dd>
 <dd><code>out</code> - the value for the <a href="#param-out"><code>out</code></a> record component</dd>
 <dd><code>err</code> - the value for the <a href="#param-err"><code>err</code></a> record component</dd>
 <dd><code>flags</code> - the value for the <a href="#param-flags"><code>flags</code></a> record component</dd>
-<dd><code>properties</code> - the value for the <code>properties</code> record component</dd>
+<dd><code>properties</code> - the value for the <a href="#param-properties"><code>properties</code></a> record component</dd>
 <dd><code>actions</code> - the value for the <a href="#param-actions"><code>actions</code></a> record component</dd>
 <dd><code>tool</code> - the value for the <a href="#param-tool"><code>tool</code></a> record component</dd>
 </dl>
@@ -268,6 +281,12 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method.detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="with(java.lang.ModuleLayer)">
+<h3>with</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></span>&nbsp;<span class="element-name">with</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/ModuleLayer.html" title="class or interface in java.lang" class="external-link">ModuleLayer</a>&nbsp;layer)</span></div>
+</section>
+</li>
 <li>
 <section class="detail" id="with(com.github.sormuras.bach.ProjectInfo)">
 <h3>with</h3>
@@ -409,6 +428,17 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="layer()">
+<h3>layer</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/ModuleLayer.html" title="class or interface in java.lang" class="external-link">ModuleLayer</a></span>&nbsp;<span class="element-name">layer</span>()</div>
+<div class="block">Returns the value of the <a href="#param-layer"><code>layer</code></a> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <a href="#param-layer"><code>layer</code></a> record component</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="info()">
 <h3>info</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach">ProjectInfo</a>&gt;</span>&nbsp;<span class="element-name">info</span>()</div>
@@ -456,10 +486,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="properties()">
 <h3>properties</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="project/Property.html" title="enum class in com.github.sormuras.bach.project">Property</a>,&#8203;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</span>&nbsp;<span class="element-name">properties</span>()</div>
-<div class="block">Returns the value of the <code>properties</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-properties"><code>properties</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>properties</code> record component</dd>
+<dd>the value of the <a href="#param-properties"><code>properties</code></a> record component</dd>
 </dl>
 </section>
 </li>

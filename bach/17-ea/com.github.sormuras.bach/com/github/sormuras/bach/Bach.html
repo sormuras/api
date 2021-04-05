@@ -100,6 +100,12 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <div class="table-header col-second">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="Bach.OnTestsFailed.html" title="interface in com.github.sormuras.bach">Bach.OnTestsFailed</a></span></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="Bach.OnTestsSuccessful.html" title="interface in com.github.sormuras.bach">Bach.OnTestsSuccessful</a></span></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="Bach.Provider.html" title="interface in com.github.sormuras.bach">Bach.Provider</a>&lt;<a href="Bach.Provider.html" title="type parameter in Bach.Provider">B</a> extends <a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a>&gt;</span></code></div>
 <div class="col-last even-row-color">
 <div class="block">A <code>Bach</code>-creating service.</div>
@@ -198,6 +204,12 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.github.sormuras.bach.Options)">of</a></span>&#8203;(<a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;options)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#onTestsFailed(java.lang.Throwable)">onTestsFailed</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;throwable)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#onTestsSuccessful()">onTestsSuccessful</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#options()">options</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
@@ -423,6 +435,18 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <dt>Specified by:</dt>
 <dd><code><a href="api/BachAPI.html#format()">format</a></code>&nbsp;in interface&nbsp;<code><a href="api/BachAPI.html" title="interface in com.github.sormuras.bach.api">BachAPI</a></code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="onTestsFailed(java.lang.Throwable)">
+<h3>onTestsFailed</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onTestsFailed</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;throwable)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="onTestsSuccessful()">
+<h3>onTestsSuccessful</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onTestsSuccessful</span>()</div>
 </section>
 </li>
 <li>
