@@ -61,19 +61,17 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link"><span class="type-name-link">Object</span></a>
 <ul>
-<li class="circle">com.github.sormuras.bach.<a href="Bach.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Bach</span></a> (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a>, com.github.sormuras.bach.api.<a href="api/BachAPI.html" title="interface in com.github.sormuras.bach.api">BachAPI</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="Browser.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Browser</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Logbook.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Logbook</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Main.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Main</span></a> (implements java.util.spi.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/spi/ToolProvider.html" title="class or interface in java.util.spi" class="external-link">ToolProvider</a>)</li>
+<li class="circle">com.github.sormuras.bach.<a href="Factory.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Factory</span></a></li>
+<li class="circle">com.github.sormuras.bach.<a href="ProjectBuilder.html" title="class in com.github.sormuras.bach"><span class="type-name-link">ProjectBuilder</span></a></li>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link"><span class="type-name-link">Record</span></a>
 <ul>
-<li class="circle">com.github.sormuras.bach.<a href="Bach.OnTestsFailed.Event.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Bach.OnTestsFailed.Event</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Bach.OnTestsSuccessful.Event.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Bach.OnTestsSuccessful.Event</span></a></li>
+<li class="circle">com.github.sormuras.bach.<a href="Bach.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Bach</span></a> (implements com.github.sormuras.bach.trait.<a href="trait/HttpTrait.html" title="interface in com.github.sormuras.bach.trait">HttpTrait</a>, com.github.sormuras.bach.trait.<a href="trait/PrintTrait.html" title="interface in com.github.sormuras.bach.trait">PrintTrait</a>, com.github.sormuras.bach.trait.<a href="trait/ResolveTrait.html" title="interface in com.github.sormuras.bach.trait">ResolveTrait</a>, com.github.sormuras.bach.trait.<a href="trait/ToolTrait.html" title="interface in com.github.sormuras.bach.trait">ToolTrait</a>, com.github.sormuras.bach.trait.<a href="trait/WorkflowTrait.html" title="interface in com.github.sormuras.bach.trait">WorkflowTrait</a>)</li>
+<li class="circle">com.github.sormuras.bach.<a href="Logbook.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Logbook</span></a></li>
 <li class="circle">com.github.sormuras.bach.<a href="Logbook.Message.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Logbook.Message</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Logbook.Run.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Logbook.Run</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Logbook.Runs.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Logbook.Runs</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Options.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Options</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Project.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Project</span></a></li>
+<li class="circle">com.github.sormuras.bach.<a href="Options.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Options</span></a> (implements com.github.sormuras.bach.<a href="Wither.html" title="interface in com.github.sormuras.bach">Wither</a>&lt;R&gt;)</li>
+<li class="circle">com.github.sormuras.bach.<a href="Printer.html" title="class in com.github.sormuras.bach"><span class="type-name-link">Printer</span></a></li>
+<li class="circle">com.github.sormuras.bach.<a href="ToolRun.html" title="class in com.github.sormuras.bach"><span class="type-name-link">ToolRun</span></a></li>
+<li class="circle">com.github.sormuras.bach.<a href="ToolRuns.html" title="class in com.github.sormuras.bach"><span class="type-name-link">ToolRuns</span></a></li>
 </ul>
 </li>
 </ul>
@@ -83,42 +81,9 @@ loadScripts(document, 'script');</script>
 <section class="hierarchy">
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
-<li class="circle">com.github.sormuras.bach.<a href="Bach.OnTestsFailed.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">Bach.OnTestsFailed</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Bach.OnTestsSuccessful.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">Bach.OnTestsSuccessful</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="Bach.Provider.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">Bach.Provider</span></a>&lt;B&gt;</li>
-<li class="circle">com.github.sormuras.bach.<a href="Command.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">Command</span></a>&lt;C&gt;</li>
-</ul>
-</section>
-<section class="hierarchy">
-<h2 title="Annotation Interface Hierarchy">Annotation Interface Hierarchy</h2>
-<ul>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.Checksum.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.Checksum</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.ExternalLibrary.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.ExternalLibrary</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.ExternalModule.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.ExternalModule</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.Launcher.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.Launcher</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.Libraries.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.Libraries</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.MainSpace.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.MainSpace</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.Metadata.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.Metadata</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.Options.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.Options</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.TestSpace.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.TestSpace</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.Tools.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.Tools</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.Tweak</span></a> (implements java.lang.annotation.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/annotation/Annotation.html" title="class or interface in java.lang.annotation" class="external-link">Annotation</a>)</li>
-</ul>
-</section>
-<section class="hierarchy">
-<h2 title="Enum Class Hierarchy">Enum Class Hierarchy</h2>
-<ul>
-<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link"><span class="type-name-link">Object</span></a>
-<ul>
-<li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link"><span class="type-name-link">Enum</span></a>&lt;E&gt; (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;T&gt;, java.lang.constant.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a>, java.io.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
-<ul>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.LibraryName.html" title="enum class in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.LibraryName</span></a></li>
-<li class="circle">com.github.sormuras.bach.<a href="ProjectInfo.LinkType.html" title="enum class in com.github.sormuras.bach"><span class="type-name-link">ProjectInfo.LinkType</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="circle">com.github.sormuras.bach.<a href="ToolCall.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">ToolCall</span></a>&lt;C&gt;</li>
+<li class="circle">com.github.sormuras.bach.<a href="Trait.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">Trait</span></a></li>
+<li class="circle">com.github.sormuras.bach.<a href="Wither.html" title="interface in com.github.sormuras.bach"><span class="type-name-link">Wither</span></a>&lt;R&gt;</li>
 </ul>
 </section>
 </main>

@@ -6,7 +6,7 @@
 <title>Bach</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="description" content="declaration: module: com.github.sormuras.bach, package: com.github.sormuras.bach, class: Bach">
+<meta name="description" content="declaration: module: com.github.sormuras.bach, package: com.github.sormuras.bach, record: Bach">
 <meta name="generator" content="javadoc/ClassWriterImpl">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
@@ -44,8 +44,8 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
@@ -72,48 +72,32 @@ loadScripts(document, 'script');</script>
 <div class="header">
 <div class="sub-title"><span class="module-label-in-type">Module</span>&nbsp;<a href="../../../../module-summary.html">com.github.sormuras.bach</a></div>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.github.sormuras.bach</a></div>
-<h1 title="Class Bach" class="title">Class Bach</h1>
+<h1 title="Record Class Bach" class="title">Record Class Bach</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">java.lang.Record</a>
 <div class="inheritance">com.github.sormuras.bach.Bach</div>
+</div>
 </div>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="api/BachAPI.html" title="interface in com.github.sormuras.bach.api">BachAPI</a></code>, <code><a href="api/BuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">BuildMainSpaceAPI</a></code>, <code><a href="api/BuildTestSpaceAPI.html" title="interface in com.github.sormuras.bach.api">BuildTestSpaceAPI</a></code>, <code><a href="api/ComputeProjectAPI.html" title="interface in com.github.sormuras.bach.api">ComputeProjectAPI</a></code>, <code><a href="api/ExternalModuleAPI.html" title="interface in com.github.sormuras.bach.api">ExternalModuleAPI</a></code>, <code><a href="api/JavaFormatterAPI.html" title="interface in com.github.sormuras.bach.api">JavaFormatterAPI</a></code>, <code><a href="api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a></code>, <code><a href="api/WriteLogbookAPI.html" title="interface in com.github.sormuras.bach.api">WriteLogbookAPI</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
+<dd><code><a href="Trait.html" title="interface in com.github.sormuras.bach">Trait</a></code>, <code><a href="trait/HttpTrait.html" title="interface in com.github.sormuras.bach.trait">HttpTrait</a></code>, <code><a href="trait/PrintTrait.html" title="interface in com.github.sormuras.bach.trait">PrintTrait</a></code>, <code><a href="trait/ResolveTrait.html" title="interface in com.github.sormuras.bach.trait">ResolveTrait</a></code>, <code><a href="trait/ToolTrait.html" title="interface in com.github.sormuras.bach.trait">ToolTrait</a></code>, <code><a href="trait/WorkflowTrait.html" title="interface in com.github.sormuras.bach.trait">WorkflowTrait</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Bach</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a>, <a href="api/BachAPI.html" title="interface in com.github.sormuras.bach.api">BachAPI</a></span></div>
-<div class="block">Java Shell Builder.</div>
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Bach</span>(<a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a>&nbsp;logbook, <a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;options, <a href="Factory.html" title="class in com.github.sormuras.bach">Factory</a>&nbsp;factory, <a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a>&nbsp;project)
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
+implements <a href="trait/WorkflowTrait.html" title="interface in com.github.sormuras.bach.trait">WorkflowTrait</a>, <a href="trait/HttpTrait.html" title="interface in com.github.sormuras.bach.trait">HttpTrait</a>, <a href="trait/PrintTrait.html" title="interface in com.github.sormuras.bach.trait">PrintTrait</a>, <a href="trait/ResolveTrait.html" title="interface in com.github.sormuras.bach.trait">ResolveTrait</a>, <a href="trait/ToolTrait.html" title="interface in com.github.sormuras.bach.trait">ToolTrait</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
-<!-- ======== NESTED CLASS SUMMARY ======== -->
+<!-- =========== FIELD SUMMARY =========== -->
 <li>
-<section class="nested-class-summary" id="nested.class.summary">
-<h2>Nested Class Summary</h2>
-<div class="caption"><span>Nested Classes</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Class</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="Bach.OnTestsFailed.html" title="interface in com.github.sormuras.bach">Bach.OnTestsFailed</a></span></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="Bach.OnTestsSuccessful.html" title="interface in com.github.sormuras.bach">Bach.OnTestsSuccessful</a></span></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><span class="member-name-link"><a href="Bach.Provider.html" title="interface in com.github.sormuras.bach">Bach.Provider</a>&lt;<a href="Bach.Provider.html" title="type parameter in Bach.Provider">B</a> extends <a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a>&gt;</span></code></div>
-<div class="col-last even-row-color">
-<div class="block">A <code>Bach</code>-creating service.</div>
-</div>
-</div>
+<section class="field-summary" id="field.summary">
+<h2>Field Summary</h2>
 <div class="inherited-list">
-<h2 id="nested.classes.inherited.from.class.com.github.sormuras.bach.api.JavaFormatterAPI">Nested classes/interfaces inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/JavaFormatterAPI.html" title="interface in com.github.sormuras.bach.api">JavaFormatterAPI</a></h2>
-<code><a href="api/JavaFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">JavaFormatterAPI.Mode</a></code></div>
+<h3 id="fields.inherited.from.class.com.github.sormuras.bach.trait.ToolTrait">Fields inherited from interface&nbsp;com.github.sormuras.bach.trait.<a href="trait/ToolTrait.html" title="interface in com.github.sormuras.bach.trait">ToolTrait</a></h3>
+<code><a href="trait/ToolTrait.html#MAX_DESCRIPTION_LENGTH">MAX_DESCRIPTION_LENGTH</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -124,8 +108,13 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(com.github.sormuras.bach.Options)">Bach</a></span>&#8203;(<a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;options)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(com.github.sormuras.bach.Logbook,com.github.sormuras.bach.Options,com.github.sormuras.bach.Factory,com.github.sormuras.bach.api.Project)">Bach</a></span>&#8203;(<a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a>&nbsp;logbook,
+ <a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;options,
+ <a href="Factory.html" title="class in com.github.sormuras.bach">Factory</a>&nbsp;factory,
+ <a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a>&nbsp;project)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Creates an instance of a <code>Bach</code> record class.</div>
+</div>
 </div>
 </section>
 </li>
@@ -134,7 +123,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -142,118 +131,83 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#bach()">bach</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns this.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#bin()">bin</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Browser.html" title="class in com.github.sormuras.bach">Browser</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#browser()">browser</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Build the current project.</div>
-</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#clean()">clean</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#close()">close</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="project/Folders.html" title="class in com.github.sormuras.bach.project">Folders</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#folders()">folders</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#format()">format</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Format source code files.</div>
-</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#info()">info</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#is(com.github.sormuras.bach.project.Flag)">is</a></span>&#8203;(<a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>&nbsp;flag)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#jar()">jar</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#log(java.lang.String,java.lang.Object...)">log</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
-<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
-</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#logbook()">logbook</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#main(java.lang.String...)">main</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>protected <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.net.http/java/net/http/HttpClient.html" title="class or interface in java.net.http" class="external-link">HttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newHttpClient()">newHttpClient</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns an instance of <code>HttpClient</code> that is memoized by this Bach object.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>protected <a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newProject()">newProject</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns an instance of <code>Project</code> that is used as a component of this Bach object.</div>
+<div class="block">Indicates whether some other object is "equal to" this one.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Factory.html" title="class in com.github.sormuras.bach">Factory</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#factory()">factory</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns the value of the <code>factory</code> record component.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns a hash code value for this object.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#log(java.lang.String)">log</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#logbook()">logbook</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns the value of the <code>logbook</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.github.sormuras.bach.Options)">of</a></span>&#8203;(<a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;options)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.github.sormuras.bach.Logbook,com.github.sormuras.bach.Options)">of</a></span>&#8203;(<a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a>&nbsp;initialLogbook,
+ <a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;initialOptions)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#onTestsFailed(java.lang.Throwable)">onTestsFailed</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;throwable)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#onTestsSuccessful()">onTestsSuccessful</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.github.sormuras.bach.Printer,java.lang.String...)">of</a></span>&#8203;(<a href="Printer.html" title="class in com.github.sormuras.bach">Printer</a>&nbsp;printer,
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(java.lang.String...)">of</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#options()">options</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns the options instance passed to the constructor of this Bach object.</div>
+<div class="block">Returns the value of the <code>options</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#project()">project</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#say(java.lang.String,java.lang.Object...)">say</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">
-<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns the value of the <code>project</code> record component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version()">version</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#run()">run</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#say(java.lang.String)">say</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns a string representation of this record class.</div>
+</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.github.sormuras.bach.api.BuildMainSpaceAPI">Methods inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/BuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">BuildMainSpaceAPI</a></h3>
-<code><a href="api/BuildMainSpaceAPI.html#buildMainBuildModules()">buildMainBuildModules</a>, <a href="api/BuildMainSpaceAPI.html#buildMainCheckModules()">buildMainCheckModules</a>, <a href="api/BuildMainSpaceAPI.html#buildMainGenerateAPIDocumentation()">buildMainGenerateAPIDocumentation</a>, <a href="api/BuildMainSpaceAPI.html#buildMainGenerateCustomRuntimeImage()">buildMainGenerateCustomRuntimeImage</a>, <a href="api/BuildMainSpaceAPI.html#buildMainJar(com.github.sormuras.bach.project.LocalModule,java.nio.file.Path)">buildMainJar</a>, <a href="api/BuildMainSpaceAPI.html#buildMainJarFileName(java.lang.String)">buildMainJarFileName</a>, <a href="api/BuildMainSpaceAPI.html#buildMainJavac(int,java.nio.file.Path)">buildMainJavac</a>, <a href="api/BuildMainSpaceAPI.html#buildMainJavac(com.github.sormuras.bach.project.LocalModule,com.github.sormuras.bach.project.SourceFolder,java.nio.file.Path)">buildMainJavac</a>, <a href="api/BuildMainSpaceAPI.html#buildMainJavadoc(java.nio.file.Path)">buildMainJavadoc</a>, <a href="api/BuildMainSpaceAPI.html#buildMainJavadocJar(java.nio.file.Path)">buildMainJavadocJar</a>, <a href="api/BuildMainSpaceAPI.html#buildMainJDeps(com.github.sormuras.bach.project.LocalModule)">buildMainJDeps</a>, <a href="api/BuildMainSpaceAPI.html#buildMainJLink(java.nio.file.Path)">buildMainJLink</a>, <a href="api/BuildMainSpaceAPI.html#buildMainSpace()">buildMainSpace</a>, <a href="api/BuildMainSpaceAPI.html#buildMainSpaceClassesForJava8(java.nio.file.Path)">buildMainSpaceClassesForJava8</a></code></div>
+<h3 id="methods.inherited.from.class.com.github.sormuras.bach.trait.HttpTrait">Methods inherited from interface&nbsp;com.github.sormuras.bach.trait.<a href="trait/HttpTrait.html" title="interface in com.github.sormuras.bach.trait">HttpTrait</a></h3>
+<code><a href="trait/HttpTrait.html#httpLoad(java.lang.String,java.nio.file.Path)">httpLoad</a>, <a href="trait/HttpTrait.html#httpLoad(java.util.Map)">httpLoad</a>, <a href="trait/HttpTrait.html#httpRead(java.lang.String)">httpRead</a>, <a href="trait/HttpTrait.html#httpRead(java.net.URI)">httpRead</a></code></div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.github.sormuras.bach.api.BuildTestSpaceAPI">Methods inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/BuildTestSpaceAPI.html" title="interface in com.github.sormuras.bach.api">BuildTestSpaceAPI</a></h3>
-<code><a href="api/BuildTestSpaceAPI.html#buildTestJar(java.nio.file.Path,com.github.sormuras.bach.project.LocalModule,java.nio.file.Path)">buildTestJar</a>, <a href="api/BuildTestSpaceAPI.html#buildTestJarFileName(java.lang.String)">buildTestJarFileName</a>, <a href="api/BuildTestSpaceAPI.html#buildTestJavac(java.nio.file.Path)">buildTestJavac</a>, <a href="api/BuildTestSpaceAPI.html#buildTestJUnitRun(java.nio.file.Path,java.lang.String)">buildTestJUnitRun</a>, <a href="api/BuildTestSpaceAPI.html#buildTestModuleFinder(java.nio.file.Path,java.lang.String)">buildTestModuleFinder</a>, <a href="api/BuildTestSpaceAPI.html#buildTestRuns(java.nio.file.Path,com.github.sormuras.bach.project.LocalModules)">buildTestRuns</a>, <a href="api/BuildTestSpaceAPI.html#buildTestSpace()">buildTestSpace</a></code></div>
+<h3 id="methods.inherited.from.class.com.github.sormuras.bach.trait.PrintTrait">Methods inherited from interface&nbsp;com.github.sormuras.bach.trait.<a href="trait/PrintTrait.html" title="interface in com.github.sormuras.bach.trait">PrintTrait</a></h3>
+<code><a href="trait/PrintTrait.html#printDeclaredModules()">printDeclaredModules</a>, <a href="trait/PrintTrait.html#printExternalModules()">printExternalModules</a>, <a href="trait/PrintTrait.html#printModules()">printModules</a>, <a href="trait/PrintTrait.html#printSystemModules()">printSystemModules</a>, <a href="trait/PrintTrait.html#printToolDescription(java.lang.String)">printToolDescription</a>, <a href="trait/PrintTrait.html#printTools()">printTools</a></code></div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.github.sormuras.bach.api.ComputeProjectAPI">Methods inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/ComputeProjectAPI.html" title="interface in com.github.sormuras.bach.api">ComputeProjectAPI</a></h3>
-<code><a href="api/ComputeProjectAPI.html#computeProject()">computeProject</a>, <a href="api/ComputeProjectAPI.html#computeProjectInfo()">computeProjectInfo</a>, <a href="api/ComputeProjectAPI.html#computeProjectJarWithSources(com.github.sormuras.bach.ProjectInfo)">computeProjectJarWithSources</a>, <a href="api/ComputeProjectAPI.html#computeProjectLibraries(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)">computeProjectLibraries</a>, <a href="api/ComputeProjectAPI.html#computeProjectLocalModule(java.nio.file.Path,java.nio.file.Path,boolean)">computeProjectLocalModule</a>, <a href="api/ComputeProjectAPI.html#computeProjectModuleLauncher(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings,java.util.stream.Stream)">computeProjectModuleLauncher</a>, <a href="api/ComputeProjectAPI.html#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.ExternalLibrary)">computeProjectModuleLookup</a>, <a href="api/ComputeProjectAPI.html#computeProjectModuleLookup(com.github.sormuras.bach.ProjectInfo.ExternalModule)">computeProjectModuleLookup</a>, <a href="api/ComputeProjectAPI.html#computeProjectModuleMetadata(com.github.sormuras.bach.ProjectInfo.Metadata)">computeProjectModuleMetadata</a>, <a href="api/ComputeProjectAPI.html#computeProjectModulePaths(java.nio.file.Path,java.lang.String...)">computeProjectModulePaths</a>, <a href="api/ComputeProjectAPI.html#computeProjectName(com.github.sormuras.bach.ProjectInfo,java.lang.String)">computeProjectName</a>, <a href="api/ComputeProjectAPI.html#computeProjectSettings(com.github.sormuras.bach.ProjectInfo)">computeProjectSettings</a>, <a href="api/ComputeProjectAPI.html#computeProjectSourceFolder(java.nio.file.Path)">computeProjectSourceFolder</a>, <a href="api/ComputeProjectAPI.html#computeProjectSourceFolders(java.nio.file.Path,java.lang.String)">computeProjectSourceFolders</a>, <a href="api/ComputeProjectAPI.html#computeProjectSpaces(com.github.sormuras.bach.ProjectInfo,com.github.sormuras.bach.project.Settings)">computeProjectSpaces</a>, <a href="api/ComputeProjectAPI.html#computeProjectTargetsJava(com.github.sormuras.bach.ProjectInfo)">computeProjectTargetsJava</a>, <a href="api/ComputeProjectAPI.html#computeProjectToolsLimit(com.github.sormuras.bach.ProjectInfo)">computeProjectToolsLimit</a>, <a href="api/ComputeProjectAPI.html#computeProjectToolsSkip(com.github.sormuras.bach.ProjectInfo)">computeProjectToolsSkip</a>, <a href="api/ComputeProjectAPI.html#computeProjectTweaks(com.github.sormuras.bach.ProjectInfo.Tweak...)">computeProjectTweaks</a>, <a href="api/ComputeProjectAPI.html#computeProjectVersion(com.github.sormuras.bach.ProjectInfo)">computeProjectVersion</a></code></div>
+<h3 id="methods.inherited.from.class.com.github.sormuras.bach.trait.ResolveTrait">Methods inherited from interface&nbsp;com.github.sormuras.bach.trait.<a href="trait/ResolveTrait.html" title="interface in com.github.sormuras.bach.trait">ResolveTrait</a></h3>
+<code><a href="trait/ResolveTrait.html#loadExternalModules(java.lang.String...)">loadExternalModules</a>, <a href="trait/ResolveTrait.html#loadMissingExternalModules()">loadMissingExternalModules</a></code></div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.github.sormuras.bach.api.ExternalModuleAPI">Methods inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/ExternalModuleAPI.html" title="interface in com.github.sormuras.bach.api">ExternalModuleAPI</a></h3>
-<code><a href="api/ExternalModuleAPI.html#computeExternalModuleFile(java.lang.String)">computeExternalModuleFile</a>, <a href="api/ExternalModuleAPI.html#computeExternalModuleUri(java.lang.String)">computeExternalModuleUri</a>, <a href="api/ExternalModuleAPI.html#computeMissingExternalModules()">computeMissingExternalModules</a>, <a href="api/ExternalModuleAPI.html#computeMissingExternalModules(boolean)">computeMissingExternalModules</a>, <a href="api/ExternalModuleAPI.html#loadExternalModules(java.lang.String...)">loadExternalModules</a>, <a href="api/ExternalModuleAPI.html#loadMissingExternalModules()">loadMissingExternalModules</a>, <a href="api/ExternalModuleAPI.html#verifyExternalModule(java.lang.module.ModuleDescriptor,java.nio.file.Path)">verifyExternalModule</a>, <a href="api/ExternalModuleAPI.html#verifyExternalModules()">verifyExternalModules</a></code></div>
+<h3 id="methods.inherited.from.class.com.github.sormuras.bach.trait.ToolTrait">Methods inherited from interface&nbsp;com.github.sormuras.bach.trait.<a href="trait/ToolTrait.html" title="interface in com.github.sormuras.bach.trait">ToolTrait</a></h3>
+<code><a href="trait/ToolTrait.html#findToolProvider(java.lang.String)">findToolProvider</a>, <a href="trait/ToolTrait.html#run(com.github.sormuras.bach.ToolCall)">run</a>, <a href="trait/ToolTrait.html#run(com.github.sormuras.bach.ToolCall,com.github.sormuras.bach.ToolCall...)">run</a>, <a href="trait/ToolTrait.html#run(com.github.sormuras.bach.ToolCall,java.lang.module.ModuleFinder,java.lang.String...)">run</a>, <a href="trait/ToolTrait.html#run(com.github.sormuras.bach.ToolCall,java.lang.String)">run</a>, <a href="trait/ToolTrait.html#run(java.lang.String,java.lang.Object...)">run</a>, <a href="trait/ToolTrait.html#run(java.util.spi.ToolProvider,java.util.List,java.lang.String)">run</a>, <a href="trait/ToolTrait.html#run(java.util.stream.Stream)">run</a>, <a href="trait/ToolTrait.html#streamToolProviders()">streamToolProviders</a>, <a href="trait/ToolTrait.html#streamToolProviders(java.lang.module.ModuleFinder,java.lang.module.ModuleFinder,boolean,java.lang.String...)">streamToolProviders</a>, <a href="trait/ToolTrait.html#streamToolProviders(java.lang.module.ModuleFinder,java.lang.String...)">streamToolProviders</a></code></div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.github.sormuras.bach.api.JavaFormatterAPI">Methods inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/JavaFormatterAPI.html" title="interface in com.github.sormuras.bach.api">JavaFormatterAPI</a></h3>
-<code><a href="api/JavaFormatterAPI.html#computeJavaSourceFilesFormatCommand(java.util.List,com.github.sormuras.bach.api.JavaFormatterAPI.Mode,com.github.sormuras.bach.project.CodeStyle)">computeJavaSourceFilesFormatCommand</a>, <a href="api/JavaFormatterAPI.html#computeJavaSourceFilesToFormat()">computeJavaSourceFilesToFormat</a>, <a href="api/JavaFormatterAPI.html#formatJavaSourceFiles()">formatJavaSourceFiles</a>, <a href="api/JavaFormatterAPI.html#formatJavaSourceFiles(com.github.sormuras.bach.api.JavaFormatterAPI.Mode)">formatJavaSourceFiles</a></code></div>
-<div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.github.sormuras.bach.api.ToolProviderAPI">Methods inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a></h3>
-<code><a href="api/ToolProviderAPI.html#computeToolProvider(java.lang.String)">computeToolProvider</a>, <a href="api/ToolProviderAPI.html#computeToolProviders()">computeToolProviders</a>, <a href="api/ToolProviderAPI.html#computeToolProviders(java.lang.module.ModuleFinder,boolean,java.lang.String...)">computeToolProviders</a>, <a href="api/ToolProviderAPI.html#computeToolProviders(java.lang.module.ModuleFinder,java.lang.String...)">computeToolProviders</a>, <a href="api/ToolProviderAPI.html#run(com.github.sormuras.bach.Command)">run</a>, <a href="api/ToolProviderAPI.html#run(com.github.sormuras.bach.Command,com.github.sormuras.bach.Command...)">run</a>, <a href="api/ToolProviderAPI.html#run(com.github.sormuras.bach.Command,java.lang.module.ModuleFinder,java.lang.String...)">run</a>, <a href="api/ToolProviderAPI.html#run(com.github.sormuras.bach.Command,java.lang.String)">run</a>, <a href="api/ToolProviderAPI.html#run(java.util.spi.ToolProvider,java.util.List,java.lang.String)">run</a>, <a href="api/ToolProviderAPI.html#run(java.util.stream.Stream)">run</a></code></div>
-<div class="inherited-list">
-<h3 id="methods.inherited.from.class.com.github.sormuras.bach.api.WriteLogbookAPI">Methods inherited from interface&nbsp;com.github.sormuras.bach.api.<a href="api/WriteLogbookAPI.html" title="interface in com.github.sormuras.bach.api">WriteLogbookAPI</a></h3>
-<code><a href="api/WriteLogbookAPI.html#writeLogbook()">writeLogbook</a>, <a href="api/WriteLogbookAPI.html#writeLogbookLines(java.time.LocalDateTime)">writeLogbookLines</a>, <a href="api/WriteLogbookAPI.html#writeLogbookMessages()">writeLogbookMessages</a>, <a href="api/WriteLogbookAPI.html#writeLogbookModulesOverview()">writeLogbookModulesOverview</a>, <a href="api/WriteLogbookAPI.html#writeLogbookToolRunDetails()">writeLogbookToolRunDetails</a>, <a href="api/WriteLogbookAPI.html#writeLogbookToolRunOverview()">writeLogbookToolRunOverview</a></code></div>
+<h3 id="methods.inherited.from.class.com.github.sormuras.bach.trait.WorkflowTrait">Methods inherited from interface&nbsp;com.github.sormuras.bach.trait.<a href="trait/WorkflowTrait.html" title="interface in com.github.sormuras.bach.trait">WorkflowTrait</a></h3>
+<code><a href="trait/WorkflowTrait.html#build()">build</a>, <a href="trait/WorkflowTrait.html#clean()">clean</a>, <a href="trait/WorkflowTrait.html#compileMainCodeSpace()">compileMainCodeSpace</a>, <a href="trait/WorkflowTrait.html#compileTestCodeSpace()">compileTestCodeSpace</a>, <a href="trait/WorkflowTrait.html#executeTests()">executeTests</a>, <a href="trait/WorkflowTrait.html#generateDocumentation()">generateDocumentation</a>, <a href="trait/WorkflowTrait.html#generateImage()">generateImage</a>, <a href="trait/WorkflowTrait.html#resolve()">resolve</a>, <a href="trait/WorkflowTrait.html#run(com.github.sormuras.bach.api.Workflow)">run</a>, <a href="trait/WorkflowTrait.html#writeLogbook()">writeLogbook</a></code></div>
 </section>
 </li>
 </ul>
@@ -266,9 +220,20 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.Options)">
+<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.Logbook,com.github.sormuras.bach.Options,com.github.sormuras.bach.Factory,com.github.sormuras.bach.api.Project)">
 <h3>Bach</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Bach</span>&#8203;<span class="parameters">(<a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;options)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Bach</span>&#8203;<span class="parameters">(<a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a>&nbsp;logbook,
+ <a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;options,
+ <a href="Factory.html" title="class in com.github.sormuras.bach">Factory</a>&nbsp;factory,
+ <a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a>&nbsp;project)</span></div>
+<div class="block">Creates an instance of a <code>Bach</code> record class.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>logbook</code> - the value for the <code>logbook</code> record component</dd>
+<dd><code>options</code> - the value for the <code>options</code> record component</dd>
+<dd><code>factory</code> - the value for the <code>factory</code> record component</dd>
+<dd><code>project</code> - the value for the <code>project</code> record component</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -280,189 +245,136 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="main(java.lang.String...)">
-<h3>main</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">main</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="of(com.github.sormuras.bach.Options)">
+<section class="detail" id="of(java.lang.String...)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">of</span>&#8203;<span class="parameters">(<a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;options)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">of</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="bin()">
-<h3>bin</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">bin</span>()</div>
+<section class="detail" id="of(com.github.sormuras.bach.Printer,java.lang.String...)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">of</span>&#8203;<span class="parameters">(<a href="Printer.html" title="class in com.github.sormuras.bach">Printer</a>&nbsp;printer,
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;args)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="jar()">
-<h3>jar</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">jar</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="version()">
-<h3>version</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">version</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="newHttpClient()">
-<h3>newHttpClient</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.net.http/java/net/http/HttpClient.html" title="class or interface in java.net.http" class="external-link">HttpClient</a></span>&nbsp;<span class="element-name">newHttpClient</span>()</div>
-<div class="block">Returns an instance of <code>HttpClient</code> that is memoized by this Bach object.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>an instance of <code>HttpClient</code> that is memoized by this Bach object</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="newProject()">
-<h3>newProject</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">newProject</span>()</div>
-<div class="block">Returns an instance of <code>Project</code> that is used as a component of this Bach object.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>an instance of <code>Project</code> that is used as a component of this Bach object</dd>
-</dl>
+<section class="detail" id="of(com.github.sormuras.bach.Logbook,com.github.sormuras.bach.Options)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">of</span>&#8203;<span class="parameters">(<a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a>&nbsp;initialLogbook,
+ <a href="Options.html" title="class in com.github.sormuras.bach">Options</a>&nbsp;initialOptions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="bach()">
 <h3>bach</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
-<div class="block">Returns this.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></span>&nbsp;<span class="element-name">bach</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Trait.html#bach()">bach</a></code>&nbsp;in interface&nbsp;<code><a href="Trait.html" title="interface in com.github.sormuras.bach">Trait</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="say(java.lang.String)">
+<h3>say</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">say</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="log(java.lang.String)">
+<h3>log</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">log</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="run()">
+<h3>run</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">run</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="toString()">
+<h3>toString</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
+<div class="block">Returns a string representation of this record class. The representation contains the name of the class, followed by the name and value of each of the record components.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
+<dt>Returns:</dt>
+<dd>a string representation of this object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hashCode()">
+<h3>hashCode</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">hashCode</span>()</div>
+<div class="block">Returns a hash code value for this object. The value is derived from the hash code of each of the record components.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
+<dt>Returns:</dt>
+<dd>a hash code value for this object</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="equals(java.lang.Object)">
+<h3>equals</h3>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="block">Indicates whether some other object is "equal to" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Objects.html#equals(java.lang.Object,java.lang.Object)" title="class or interface in java.util" class="external-link"><code>Objects::equals(Object,Object)</code></a>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>o</code> - the object with which to compare</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if this object is the same as the <code>o</code> argument; <code>false</code> otherwise.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="logbook()">
+<h3>logbook</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a></span>&nbsp;<span class="element-name">logbook</span>()</div>
+<div class="block">Returns the value of the <code>logbook</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>this</dd>
+<dd>the value of the <code>logbook</code> record component</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="options()">
 <h3>options</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></span>&nbsp;<span class="element-name">options</span>()</div>
-<div class="block">Returns the options instance passed to the constructor of this Bach object.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Options.html" title="class in com.github.sormuras.bach">Options</a></span>&nbsp;<span class="element-name">options</span>()</div>
+<div class="block">Returns the value of the <code>options</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the options instance passed to the constructor of this Bach object</dd>
+<dd>the value of the <code>options</code> record component</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="folders()">
-<h3>folders</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="project/Folders.html" title="class in com.github.sormuras.bach.project">Folders</a></span>&nbsp;<span class="element-name">folders</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="browser()">
-<h3>browser</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Browser.html" title="class in com.github.sormuras.bach">Browser</a></span>&nbsp;<span class="element-name">browser</span>()</div>
+<section class="detail" id="factory()">
+<h3>factory</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Factory.html" title="class in com.github.sormuras.bach">Factory</a></span>&nbsp;<span class="element-name">factory</span>()</div>
+<div class="block">Returns the value of the <code>factory</code> record component.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>factory</code> record component</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="project()">
 <h3>project</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Project.html" title="class in com.github.sormuras.bach">Project</a></span>&nbsp;<span class="element-name">project</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="logbook()">
-<h3>logbook</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="Logbook.html" title="class in com.github.sormuras.bach">Logbook</a></span>&nbsp;<span class="element-name">logbook</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="is(com.github.sormuras.bach.project.Flag)">
-<h3>is</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">is</span>&#8203;<span class="parameters">(<a href="project/Flag.html" title="enum class in com.github.sormuras.bach.project">Flag</a>&nbsp;flag)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="build()">
-<h3>build</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">build</span>()
-                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="api/BachAPI.html#build()">BachAPI</a></code></span></div>
-<div class="block">Build the current project.</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a></span>&nbsp;<span class="element-name">project</span>()</div>
+<div class="block">Returns the value of the <code>project</code> record component.</div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="api/BachAPI.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="api/BachAPI.html" title="interface in com.github.sormuras.bach.api">BachAPI</a></code></dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code></dd>
+<dt>Returns:</dt>
+<dd>the value of the <code>project</code> record component</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="clean()">
-<h3>clean</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clean</span>()
-                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
-<dl class="notes">
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="close()">
-<h3>close</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">close</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="info()">
-<h3>info</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">info</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="format()">
-<h3>format</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">format</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="api/BachAPI.html#format()">BachAPI</a></code></span></div>
-<div class="block">Format source code files.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="api/BachAPI.html#format()">format</a></code>&nbsp;in interface&nbsp;<code><a href="api/BachAPI.html" title="interface in com.github.sormuras.bach.api">BachAPI</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="onTestsFailed(java.lang.Throwable)">
-<h3>onTestsFailed</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onTestsFailed</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;throwable)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="onTestsSuccessful()">
-<h3>onTestsSuccessful</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onTestsSuccessful</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="log(java.lang.String,java.lang.Object...)">
-<h3>log</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">log</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
-<div class="block">Record a log message at debug level, which is not printed to the output stream by default.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="say(java.lang.String,java.lang.Object...)">
-<h3>say</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">say</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;format,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span></div>
-<div class="block">Record a log message at info level, which is printed to the output stream by default.</div>
 </section>
 </li>
 </ul>

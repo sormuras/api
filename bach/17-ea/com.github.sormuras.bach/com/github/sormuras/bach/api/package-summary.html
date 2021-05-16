@@ -56,7 +56,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="package-signature">package <span class="element-name">com.github.sormuras.bach.api</span></div>
 <section class="package-description" id="package.description">
-<div class="block">Provides overlay interfaces with default implementations.
+<div class="block">Provides the classes and interfaces of Bach's project model.
 
  <p>Unless otherwise noted, passing a null argument to a constructor or method in any class or
  interface in this package will cause a <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link"><code>NullPointerException</code></a> to be thrown.</div>
@@ -68,38 +68,55 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Interface</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><a href="BachAPI.html" title="interface in com.github.sormuras.bach.api">BachAPI</a></div>
+<div class="col-first even-row-color"><a href="ExternalModuleLocator.html" title="interface in com.github.sormuras.bach.api">ExternalModuleLocator</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</li>
+<li>
+<div class="caption"><span>Class Summary</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><a href="CodeSpaceMain.html" title="class in com.github.sormuras.bach.api">CodeSpaceMain</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="CodeSpaceTest.html" title="class in com.github.sormuras.bach.api">CodeSpaceTest</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="DeclaredModule.html" title="class in com.github.sormuras.bach.api">DeclaredModule</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="DeclaredModuleFinder.html" title="class in com.github.sormuras.bach.api">DeclaredModuleFinder</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="DeclaredModuleReference.html" title="class in com.github.sormuras.bach.api">DeclaredModuleReference</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="ExternalLibraryVersion.html" title="class in com.github.sormuras.bach.api">ExternalLibraryVersion</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="ExternalModuleLocation.html" title="class in com.github.sormuras.bach.api">ExternalModuleLocation</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="ExternalModuleLocations.html" title="class in com.github.sormuras.bach.api">ExternalModuleLocations</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="Externals.html" title="class in com.github.sormuras.bach.api">Externals</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="Externals.External.html" title="class in com.github.sormuras.bach.api">Externals.External</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="Folders.html" title="class in com.github.sormuras.bach.api">Folders</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="ModulePaths.html" title="class in com.github.sormuras.bach.api">ModulePaths</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="Project.html" title="class in com.github.sormuras.bach.api">Project</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="SourceFolder.html" title="class in com.github.sormuras.bach.api">SourceFolder</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="SourceFolders.html" title="class in com.github.sormuras.bach.api">SourceFolders</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="Spaces.html" title="class in com.github.sormuras.bach.api">Spaces</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="Tools.html" title="class in com.github.sormuras.bach.api">Tools</a></div>
 <div class="col-last even-row-color">
-<div class="block">Defines the extensible API of the Java Shell Builder by combining overlay API declarations.</div>
+<div class="block">Tool-related settings.</div>
 </div>
-<div class="col-first odd-row-color"><a href="BuildMainSpaceAPI.html" title="interface in com.github.sormuras.bach.api">BuildMainSpaceAPI</a></div>
-<div class="col-last odd-row-color">
-<div class="block">Methods related to building projects.</div>
-</div>
-<div class="col-first even-row-color"><a href="BuildTestSpaceAPI.html" title="interface in com.github.sormuras.bach.api">BuildTestSpaceAPI</a></div>
-<div class="col-last even-row-color">
-<div class="block">Methods related to building and running test modules.</div>
-</div>
-<div class="col-first odd-row-color"><a href="ComputeProjectAPI.html" title="interface in com.github.sormuras.bach.api">ComputeProjectAPI</a></div>
-<div class="col-last odd-row-color">
-<div class="block">A <a href="../ProjectInfo.html" title="annotation in com.github.sormuras.bach"><code>ProjectInfo</code></a> to <a href="../Project.html" title="class in com.github.sormuras.bach"><code>Project</code></a> factory.</div>
-</div>
-<div class="col-first even-row-color"><a href="ExternalModuleAPI.html" title="interface in com.github.sormuras.bach.api">ExternalModuleAPI</a></div>
-<div class="col-last even-row-color">
-<div class="block">Methods related to manage external modules.</div>
-</div>
-<div class="col-first odd-row-color"><a href="JavaFormatterAPI.html" title="interface in com.github.sormuras.bach.api">JavaFormatterAPI</a></div>
-<div class="col-last odd-row-color">
-<div class="block">Methods related to formatting Java source-code files.</div>
-</div>
-<div class="col-first even-row-color"><a href="ToolProviderAPI.html" title="interface in com.github.sormuras.bach.api">ToolProviderAPI</a></div>
-<div class="col-last even-row-color">
-<div class="block">Methods related to finding and running provided tools.</div>
-</div>
-<div class="col-first odd-row-color"><a href="WriteLogbookAPI.html" title="interface in com.github.sormuras.bach.api">WriteLogbookAPI</a></div>
-<div class="col-last odd-row-color">
-<div class="block">Methods for writing logbooks in markdown format.</div>
-</div>
+<div class="col-first odd-row-color"><a href="Tweak.html" title="class in com.github.sormuras.bach.api">Tweak</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="Tweaks.html" title="class in com.github.sormuras.bach.api">Tweaks</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </li>
 <li>
@@ -107,8 +124,52 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Enum Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><a href="JavaFormatterAPI.Mode.html" title="enum class in com.github.sormuras.bach.api">JavaFormatterAPI.Mode</a></div>
+<div class="col-first even-row-color"><a href="CodeSpace.html" title="enum class in com.github.sormuras.bach.api">CodeSpace</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="ExternalLibraryName.html" title="enum class in com.github.sormuras.bach.api">ExternalLibraryName</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="ExternalModuleLocator.Stability.html" title="enum class in com.github.sormuras.bach.api">ExternalModuleLocator.Stability</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="LinkType.html" title="enum class in com.github.sormuras.bach.api">LinkType</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="ModuleOrigin.html" title="enum class in com.github.sormuras.bach.api">ModuleOrigin</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="Workflow.html" title="enum class in com.github.sormuras.bach.api">Workflow</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+</div>
+</li>
+<li>
+<div class="caption"><span>Exception Summary</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Exception</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><a href="BachException.html" title="class in com.github.sormuras.bach.api">BachException</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="UnsupportedWorkflowException.html" title="class in com.github.sormuras.bach.api">UnsupportedWorkflowException</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+</div>
+</li>
+<li>
+<div class="caption"><span>Annotation Interfaces Summary</span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Annotation Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><a href="ProjectInfo.html" title="annotation in com.github.sormuras.bach.api">ProjectInfo</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="ProjectInfo.External.html" title="annotation in com.github.sormuras.bach.api">ProjectInfo.External</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="ProjectInfo.ExternalLibrary.html" title="annotation in com.github.sormuras.bach.api">ProjectInfo.ExternalLibrary</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="ProjectInfo.ExternalModule.html" title="annotation in com.github.sormuras.bach.api">ProjectInfo.ExternalModule</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="ProjectInfo.Main.html" title="annotation in com.github.sormuras.bach.api">ProjectInfo.Main</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="ProjectInfo.Test.html" title="annotation in com.github.sormuras.bach.api">ProjectInfo.Test</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="ProjectInfo.Tool.html" title="annotation in com.github.sormuras.bach.api">ProjectInfo.Tool</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="ProjectInfo.Tweak.html" title="annotation in com.github.sormuras.bach.api">ProjectInfo.Tweak</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </li>
 </ul>
