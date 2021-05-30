@@ -109,7 +109,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.net.http/java/net/http/HttpClient.html" title="class or interface in java.net.http" class="external-link">HttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultHttpClient(com.github.sormuras.bach.Configuration)">defaultHttpClient</a></span>&#8203;(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#defaultHttpClient(com.github.sormuras.bach.Core)">defaultHttpClient</a></span>&#8203;(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="workflow/BuildWorkflow.html" title="class in com.github.sormuras.bach.workflow">BuildWorkflow</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newBuildWorkflow(com.github.sormuras.bach.Bach)">newBuildWorkflow</a></span>&#8203;(<a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a>&nbsp;bach)</code></div>
@@ -133,10 +133,10 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newGenerateImageWorkflow(com.github.sormuras.bach.Bach)">newGenerateImageWorkflow</a></span>&#8203;(<a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a>&nbsp;bach)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.net.http/java/net/http/HttpClient.Builder.html" title="class or interface in java.net.http" class="external-link">HttpClient.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newHttpClientBuilder(com.github.sormuras.bach.Configuration)">newHttpClientBuilder</a></span>&#8203;(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newHttpClientBuilder(com.github.sormuras.bach.Core)">newHttpClientBuilder</a></span>&#8203;(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.github.sormuras.bach">ProjectBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newProjectBuilder(com.github.sormuras.bach.Configuration)">newProjectBuilder</a></span>&#8203;(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newProjectBuilder(com.github.sormuras.bach.Core)">newProjectBuilder</a></span>&#8203;(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="workflow/ResolveWorkflow.html" title="class in com.github.sormuras.bach.workflow">ResolveWorkflow</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newResolveWorkflow(com.github.sormuras.bach.Bach)">newResolveWorkflow</a></span>&#8203;(<a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a>&nbsp;bach)</code></div>
@@ -176,21 +176,21 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="defaultHttpClient(com.github.sormuras.bach.Configuration)">
+<section class="detail" id="defaultHttpClient(com.github.sormuras.bach.Core)">
 <h3>defaultHttpClient</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.net.http/java/net/http/HttpClient.html" title="class or interface in java.net.http" class="external-link">HttpClient</a></span>&nbsp;<span class="element-name">defaultHttpClient</span>&#8203;<span class="parameters">(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.net.http/java/net/http/HttpClient.html" title="class or interface in java.net.http" class="external-link">HttpClient</a></span>&nbsp;<span class="element-name">defaultHttpClient</span>&#8203;<span class="parameters">(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="newProjectBuilder(com.github.sormuras.bach.Configuration)">
+<section class="detail" id="newProjectBuilder(com.github.sormuras.bach.Core)">
 <h3>newProjectBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.github.sormuras.bach">ProjectBuilder</a></span>&nbsp;<span class="element-name">newProjectBuilder</span>&#8203;<span class="parameters">(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.github.sormuras.bach">ProjectBuilder</a></span>&nbsp;<span class="element-name">newProjectBuilder</span>&#8203;<span class="parameters">(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="newHttpClientBuilder(com.github.sormuras.bach.Configuration)">
+<section class="detail" id="newHttpClientBuilder(com.github.sormuras.bach.Core)">
 <h3>newHttpClientBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.net.http/java/net/http/HttpClient.Builder.html" title="class or interface in java.net.http" class="external-link">HttpClient.Builder</a></span>&nbsp;<span class="element-name">newHttpClientBuilder</span>&#8203;<span class="parameters">(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.net.http/java/net/http/HttpClient.Builder.html" title="class or interface in java.net.http" class="external-link">HttpClient.Builder</a></span>&nbsp;<span class="element-name">newHttpClientBuilder</span>&#8203;<span class="parameters">(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core)</span></div>
 </section>
 </li>
 <li>

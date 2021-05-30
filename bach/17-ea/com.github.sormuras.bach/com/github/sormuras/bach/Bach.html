@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Trait.html" title="interface in com.github.sormuras.bach">Trait</a></code>, <code><a href="trait/PrintTrait.html" title="interface in com.github.sormuras.bach.trait">PrintTrait</a></code>, <code><a href="trait/ResolveTrait.html" title="interface in com.github.sormuras.bach.trait">ResolveTrait</a></code>, <code><a href="trait/ToolTrait.html" title="interface in com.github.sormuras.bach.trait">ToolTrait</a></code>, <code><a href="trait/WorkflowTrait.html" title="interface in com.github.sormuras.bach.trait">WorkflowTrait</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Bach</span>(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration, <a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a>&nbsp;project)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Bach</span>(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core, <a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a>&nbsp;project)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a>
 implements <a href="trait/WorkflowTrait.html" title="interface in com.github.sormuras.bach.trait">WorkflowTrait</a>, <a href="trait/PrintTrait.html" title="interface in com.github.sormuras.bach.trait">PrintTrait</a>, <a href="trait/ResolveTrait.html" title="interface in com.github.sormuras.bach.trait">ResolveTrait</a>, <a href="trait/ToolTrait.html" title="interface in com.github.sormuras.bach.trait">ToolTrait</a></span></div>
 </section>
@@ -108,7 +108,7 @@ implements <a href="trait/WorkflowTrait.html" title="interface in com.github.sor
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(com.github.sormuras.bach.Configuration,com.github.sormuras.bach.api.Project)">Bach</a></span>&#8203;(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration,
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(com.github.sormuras.bach.Core,com.github.sormuras.bach.api.Project)">Bach</a></span>&#8203;(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core,
  <a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a>&nbsp;project)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Bach</code> record class.</div>
@@ -130,10 +130,10 @@ implements <a href="trait/WorkflowTrait.html" title="interface in com.github.sor
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Bach.html" title="class in com.github.sormuras.bach">Bach</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#bach()">bach</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#configuration()">configuration</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Core.html" title="class in com.github.sormuras.bach">Core</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#core()">core</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns the value of the <code>configuration</code> record component.</div>
+<div class="block">Returns the value of the <code>core</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
@@ -211,14 +211,14 @@ implements <a href="trait/WorkflowTrait.html" title="interface in com.github.sor
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.Configuration,com.github.sormuras.bach.api.Project)">
+<section class="detail" id="&lt;init&gt;(com.github.sormuras.bach.Core,com.github.sormuras.bach.api.Project)">
 <h3>Bach</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Bach</span>&#8203;<span class="parameters">(<a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a>&nbsp;configuration,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Bach</span>&#8203;<span class="parameters">(<a href="Core.html" title="class in com.github.sormuras.bach">Core</a>&nbsp;core,
  <a href="api/Project.html" title="class in com.github.sormuras.bach.api">Project</a>&nbsp;project)</span></div>
 <div class="block">Creates an instance of a <code>Bach</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>configuration</code> - the value for the <code>configuration</code> record component</dd>
+<dd><code>core</code> - the value for the <code>core</code> record component</dd>
 <dd><code>project</code> - the value for the <code>project</code> record component</dd>
 </dl>
 </section>
@@ -333,13 +333,13 @@ implements <a href="trait/WorkflowTrait.html" title="interface in com.github.sor
 </section>
 </li>
 <li>
-<section class="detail" id="configuration()">
-<h3>configuration</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Configuration.html" title="class in com.github.sormuras.bach">Configuration</a></span>&nbsp;<span class="element-name">configuration</span>()</div>
-<div class="block">Returns the value of the <code>configuration</code> record component.</div>
+<section class="detail" id="core()">
+<h3>core</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Core.html" title="class in com.github.sormuras.bach">Core</a></span>&nbsp;<span class="element-name">core</span>()</div>
+<div class="block">Returns the value of the <code>core</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>configuration</code> record component</dd>
+<dd>the value of the <code>core</code> record component</dd>
 </dl>
 </section>
 </li>
