@@ -81,7 +81,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Folders</span>(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;workspace, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externals, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;tools)
+<div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">Folders</span>(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;workspace, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externalModules, <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externalTools)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
 </section>
 <section class="summary">
@@ -96,8 +96,8 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.nio.file.Path,java.nio.file.Path,java.nio.file.Path,java.nio.file.Path)">Folders</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;workspace,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externals,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;tools)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externalModules,
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externalTools)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Creates an instance of a <code>Folders</code> record class.</div>
 </div>
@@ -121,12 +121,21 @@ loadScripts(document, 'script');</script>
 <div class="block">Indicates whether some other object is "equal to" this one.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#externals()">externals</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#externalModules()">externalModules</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns the value of the <code>externals</code> record component.</div>
+<div class="block">Returns the value of the <code>externalModules</code> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#externals(java.lang.String,java.lang.String...)">externals</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#externalModules(java.lang.String,java.lang.String...)">externalModules</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;more)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#externalTools()">externalTools</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns the value of the <code>externalTools</code> record component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#externalTools(java.lang.String,java.lang.String...)">externalTools</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;more)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
@@ -160,15 +169,6 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#root(java.lang.String,java.lang.String...)">root</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;more)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#tools()">tools</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Returns the value of the <code>tools</code> record component.</div>
-</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#tools(java.lang.String,java.lang.String...)">tools</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;more)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
@@ -207,15 +207,15 @@ loadScripts(document, 'script');</script>
 <h3>Folders</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Folders</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;root,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;workspace,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externals,
- <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;tools)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externalModules,
+ <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;externalTools)</span></div>
 <div class="block">Creates an instance of a <code>Folders</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>root</code> - the value for the <code>root</code> record component</dd>
 <dd><code>workspace</code> - the value for the <code>workspace</code> record component</dd>
-<dd><code>externals</code> - the value for the <code>externals</code> record component</dd>
-<dd><code>tools</code> - the value for the <code>tools</code> record component</dd>
+<dd><code>externalModules</code> - the value for the <code>externalModules</code> record component</dd>
+<dd><code>externalTools</code> - the value for the <code>externalTools</code> record component</dd>
 </dl>
 </section>
 </li>
@@ -247,16 +247,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="externals(java.lang.String,java.lang.String...)">
-<h3>externals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">externals</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
+<section class="detail" id="externalModules(java.lang.String,java.lang.String...)">
+<h3>externalModules</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">externalModules</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;more)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="tools(java.lang.String,java.lang.String...)">
-<h3>tools</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">tools</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
+<section class="detail" id="externalTools(java.lang.String,java.lang.String...)">
+<h3>externalTools</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">externalTools</span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;first,
  <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;more)</span></div>
 </section>
 </li>
@@ -353,24 +353,24 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="externals()">
-<h3>externals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">externals</span>()</div>
-<div class="block">Returns the value of the <code>externals</code> record component.</div>
+<section class="detail" id="externalModules()">
+<h3>externalModules</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">externalModules</span>()</div>
+<div class="block">Returns the value of the <code>externalModules</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>externals</code> record component</dd>
+<dd>the value of the <code>externalModules</code> record component</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="tools()">
-<h3>tools</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">tools</span>()</div>
-<div class="block">Returns the value of the <code>tools</code> record component.</div>
+<section class="detail" id="externalTools()">
+<h3>externalTools</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a></span>&nbsp;<span class="element-name">externalTools</span>()</div>
+<div class="block">Returns the value of the <code>externalTools</code> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>tools</code> record component</dd>
+<dd>the value of the <code>externalTools</code> record component</dd>
 </dl>
 </section>
 </li>
