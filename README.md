@@ -5,8 +5,6 @@
 ### bach 17
 
 - [17-ea](bach/17-ea)
-- [17-ea-2](bach/17-ea-2)
-- [17-ea-1](bach/17-ea-1)
 
 ### bach 16
 
