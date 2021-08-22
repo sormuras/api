@@ -1,7 +1,0 @@
-module:com.github.sormuras.bach
-com.github.sormuras.bach
-com.github.sormuras.bach.api
-com.github.sormuras.bach.locator
-com.github.sormuras.bach.tool
-com.github.sormuras.bach.trait
-com.github.sormuras.bach.workflow
