@@ -36,42 +36,42 @@
 <span class="source-line-no">023</span><span id="line-23">/** Java Shell Builder. */</span>
 <span class="source-line-no">024</span><span id="line-24">public class Bach implements AutoCloseable {</span>
 <span class="source-line-no">025</span><span id="line-25"></span>
-<span class="source-line-no">026</span><span id="line-26">  public static String version() {</span>
-<span class="source-line-no">027</span><span id="line-27">    return ModuleSupport.version(Bach.class.getModule());</span>
-<span class="source-line-no">028</span><span id="line-28">  }</span>
-<span class="source-line-no">029</span><span id="line-29"></span>
-<span class="source-line-no">030</span><span id="line-30">  public sealed interface BuildProgramGenerators {</span>
-<span class="source-line-no">031</span><span id="line-31">    static String generateConventionalBuildProgram() {</span>
-<span class="source-line-no">032</span><span id="line-32">      return Conventional.generateMainAndTestSpaceBuildProgram();</span>
-<span class="source-line-no">033</span><span id="line-33">    }</span>
-<span class="source-line-no">034</span><span id="line-34"></span>
-<span class="source-line-no">035</span><span id="line-35">    static String generateConventionalUnnamedSpaceBuildProgram() {</span>
-<span class="source-line-no">036</span><span id="line-36">      return Conventional.generateUnnamedSpaceBuildProgram();</span>
-<span class="source-line-no">037</span><span id="line-37">    }</span>
-<span class="source-line-no">038</span><span id="line-38">  }</span>
-<span class="source-line-no">039</span><span id="line-39"></span>
-<span class="source-line-no">040</span><span id="line-40">  /** Package-private target of local "namespace-defining" sealed types. */</span>
-<span class="source-line-no">041</span><span id="line-41">  record Sealer() implements BuildProgramGenerators {}</span>
-<span class="source-line-no">042</span><span id="line-42"></span>
-<span class="source-line-no">043</span><span id="line-43">  private final Configuration configuration;</span>
-<span class="source-line-no">044</span><span id="line-44">  private final Logbook logbook;</span>
-<span class="source-line-no">045</span><span id="line-45"></span>
-<span class="source-line-no">046</span><span id="line-46">  public Bach(String... args) {</span>
-<span class="source-line-no">047</span><span id="line-47">    this(Configuration.of().with(Options.parse(args)));</span>
-<span class="source-line-no">048</span><span id="line-48">  }</span>
-<span class="source-line-no">049</span><span id="line-49"></span>
-<span class="source-line-no">050</span><span id="line-50">  public Bach(Configuration configuration) {</span>
-<span class="source-line-no">051</span><span id="line-51">    this.configuration = configuration;</span>
-<span class="source-line-no">052</span><span id="line-52">    this.logbook = constructLogbook();</span>
-<span class="source-line-no">053</span><span id="line-53">    logbook()</span>
-<span class="source-line-no">054</span><span id="line-54">        .logMessage(</span>
-<span class="source-line-no">055</span><span id="line-55">            System.Logger.Level.INFO,</span>
-<span class="source-line-no">056</span><span id="line-56">            "Initialized Bach %s (Java %s, %s, %s)"</span>
-<span class="source-line-no">057</span><span id="line-57">                .formatted(</span>
-<span class="source-line-no">058</span><span id="line-58">                    version(),</span>
-<span class="source-line-no">059</span><span id="line-59">                    System.getProperty("java.version"),</span>
-<span class="source-line-no">060</span><span id="line-60">                    System.getProperty("os.name"),</span>
-<span class="source-line-no">061</span><span id="line-61">                    Path.of(System.getProperty("user.dir")).toUri()));</span>
+<span class="source-line-no">026</span><span id="line-26">  /** {@return the version information compiled into Bach's module} */</span>
+<span class="source-line-no">027</span><span id="line-27">  public static String version() {</span>
+<span class="source-line-no">028</span><span id="line-28">    return ModuleSupport.version(Bach.class.getModule());</span>
+<span class="source-line-no">029</span><span id="line-29">  }</span>
+<span class="source-line-no">030</span><span id="line-30"></span>
+<span class="source-line-no">031</span><span id="line-31">  /** Convenience short-cuts to various build program generators. */</span>
+<span class="source-line-no">032</span><span id="line-32">  public sealed interface BuildProgramGenerators {</span>
+<span class="source-line-no">033</span><span id="line-33">    static String generateConventionalBuildProgram() {</span>
+<span class="source-line-no">034</span><span id="line-34">      return Conventional.generateMainAndTestSpaceBuildProgram();</span>
+<span class="source-line-no">035</span><span id="line-35">    }</span>
+<span class="source-line-no">036</span><span id="line-36"></span>
+<span class="source-line-no">037</span><span id="line-37">    static String generateConventionalUnnamedSpaceBuildProgram() {</span>
+<span class="source-line-no">038</span><span id="line-38">      return Conventional.generateUnnamedSpaceBuildProgram();</span>
+<span class="source-line-no">039</span><span id="line-39">    }</span>
+<span class="source-line-no">040</span><span id="line-40">  }</span>
+<span class="source-line-no">041</span><span id="line-41"></span>
+<span class="source-line-no">042</span><span id="line-42">  /** Package-private target of local "namespace-defining" sealed types. */</span>
+<span class="source-line-no">043</span><span id="line-43">  record Sealer() implements BuildProgramGenerators {}</span>
+<span class="source-line-no">044</span><span id="line-44"></span>
+<span class="source-line-no">045</span><span id="line-45">  private final Configuration configuration;</span>
+<span class="source-line-no">046</span><span id="line-46">  private final Logbook logbook;</span>
+<span class="source-line-no">047</span><span id="line-47"></span>
+<span class="source-line-no">048</span><span id="line-48">  public Bach(String... args) {</span>
+<span class="source-line-no">049</span><span id="line-49">    this(Configuration.of().with(Options.parse(args)));</span>
+<span class="source-line-no">050</span><span id="line-50">  }</span>
+<span class="source-line-no">051</span><span id="line-51"></span>
+<span class="source-line-no">052</span><span id="line-52">  public Bach(Configuration configuration) {</span>
+<span class="source-line-no">053</span><span id="line-53">    this.configuration = configuration;</span>
+<span class="source-line-no">054</span><span id="line-54">    this.logbook = constructLogbook();</span>
+<span class="source-line-no">055</span><span id="line-55">    logMessage(</span>
+<span class="source-line-no">056</span><span id="line-56">        "Initialized Bach %s (Java %s, %s, %s)"</span>
+<span class="source-line-no">057</span><span id="line-57">            .formatted(</span>
+<span class="source-line-no">058</span><span id="line-58">                version(),</span>
+<span class="source-line-no">059</span><span id="line-59">                System.getProperty("java.version"),</span>
+<span class="source-line-no">060</span><span id="line-60">                System.getProperty("os.name"),</span>
+<span class="source-line-no">061</span><span id="line-61">                Path.of(System.getProperty("user.dir")).toUri()));</span>
 <span class="source-line-no">062</span><span id="line-62">  }</span>
 <span class="source-line-no">063</span><span id="line-63"></span>
 <span class="source-line-no">064</span><span id="line-64">  protected Logbook constructLogbook() {</span>
