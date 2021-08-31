@@ -26,49 +26,59 @@
 <span class="source-line-no">013</span><span id="line-13">    List&lt;String&gt; unhandledArguments) {</span>
 <span class="source-line-no">014</span><span id="line-14"></span>
 <span class="source-line-no">015</span><span id="line-15">  /** A group of optional components used by the main program. */</span>
-<span class="source-line-no">016</span><span id="line-16">  public record MainOptions(Optional&lt;Boolean&gt; help, Optional&lt;Boolean&gt; version) {}</span>
-<span class="source-line-no">017</span><span id="line-17"></span>
-<span class="source-line-no">018</span><span id="line-18">  /** A group of optional components used as global settings of a {@link Configuration} instance. */</span>
-<span class="source-line-no">019</span><span id="line-19">  public record ConfigurationOptions(</span>
-<span class="source-line-no">020</span><span id="line-20">      Optional&lt;Boolean&gt; verbose, Optional&lt;Boolean&gt; lenient, Optional&lt;Integer&gt; timeout) {}</span>
-<span class="source-line-no">021</span><span id="line-21"></span>
-<span class="source-line-no">022</span><span id="line-22">  /** A group of optional components used when building a project model instance. */</span>
-<span class="source-line-no">023</span><span id="line-23">  public record ProjectOptions(Optional&lt;String&gt; name, Optional&lt;Version&gt; version) {}</span>
-<span class="source-line-no">024</span><span id="line-24"></span>
-<span class="source-line-no">025</span><span id="line-25">  /** Parses an array of strings in command-line style into an options instance. */</span>
-<span class="source-line-no">026</span><span id="line-26">  public static Options parse(String... args) {</span>
-<span class="source-line-no">027</span><span id="line-27">    Boolean help = null;</span>
-<span class="source-line-no">028</span><span id="line-28">    Boolean version = null;</span>
-<span class="source-line-no">029</span><span id="line-29">    Boolean verbose = null;</span>
-<span class="source-line-no">030</span><span id="line-30">    Boolean lenient = null;</span>
-<span class="source-line-no">031</span><span id="line-31">    Integer timeout = null;</span>
-<span class="source-line-no">032</span><span id="line-32">    String projectName = null;</span>
-<span class="source-line-no">033</span><span id="line-33">    Version projectVersion = null;</span>
-<span class="source-line-no">034</span><span id="line-34">    var unhandled = new LinkedList&lt;String&gt;();</span>
-<span class="source-line-no">035</span><span id="line-35">    var arguments = new LinkedList&lt;&gt;(List.of(args));</span>
-<span class="source-line-no">036</span><span id="line-36">    while (!arguments.isEmpty()) {</span>
-<span class="source-line-no">037</span><span id="line-37">      var argument = arguments.pop();</span>
-<span class="source-line-no">038</span><span id="line-38">      switch (argument) {</span>
-<span class="source-line-no">039</span><span id="line-39">        case "--help", "/?" -&gt; help = true;</span>
-<span class="source-line-no">040</span><span id="line-40">        case "--version" -&gt; version = true;</span>
-<span class="source-line-no">041</span><span id="line-41">        case "--verbose" -&gt; verbose = true;</span>
-<span class="source-line-no">042</span><span id="line-42">        case "--lenient" -&gt; lenient = true;</span>
-<span class="source-line-no">043</span><span id="line-43">        case "--timeout" -&gt; timeout = Integer.parseInt(arguments.pop());</span>
-<span class="source-line-no">044</span><span id="line-44">        case "--project-name" -&gt; projectName = arguments.pop();</span>
-<span class="source-line-no">045</span><span id="line-45">        case "--project-version" -&gt; projectVersion = Version.parse(arguments.pop());</span>
-<span class="source-line-no">046</span><span id="line-46">        default -&gt; unhandled.add(argument);</span>
-<span class="source-line-no">047</span><span id="line-47">      }</span>
-<span class="source-line-no">048</span><span id="line-48">    }</span>
-<span class="source-line-no">049</span><span id="line-49">    return new Options(</span>
-<span class="source-line-no">050</span><span id="line-50">        new MainOptions(Optional.ofNullable(help), Optional.ofNullable(version)),</span>
-<span class="source-line-no">051</span><span id="line-51">        new ConfigurationOptions(</span>
-<span class="source-line-no">052</span><span id="line-52">            Optional.ofNullable(verbose),</span>
-<span class="source-line-no">053</span><span id="line-53">            Optional.ofNullable(lenient),</span>
-<span class="source-line-no">054</span><span id="line-54">            Optional.ofNullable(timeout)),</span>
-<span class="source-line-no">055</span><span id="line-55">        new ProjectOptions(Optional.ofNullable(projectName), Optional.ofNullable(projectVersion)),</span>
-<span class="source-line-no">056</span><span id="line-56">        List.copyOf(unhandled));</span>
-<span class="source-line-no">057</span><span id="line-57">  }</span>
-<span class="source-line-no">058</span><span id="line-58">}</span>
+<span class="source-line-no">016</span><span id="line-16">  public record MainOptions(</span>
+<span class="source-line-no">017</span><span id="line-17">      Optional&lt;Boolean&gt; help, Optional&lt;Boolean&gt; version, Optional&lt;Boolean&gt; generateBuildProgram) {}</span>
+<span class="source-line-no">018</span><span id="line-18"></span>
+<span class="source-line-no">019</span><span id="line-19">  /** A group of optional components used as global settings of a {@link Configuration} instance. */</span>
+<span class="source-line-no">020</span><span id="line-20">  public record ConfigurationOptions(</span>
+<span class="source-line-no">021</span><span id="line-21">      Optional&lt;Boolean&gt; verbose, Optional&lt;Boolean&gt; lenient, Optional&lt;Integer&gt; timeout) {}</span>
+<span class="source-line-no">022</span><span id="line-22"></span>
+<span class="source-line-no">023</span><span id="line-23">  /** A group of optional components used when building a project model instance. */</span>
+<span class="source-line-no">024</span><span id="line-24">  public record ProjectOptions(Optional&lt;String&gt; name, Optional&lt;Version&gt; version) {}</span>
+<span class="source-line-no">025</span><span id="line-25"></span>
+<span class="source-line-no">026</span><span id="line-26">  /** Parses an array of strings in command-line style into an options instance. */</span>
+<span class="source-line-no">027</span><span id="line-27">  public static Options parse(String... args) {</span>
+<span class="source-line-no">028</span><span id="line-28">    return Options.parse(List.of(args));</span>
+<span class="source-line-no">029</span><span id="line-29">  }</span>
+<span class="source-line-no">030</span><span id="line-30"></span>
+<span class="source-line-no">031</span><span id="line-31">  public static Options parse(List&lt;String&gt; args) {</span>
+<span class="source-line-no">032</span><span id="line-32">    Boolean help = null;</span>
+<span class="source-line-no">033</span><span id="line-33">    Boolean version = null;</span>
+<span class="source-line-no">034</span><span id="line-34">    Boolean generateBuildProgram = null;</span>
+<span class="source-line-no">035</span><span id="line-35">    Boolean verbose = null;</span>
+<span class="source-line-no">036</span><span id="line-36">    Boolean lenient = null;</span>
+<span class="source-line-no">037</span><span id="line-37">    Integer timeout = null;</span>
+<span class="source-line-no">038</span><span id="line-38">    String projectName = null;</span>
+<span class="source-line-no">039</span><span id="line-39">    Version projectVersion = null;</span>
+<span class="source-line-no">040</span><span id="line-40">    var unhandled = new LinkedList&lt;String&gt;();</span>
+<span class="source-line-no">041</span><span id="line-41">    var arguments = new LinkedList&lt;&gt;(args);</span>
+<span class="source-line-no">042</span><span id="line-42">    while (!arguments.isEmpty()) {</span>
+<span class="source-line-no">043</span><span id="line-43">      var argument = arguments.pop();</span>
+<span class="source-line-no">044</span><span id="line-44">      switch (argument) {</span>
+<span class="source-line-no">045</span><span id="line-45">        case "--help", "/?" -&gt; help = true;</span>
+<span class="source-line-no">046</span><span id="line-46">        case "--version" -&gt; version = true;</span>
+<span class="source-line-no">047</span><span id="line-47">        case "--generate-build-program" -&gt; generateBuildProgram = true;</span>
+<span class="source-line-no">048</span><span id="line-48">        case "--verbose" -&gt; verbose = true;</span>
+<span class="source-line-no">049</span><span id="line-49">        case "--lenient" -&gt; lenient = true;</span>
+<span class="source-line-no">050</span><span id="line-50">        case "--timeout" -&gt; timeout = Integer.parseInt(arguments.pop());</span>
+<span class="source-line-no">051</span><span id="line-51">        case "--project-name" -&gt; projectName = arguments.pop();</span>
+<span class="source-line-no">052</span><span id="line-52">        case "--project-version" -&gt; projectVersion = Version.parse(arguments.pop());</span>
+<span class="source-line-no">053</span><span id="line-53">        default -&gt; unhandled.add(argument);</span>
+<span class="source-line-no">054</span><span id="line-54">      }</span>
+<span class="source-line-no">055</span><span id="line-55">    }</span>
+<span class="source-line-no">056</span><span id="line-56">    return new Options(</span>
+<span class="source-line-no">057</span><span id="line-57">        new MainOptions(</span>
+<span class="source-line-no">058</span><span id="line-58">            Optional.ofNullable(help),</span>
+<span class="source-line-no">059</span><span id="line-59">            Optional.ofNullable(version),</span>
+<span class="source-line-no">060</span><span id="line-60">            Optional.ofNullable(generateBuildProgram)),</span>
+<span class="source-line-no">061</span><span id="line-61">        new ConfigurationOptions(</span>
+<span class="source-line-no">062</span><span id="line-62">            Optional.ofNullable(verbose),</span>
+<span class="source-line-no">063</span><span id="line-63">            Optional.ofNullable(lenient),</span>
+<span class="source-line-no">064</span><span id="line-64">            Optional.ofNullable(timeout)),</span>
+<span class="source-line-no">065</span><span id="line-65">        new ProjectOptions(Optional.ofNullable(projectName), Optional.ofNullable(projectVersion)),</span>
+<span class="source-line-no">066</span><span id="line-66">        List.copyOf(unhandled));</span>
+<span class="source-line-no">067</span><span id="line-67">  }</span>
+<span class="source-line-no">068</span><span id="line-68">}</span>
 
 
 
