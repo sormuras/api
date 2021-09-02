@@ -23,30 +23,27 @@
 <span class="source-line-no">010</span><span id="line-10">/** Contains methods creating new builder instances, e.g. building conventional Java projects. */</span>
 <span class="source-line-no">011</span><span id="line-11">public record BuilderFactory(Bach bach) {</span>
 <span class="source-line-no">012</span><span id="line-12"></span>
-<span class="source-line-no">013</span><span id="line-13">  public Conventional.Builder conventional(String... modules) {</span>
-<span class="source-line-no">014</span><span id="line-14">    if (modules.length == 0) throw new IllegalArgumentException("modules array must not be empty");</span>
-<span class="source-line-no">015</span><span id="line-15"></span>
-<span class="source-line-no">016</span><span id="line-16">    var unnamedSpace =</span>
-<span class="source-line-no">017</span><span id="line-17">        new Conventional.Space(</span>
-<span class="source-line-no">018</span><span id="line-18">            Optional.empty(), List.of(modules), List.of("."), List.of(), Path.of("modules"));</span>
-<span class="source-line-no">019</span><span id="line-19">    return new Conventional.Builder(bach, unnamedSpace);</span>
-<span class="source-line-no">020</span><span id="line-20">  }</span>
-<span class="source-line-no">021</span><span id="line-21"></span>
-<span class="source-line-no">022</span><span id="line-22">  public Conventional.Builder conventionalSpace(String name, String... modules) {</span>
-<span class="source-line-no">023</span><span id="line-23">    if (modules.length == 0) throw new IllegalArgumentException("modules array must not be empty");</span>
-<span class="source-line-no">024</span><span id="line-24">    if (name.isEmpty()) throw new IllegalArgumentException("name must not be empty");</span>
-<span class="source-line-no">025</span><span id="line-25"></span>
-<span class="source-line-no">026</span><span id="line-26">    var moduleSourcePather = new StringJoiner(File.separator).add(".").add("*").add(name);</span>
-<span class="source-line-no">027</span><span id="line-27">    var namedSpace =</span>
-<span class="source-line-no">028</span><span id="line-28">        new Conventional.Space(</span>
-<span class="source-line-no">029</span><span id="line-29">            Optional.of(name),</span>
-<span class="source-line-no">030</span><span id="line-30">            List.of(modules),</span>
-<span class="source-line-no">031</span><span id="line-31">            List.of(moduleSourcePather.toString(), moduleSourcePather.add("java").toString()),</span>
-<span class="source-line-no">032</span><span id="line-32">            List.of(),</span>
-<span class="source-line-no">033</span><span id="line-33">            Path.of(name, "modules"));</span>
-<span class="source-line-no">034</span><span id="line-34">    return new Conventional.Builder(bach, namedSpace);</span>
-<span class="source-line-no">035</span><span id="line-35">  }</span>
-<span class="source-line-no">036</span><span id="line-36">}</span>
+<span class="source-line-no">013</span><span id="line-13">  public Conventional.Builder conventional() {</span>
+<span class="source-line-no">014</span><span id="line-14">    var unnamedSpace =</span>
+<span class="source-line-no">015</span><span id="line-15">        new Conventional.Space(</span>
+<span class="source-line-no">016</span><span id="line-16">            Optional.empty(), List.of(), List.of("."), List.of(), Path.of("modules"));</span>
+<span class="source-line-no">017</span><span id="line-17">    return new Conventional.Builder(bach, unnamedSpace);</span>
+<span class="source-line-no">018</span><span id="line-18">  }</span>
+<span class="source-line-no">019</span><span id="line-19"></span>
+<span class="source-line-no">020</span><span id="line-20">  public Conventional.Builder conventional(String space) {</span>
+<span class="source-line-no">021</span><span id="line-21">    if (space.isEmpty()) throw new IllegalArgumentException("space name must not be empty");</span>
+<span class="source-line-no">022</span><span id="line-22"></span>
+<span class="source-line-no">023</span><span id="line-23">    var moduleSourcePather = new StringJoiner(File.separator).add(".").add("*").add(space);</span>
+<span class="source-line-no">024</span><span id="line-24">    var namedSpace =</span>
+<span class="source-line-no">025</span><span id="line-25">        new Conventional.Space(</span>
+<span class="source-line-no">026</span><span id="line-26">            Optional.of(space),</span>
+<span class="source-line-no">027</span><span id="line-27">            List.of(),</span>
+<span class="source-line-no">028</span><span id="line-28">            List.of(moduleSourcePather.toString(), moduleSourcePather.add("java").toString()),</span>
+<span class="source-line-no">029</span><span id="line-29">            List.of(),</span>
+<span class="source-line-no">030</span><span id="line-30">            Path.of(space, "modules"));</span>
+<span class="source-line-no">031</span><span id="line-31">    return new Conventional.Builder(bach, namedSpace);</span>
+<span class="source-line-no">032</span><span id="line-32">  }</span>
+<span class="source-line-no">033</span><span id="line-33">}</span>
 
 
 
