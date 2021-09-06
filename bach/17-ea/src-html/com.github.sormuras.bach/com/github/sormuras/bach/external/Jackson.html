@@ -54,39 +54,38 @@
 <span class="source-line-no">041</span><span id="line-41">              yield "com.fasterxml.jackson.module";</span>
 <span class="source-line-no">042</span><span id="line-42">            if (module.startsWith("com.fasterxml.jackson.jaxrs."))</span>
 <span class="source-line-no">043</span><span id="line-43">              yield "com.fasterxml.jackson.jaxrs";</span>
-<span class="source-line-no">044</span><span id="line-44">            if (module.startsWith("com.fasterxml.jackson.jr."))</span>
-<span class="source-line-no">045</span><span id="line-45">              yield "com.fasterxml.jackson.jr";</span>
-<span class="source-line-no">046</span><span id="line-46">            yield MAVEN_GROUP;</span>
-<span class="source-line-no">047</span><span id="line-47">          }</span>
-<span class="source-line-no">048</span><span id="line-48">        };</span>
-<span class="source-line-no">049</span><span id="line-49">    var artifact =</span>
-<span class="source-line-no">050</span><span id="line-50">        switch (module) {</span>
-<span class="source-line-no">051</span><span id="line-51">          case "com.fasterxml.jackson.annotation" -&gt; "jackson-annotations";</span>
-<span class="source-line-no">052</span><span id="line-52">          case "com.fasterxml.jackson.jakarta.rs.cbor" -&gt; "jackson-jakarta-rs-cbor-provider";</span>
-<span class="source-line-no">053</span><span id="line-53">          case "com.fasterxml.jackson.jakarta.rs.json" -&gt; "jackson-jakarta-rs-json-provider";</span>
-<span class="source-line-no">054</span><span id="line-54">          case "com.fasterxml.jackson.jakarta.rs.smile" -&gt; "jackson-jakarta-rs-smile-provider";</span>
-<span class="source-line-no">055</span><span id="line-55">          case "com.fasterxml.jackson.jakarta.rs.xml" -&gt; "jackson-jakarta-rs-xml-provider";</span>
-<span class="source-line-no">056</span><span id="line-56">          case "com.fasterxml.jackson.jakarta.rs.yaml" -&gt; "jackson-jakarta-rs-yaml-provider";</span>
-<span class="source-line-no">057</span><span id="line-57">          case "com.fasterxml.jackson.jaxrs.cbor" -&gt; "jackson-jaxrs-cbor-provider";</span>
-<span class="source-line-no">058</span><span id="line-58">          case "com.fasterxml.jackson.jaxrs.smile" -&gt; "jackson-jaxrs-smile-provider";</span>
-<span class="source-line-no">059</span><span id="line-59">          case "com.fasterxml.jackson.jaxrs.json" -&gt; "jackson-jaxrs-json-provider";</span>
-<span class="source-line-no">060</span><span id="line-60">          case "com.fasterxml.jackson.jaxrs.xml" -&gt; "jackson-jaxrs-xml-provider";</span>
-<span class="source-line-no">061</span><span id="line-61">          case "com.fasterxml.jackson.jaxrs.yaml" -&gt; "jackson-jaxrs-yaml-provider";</span>
-<span class="source-line-no">062</span><span id="line-62">          case "com.fasterxml.jackson.jr.annotationsupport" -&gt; "jackson-jr-annotation-support";</span>
-<span class="source-line-no">063</span><span id="line-63">          case "com.fasterxml.jackson.jr.ob" -&gt; "jackson-jr-objects";</span>
-<span class="source-line-no">064</span><span id="line-64">          case "com.fasterxml.jackson.datatype.joda" -&gt; "jackson-datatype-joda-money";</span>
-<span class="source-line-no">065</span><span id="line-65">          case "com.fasterxml.jackson.datatype.jsonorg" -&gt; "jackson-datatype-json-org";</span>
-<span class="source-line-no">066</span><span id="line-66">          case "com.fasterxml.jackson.datatype.jsonp" -&gt; "jackson-datatype-jakarta-jsonp";</span>
-<span class="source-line-no">067</span><span id="line-67">          case "com.fasterxml.jackson.dataformat.javaprop" -&gt; "jackson-dataformat-properties";</span>
-<span class="source-line-no">068</span><span id="line-68">          case "com.fasterxml.jackson.module.jakarta.xmlbind" -&gt; "jackson-module-jakarta-xmlbind-annotations";</span>
-<span class="source-line-no">069</span><span id="line-69">          case "com.fasterxml.jackson.module.jaxb" -&gt; "jackson-module-jaxb-annotations";</span>
-<span class="source-line-no">070</span><span id="line-70">          case "com.fasterxml.jackson.module.noctordeser" -&gt; "jackson-module-no-ctor-deser";</span>
-<span class="source-line-no">071</span><span id="line-71">          case "com.fasterxml.jackson.module.paramnames" -&gt; "jackson-module-parameter-names";</span>
-<span class="source-line-no">072</span><span id="line-72">          default -&gt; module.substring(14).replace('.', '-');</span>
-<span class="source-line-no">073</span><span id="line-73">        };</span>
-<span class="source-line-no">074</span><span id="line-74">    return Maven.central(group, artifact, version);</span>
-<span class="source-line-no">075</span><span id="line-75">  }</span>
-<span class="source-line-no">076</span><span id="line-76">}</span>
+<span class="source-line-no">044</span><span id="line-44">            if (module.startsWith("com.fasterxml.jackson.jr.")) yield "com.fasterxml.jackson.jr";</span>
+<span class="source-line-no">045</span><span id="line-45">            yield MAVEN_GROUP;</span>
+<span class="source-line-no">046</span><span id="line-46">          }</span>
+<span class="source-line-no">047</span><span id="line-47">        };</span>
+<span class="source-line-no">048</span><span id="line-48">    var artifact =</span>
+<span class="source-line-no">049</span><span id="line-49">        switch (module) {</span>
+<span class="source-line-no">050</span><span id="line-50">          case "com.fasterxml.jackson.annotation" -&gt; "jackson-annotations";</span>
+<span class="source-line-no">051</span><span id="line-51">          case "com.fasterxml.jackson.jakarta.rs.cbor" -&gt; "jackson-jakarta-rs-cbor-provider";</span>
+<span class="source-line-no">052</span><span id="line-52">          case "com.fasterxml.jackson.jakarta.rs.json" -&gt; "jackson-jakarta-rs-json-provider";</span>
+<span class="source-line-no">053</span><span id="line-53">          case "com.fasterxml.jackson.jakarta.rs.smile" -&gt; "jackson-jakarta-rs-smile-provider";</span>
+<span class="source-line-no">054</span><span id="line-54">          case "com.fasterxml.jackson.jakarta.rs.xml" -&gt; "jackson-jakarta-rs-xml-provider";</span>
+<span class="source-line-no">055</span><span id="line-55">          case "com.fasterxml.jackson.jakarta.rs.yaml" -&gt; "jackson-jakarta-rs-yaml-provider";</span>
+<span class="source-line-no">056</span><span id="line-56">          case "com.fasterxml.jackson.jaxrs.cbor" -&gt; "jackson-jaxrs-cbor-provider";</span>
+<span class="source-line-no">057</span><span id="line-57">          case "com.fasterxml.jackson.jaxrs.smile" -&gt; "jackson-jaxrs-smile-provider";</span>
+<span class="source-line-no">058</span><span id="line-58">          case "com.fasterxml.jackson.jaxrs.json" -&gt; "jackson-jaxrs-json-provider";</span>
+<span class="source-line-no">059</span><span id="line-59">          case "com.fasterxml.jackson.jaxrs.xml" -&gt; "jackson-jaxrs-xml-provider";</span>
+<span class="source-line-no">060</span><span id="line-60">          case "com.fasterxml.jackson.jaxrs.yaml" -&gt; "jackson-jaxrs-yaml-provider";</span>
+<span class="source-line-no">061</span><span id="line-61">          case "com.fasterxml.jackson.jr.annotationsupport" -&gt; "jackson-jr-annotation-support";</span>
+<span class="source-line-no">062</span><span id="line-62">          case "com.fasterxml.jackson.jr.ob" -&gt; "jackson-jr-objects";</span>
+<span class="source-line-no">063</span><span id="line-63">          case "com.fasterxml.jackson.datatype.joda" -&gt; "jackson-datatype-joda-money";</span>
+<span class="source-line-no">064</span><span id="line-64">          case "com.fasterxml.jackson.datatype.jsonorg" -&gt; "jackson-datatype-json-org";</span>
+<span class="source-line-no">065</span><span id="line-65">          case "com.fasterxml.jackson.datatype.jsonp" -&gt; "jackson-datatype-jakarta-jsonp";</span>
+<span class="source-line-no">066</span><span id="line-66">          case "com.fasterxml.jackson.dataformat.javaprop" -&gt; "jackson-dataformat-properties";</span>
+<span class="source-line-no">067</span><span id="line-67">          case "com.fasterxml.jackson.module.jakarta.xmlbind" -&gt; "jackson-module-jakarta-xmlbind-annotations";</span>
+<span class="source-line-no">068</span><span id="line-68">          case "com.fasterxml.jackson.module.jaxb" -&gt; "jackson-module-jaxb-annotations";</span>
+<span class="source-line-no">069</span><span id="line-69">          case "com.fasterxml.jackson.module.noctordeser" -&gt; "jackson-module-no-ctor-deser";</span>
+<span class="source-line-no">070</span><span id="line-70">          case "com.fasterxml.jackson.module.paramnames" -&gt; "jackson-module-parameter-names";</span>
+<span class="source-line-no">071</span><span id="line-71">          default -&gt; module.substring(14).replace('.', '-');</span>
+<span class="source-line-no">072</span><span id="line-72">        };</span>
+<span class="source-line-no">073</span><span id="line-73">    return Maven.central(group, artifact, version);</span>
+<span class="source-line-no">074</span><span id="line-74">  }</span>
+<span class="source-line-no">075</span><span id="line-75">}</span>
 
 
 
