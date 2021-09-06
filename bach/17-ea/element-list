@@ -1,4 +1,5 @@
 module:com.github.sormuras.bach
 com.github.sormuras.bach
 com.github.sormuras.bach.builder
+com.github.sormuras.bach.command
 com.github.sormuras.bach.external
