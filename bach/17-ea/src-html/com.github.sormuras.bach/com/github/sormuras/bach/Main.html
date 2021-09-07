@@ -57,7 +57,7 @@
 <span class="source-line-no">044</span><span id="line-44">        return;</span>
 <span class="source-line-no">045</span><span id="line-45">      }</span>
 <span class="source-line-no">046</span><span id="line-46">      if (options.forMain().generateBuildProgram().orElse(false)) {</span>
-<span class="source-line-no">047</span><span id="line-47">        out.print(Bach.BuildProgramGenerators.generateConventionalBuildProgram());</span>
+<span class="source-line-no">047</span><span id="line-47">        // TODO out.print(Bach.BuildProgramGenerators.generateConventionalBuildProgram());</span>
 <span class="source-line-no">048</span><span id="line-48">        return;</span>
 <span class="source-line-no">049</span><span id="line-49">      }</span>
 <span class="source-line-no">050</span><span id="line-50">      throw new UnsupportedOperationException("options = %s".formatted(options));</span>
