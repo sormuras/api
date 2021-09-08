@@ -57,9 +57,13 @@
 <span class="source-line-no">044</span><span id="line-44">  }</span>
 <span class="source-line-no">045</span><span id="line-45"></span>
 <span class="source-line-no">046</span><span id="line-46">  static ToolCall module(ModuleFinder finder, String name, Object... arguments) {</span>
-<span class="source-line-no">047</span><span id="line-47">    return new ModuleLaunchingToolCall(finder, Command.of(name, arguments));</span>
+<span class="source-line-no">047</span><span id="line-47">    return ToolCall.module(finder, Command.of(name, arguments));</span>
 <span class="source-line-no">048</span><span id="line-48">  }</span>
-<span class="source-line-no">049</span><span id="line-49">}</span>
+<span class="source-line-no">049</span><span id="line-49"></span>
+<span class="source-line-no">050</span><span id="line-50">  static ToolCall module(ModuleFinder finder, Command&lt;?&gt; command) {</span>
+<span class="source-line-no">051</span><span id="line-51">    return new ModuleLaunchingToolCall(finder, command);</span>
+<span class="source-line-no">052</span><span id="line-52">  }</span>
+<span class="source-line-no">053</span><span id="line-53">}</span>
 
 
 
