@@ -207,17 +207,14 @@
 <span class="source-line-no">194</span><span id="line-194">  }</span>
 <span class="source-line-no">195</span><span id="line-195"></span>
 <span class="source-line-no">196</span><span id="line-196">  default void runJUnit(</span>
-<span class="source-line-no">197</span><span id="line-197">      ToolFinder finder,</span>
-<span class="source-line-no">198</span><span id="line-198">      String module,</span>
-<span class="source-line-no">199</span><span id="line-199">      Composer&lt;JUnitCommand&gt; composer,</span>
-<span class="source-line-no">200</span><span id="line-200">      ToolRun.Visitor visitor) {</span>
-<span class="source-line-no">201</span><span id="line-201">    var reports = outputDirectoryForReports().resolve("junit/" + module);</span>
-<span class="source-line-no">202</span><span id="line-202">    var junit = Command.junit().add("--select-module", module).add("--reports-dir", reports);</span>
-<span class="source-line-no">203</span><span id="line-203">    var call = ToolCall.of(finder, composer.apply(junit));</span>
-<span class="source-line-no">204</span><span id="line-204">    var run = bach().run(call);</span>
-<span class="source-line-no">205</span><span id="line-205">    visitor.accept(run);</span>
-<span class="source-line-no">206</span><span id="line-206">  }</span>
-<span class="source-line-no">207</span><span id="line-207">}</span>
+<span class="source-line-no">197</span><span id="line-197">      ToolFinder finder, String module, Composer&lt;JUnitCommand&gt; composer, ToolRun.Visitor visitor) {</span>
+<span class="source-line-no">198</span><span id="line-198">    var reports = outputDirectoryForReports().resolve("junit/" + module);</span>
+<span class="source-line-no">199</span><span id="line-199">    var junit = Command.junit().add("--select-module", module).add("--reports-dir", reports);</span>
+<span class="source-line-no">200</span><span id="line-200">    var call = ToolCall.of(finder, composer.apply(junit));</span>
+<span class="source-line-no">201</span><span id="line-201">    var run = bach().run(call);</span>
+<span class="source-line-no">202</span><span id="line-202">    visitor.accept(run);</span>
+<span class="source-line-no">203</span><span id="line-203">  }</span>
+<span class="source-line-no">204</span><span id="line-204">}</span>
 
 
 
