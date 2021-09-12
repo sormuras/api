@@ -30,14 +30,18 @@
 <span class="source-line-no">017</span><span id="line-17">    return new ProjectSpace(name, parents, modules.with(module));</span>
 <span class="source-line-no">018</span><span id="line-18">  }</span>
 <span class="source-line-no">019</span><span id="line-19"></span>
-<span class="source-line-no">020</span><span id="line-20">  public ProjectSpace withModule(Path info, DeclaredModule.Operator operator) {</span>
-<span class="source-line-no">021</span><span id="line-21">    return withModule(operator.apply(DeclaredModule.of(info.toString())));</span>
+<span class="source-line-no">020</span><span id="line-20">  public ProjectSpace withModule(String info) {</span>
+<span class="source-line-no">021</span><span id="line-21">    return withModule(Path.of(info), module -&gt; module);</span>
 <span class="source-line-no">022</span><span id="line-22">  }</span>
 <span class="source-line-no">023</span><span id="line-23"></span>
-<span class="source-line-no">024</span><span id="line-24">  ProjectSpace tweak(DeclaredModule.Tweak tweak) {</span>
-<span class="source-line-no">025</span><span id="line-25">    return this == tweak.space() ? new ProjectSpace(name, parents, modules.tweak(tweak)) : this;</span>
+<span class="source-line-no">024</span><span id="line-24">  public ProjectSpace withModule(Path info, DeclaredModule.Operator operator) {</span>
+<span class="source-line-no">025</span><span id="line-25">    return withModule(operator.apply(DeclaredModule.of(info.toString())));</span>
 <span class="source-line-no">026</span><span id="line-26">  }</span>
-<span class="source-line-no">027</span><span id="line-27">}</span>
+<span class="source-line-no">027</span><span id="line-27"></span>
+<span class="source-line-no">028</span><span id="line-28">  ProjectSpace tweak(DeclaredModule.Tweak tweak) {</span>
+<span class="source-line-no">029</span><span id="line-29">    return this == tweak.space() ? new ProjectSpace(name, parents, modules.tweak(tweak)) : this;</span>
+<span class="source-line-no">030</span><span id="line-30">  }</span>
+<span class="source-line-no">031</span><span id="line-31">}</span>
 
 
 
