@@ -100,8 +100,8 @@
 <span class="source-line-no">087</span><span id="line-87">    return option(moduleSourcePathPatterns.add(segment));</span>
 <span class="source-line-no">088</span><span id="line-88">  }</span>
 <span class="source-line-no">089</span><span id="line-89"></span>
-<span class="source-line-no">090</span><span id="line-90">  public JavacCommand moduleSourcePathAddSpecific(String module, Path path, Path... more) {</span>
-<span class="source-line-no">091</span><span id="line-91">    return option(moduleSourcePathSpecifics.withModuleSpecificForm(module, path, more));</span>
+<span class="source-line-no">090</span><span id="line-90">  public JavacCommand moduleSourcePathAddSpecific(String module, Path... paths) {</span>
+<span class="source-line-no">091</span><span id="line-91">    return option(moduleSourcePathSpecifics.withModuleSpecificForm(module, paths));</span>
 <span class="source-line-no">092</span><span id="line-92">  }</span>
 <span class="source-line-no">093</span><span id="line-93"></span>
 <span class="source-line-no">094</span><span id="line-94">  public JavacCommand modulePaths(Path... paths) {</span>
