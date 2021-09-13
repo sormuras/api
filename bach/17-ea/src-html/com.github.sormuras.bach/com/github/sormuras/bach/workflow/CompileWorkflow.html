@@ -18,112 +18,95 @@
 <span class="source-line-no">005</span><span id="line-5">import com.github.sormuras.bach.Project;</span>
 <span class="source-line-no">006</span><span id="line-6">import com.github.sormuras.bach.command.JarCommand;</span>
 <span class="source-line-no">007</span><span id="line-7">import com.github.sormuras.bach.command.JavacCommand;</span>
-<span class="source-line-no">008</span><span id="line-8">import com.github.sormuras.bach.command.ModulePathsOption;</span>
-<span class="source-line-no">009</span><span id="line-9">import com.github.sormuras.bach.project.DeclaredModule;</span>
-<span class="source-line-no">010</span><span id="line-10">import com.github.sormuras.bach.project.FolderType;</span>
-<span class="source-line-no">011</span><span id="line-11">import com.github.sormuras.bach.project.ProjectSpace;</span>
-<span class="source-line-no">012</span><span id="line-12">import java.nio.file.Files;</span>
-<span class="source-line-no">013</span><span id="line-13">import java.nio.file.Path;</span>
-<span class="source-line-no">014</span><span id="line-14"></span>
-<span class="source-line-no">015</span><span id="line-15">/** Compiles and archives Java source files. */</span>
-<span class="source-line-no">016</span><span id="line-16">public class CompileWorkflow extends Workflow {</span>
-<span class="source-line-no">017</span><span id="line-17"></span>
-<span class="source-line-no">018</span><span id="line-18">  protected final ProjectSpace space;</span>
+<span class="source-line-no">008</span><span id="line-8">import com.github.sormuras.bach.project.DeclaredModule;</span>
+<span class="source-line-no">009</span><span id="line-9">import com.github.sormuras.bach.project.FolderType;</span>
+<span class="source-line-no">010</span><span id="line-10">import com.github.sormuras.bach.project.ProjectSpace;</span>
+<span class="source-line-no">011</span><span id="line-11">import java.nio.file.Path;</span>
+<span class="source-line-no">012</span><span id="line-12"></span>
+<span class="source-line-no">013</span><span id="line-13">/** Compiles and archives Java source files. */</span>
+<span class="source-line-no">014</span><span id="line-14">public class CompileWorkflow extends AbstractSpaceWorkflow {</span>
+<span class="source-line-no">015</span><span id="line-15"></span>
+<span class="source-line-no">016</span><span id="line-16">  public CompileWorkflow(Bach bach, Project project, ProjectSpace space) {</span>
+<span class="source-line-no">017</span><span id="line-17">    super(bach, project, space);</span>
+<span class="source-line-no">018</span><span id="line-18">  }</span>
 <span class="source-line-no">019</span><span id="line-19"></span>
-<span class="source-line-no">020</span><span id="line-20">  public CompileWorkflow(Bach bach, Project project, ProjectSpace space) {</span>
-<span class="source-line-no">021</span><span id="line-21">    super(bach, project);</span>
-<span class="source-line-no">022</span><span id="line-22">    this.space = space;</span>
-<span class="source-line-no">023</span><span id="line-23">  }</span>
-<span class="source-line-no">024</span><span id="line-24"></span>
-<span class="source-line-no">025</span><span id="line-25">  protected JavacCommand computeJavacCommand(Path classes) {</span>
-<span class="source-line-no">026</span><span id="line-26">    var computedModuleSourcePath = ModuleSourcePathComputer.compute(space);</span>
-<span class="source-line-no">027</span><span id="line-27">    return Command.javac()</span>
-<span class="source-line-no">028</span><span id="line-28">        .modules(space.modules().names())</span>
-<span class="source-line-no">029</span><span id="line-29">        .option(computedModuleSourcePath.patterns())</span>
-<span class="source-line-no">030</span><span id="line-30">        .option(computedModuleSourcePath.specifics())</span>
-<span class="source-line-no">031</span><span id="line-31">        .option(computeModulePathsOption())</span>
-<span class="source-line-no">032</span><span id="line-32">        .outputDirectoryForClasses(classes);</span>
-<span class="source-line-no">033</span><span id="line-33">  }</span>
+<span class="source-line-no">020</span><span id="line-20">  protected JavacCommand computeJavacCommand(Path classes) {</span>
+<span class="source-line-no">021</span><span id="line-21">    var computedModuleSourcePath = ModuleSourcePathComputer.compute(space);</span>
+<span class="source-line-no">022</span><span id="line-22">    return Command.javac()</span>
+<span class="source-line-no">023</span><span id="line-23">        .modules(space.modules().names())</span>
+<span class="source-line-no">024</span><span id="line-24">        .option(computedModuleSourcePath.patterns())</span>
+<span class="source-line-no">025</span><span id="line-25">        .option(computedModuleSourcePath.specifics())</span>
+<span class="source-line-no">026</span><span id="line-26">        .option(computeModulePathsOption())</span>
+<span class="source-line-no">027</span><span id="line-27">        .outputDirectoryForClasses(classes);</span>
+<span class="source-line-no">028</span><span id="line-28">  }</span>
+<span class="source-line-no">029</span><span id="line-29"></span>
+<span class="source-line-no">030</span><span id="line-30">  protected JarCommand computeJarCommand(DeclaredModule module, Path classes, Path modules) {</span>
+<span class="source-line-no">031</span><span id="line-31">    var name = module.name();</span>
+<span class="source-line-no">032</span><span id="line-32">    var version = project.version().value();</span>
+<span class="source-line-no">033</span><span id="line-33">    var file = modules.resolve(name + "@" + version + ".jar");</span>
 <span class="source-line-no">034</span><span id="line-34"></span>
-<span class="source-line-no">035</span><span id="line-35">  protected JarCommand computeJarCommand(DeclaredModule module, Path classes, Path modules) {</span>
-<span class="source-line-no">036</span><span id="line-36">    var name = module.name();</span>
-<span class="source-line-no">037</span><span id="line-37">    var version = project.version().value();</span>
-<span class="source-line-no">038</span><span id="line-38">    var file = modules.resolve(name + "@" + version + ".jar");</span>
-<span class="source-line-no">039</span><span id="line-39"></span>
-<span class="source-line-no">040</span><span id="line-40">    var jar = Command.jar().mode("--create").file(file);</span>
-<span class="source-line-no">041</span><span id="line-41"></span>
-<span class="source-line-no">042</span><span id="line-42">    if (module.mainClass().isPresent()) jar = jar.main(module.mainClass().get());</span>
-<span class="source-line-no">043</span><span id="line-43"></span>
-<span class="source-line-no">044</span><span id="line-44">    var folders = module.folders();</span>
-<span class="source-line-no">045</span><span id="line-45">    var baseSources = folders.list(0, FolderType.SOURCES);</span>
-<span class="source-line-no">046</span><span id="line-46">    if (!baseSources.isEmpty()) jar = jar.filesAdd(classes.resolve(name));</span>
-<span class="source-line-no">047</span><span id="line-47">    var baseResources = folders.list(0, FolderType.RESOURCES);</span>
-<span class="source-line-no">048</span><span id="line-48">    for (var resource : baseResources) jar = jar.filesAdd(resource);</span>
+<span class="source-line-no">035</span><span id="line-35">    var jar = Command.jar().mode("--create").file(file);</span>
+<span class="source-line-no">036</span><span id="line-36"></span>
+<span class="source-line-no">037</span><span id="line-37">    if (module.mainClass().isPresent()) jar = jar.main(module.mainClass().get());</span>
+<span class="source-line-no">038</span><span id="line-38"></span>
+<span class="source-line-no">039</span><span id="line-39">    var folders = module.folders();</span>
+<span class="source-line-no">040</span><span id="line-40">    var baseSources = folders.list(0, FolderType.SOURCES);</span>
+<span class="source-line-no">041</span><span id="line-41">    if (!baseSources.isEmpty()) jar = jar.filesAdd(classes.resolve(name));</span>
+<span class="source-line-no">042</span><span id="line-42">    var baseResources = folders.list(0, FolderType.RESOURCES);</span>
+<span class="source-line-no">043</span><span id="line-43">    for (var resource : baseResources) jar = jar.filesAdd(resource);</span>
+<span class="source-line-no">044</span><span id="line-44"></span>
+<span class="source-line-no">045</span><span id="line-45">    //    if (computedModulePatches.mode() == PatchMode.CLASSES) {</span>
+<span class="source-line-no">046</span><span id="line-46">    //      var list = computedModulePatches.map().getOrDefault(name, List.of());</span>
+<span class="source-line-no">047</span><span id="line-47">    //      jar = jar.forEach(list, (call, path) -&gt; call.with("-C", path, "."));</span>
+<span class="source-line-no">048</span><span id="line-48">    //    }</span>
 <span class="source-line-no">049</span><span id="line-49"></span>
-<span class="source-line-no">050</span><span id="line-50">    //    if (computedModulePatches.mode() == PatchMode.CLASSES) {</span>
-<span class="source-line-no">051</span><span id="line-51">    //      var list = computedModulePatches.map().getOrDefault(name, List.of());</span>
-<span class="source-line-no">052</span><span id="line-52">    //      jar = jar.forEach(list, (call, path) -&gt; call.with("-C", path, "."));</span>
-<span class="source-line-no">053</span><span id="line-53">    //    }</span>
-<span class="source-line-no">054</span><span id="line-54"></span>
-<span class="source-line-no">055</span><span id="line-55">    // multi-release</span>
-<span class="source-line-no">056</span><span id="line-56">    for (var release = 9; release &lt;= Runtime.version().feature(); release++) {</span>
-<span class="source-line-no">057</span><span id="line-57">      if (!folders.list(release, FolderType.SOURCES).isEmpty()) {</span>
-<span class="source-line-no">058</span><span id="line-58">        jar = jar.filesAdd(release, computeOutputDirectoryForClasses(name, release));</span>
-<span class="source-line-no">059</span><span id="line-59">      }</span>
-<span class="source-line-no">060</span><span id="line-60">      for (var resource : folders.list(release, FolderType.RESOURCES)) {</span>
-<span class="source-line-no">061</span><span id="line-61">        jar = jar.filesAdd(release, resource);</span>
-<span class="source-line-no">062</span><span id="line-62">      }</span>
-<span class="source-line-no">063</span><span id="line-63">    }</span>
-<span class="source-line-no">064</span><span id="line-64"></span>
-<span class="source-line-no">065</span><span id="line-65">    return jar;</span>
-<span class="source-line-no">066</span><span id="line-66">  }</span>
-<span class="source-line-no">067</span><span id="line-67"></span>
-<span class="source-line-no">068</span><span id="line-68">  protected Path computeOutputDirectoryForClasses() {</span>
-<span class="source-line-no">069</span><span id="line-69">    return bach.path().workspace(space.name(), "classes-" + computeRelease());</span>
-<span class="source-line-no">070</span><span id="line-70">  }</span>
-<span class="source-line-no">071</span><span id="line-71"></span>
-<span class="source-line-no">072</span><span id="line-72">  protected Path computeOutputDirectoryForClasses(String module, int release) {</span>
-<span class="source-line-no">073</span><span id="line-73">    return bach.path().workspace(space.name(), "classes-mr-" + release, module);</span>
-<span class="source-line-no">074</span><span id="line-74">  }</span>
-<span class="source-line-no">075</span><span id="line-75"></span>
-<span class="source-line-no">076</span><span id="line-76">  protected Path computeOutputDirectoryForModules(ProjectSpace space) {</span>
-<span class="source-line-no">077</span><span id="line-77">    return bach.path().workspace(space.name(), "modules");</span>
-<span class="source-line-no">078</span><span id="line-78">  }</span>
-<span class="source-line-no">079</span><span id="line-79"></span>
-<span class="source-line-no">080</span><span id="line-80">  protected int computeRelease() {</span>
-<span class="source-line-no">081</span><span id="line-81">    return /*space.release().map(JavaRelease::feature).orElse*/ Runtime.version().feature();</span>
-<span class="source-line-no">082</span><span id="line-82">  }</span>
-<span class="source-line-no">083</span><span id="line-83"></span>
-<span class="source-line-no">084</span><span id="line-84">  protected ModulePathsOption computeModulePathsOption() {</span>
-<span class="source-line-no">085</span><span id="line-85">    var paths = ModulePathsOption.empty();</span>
-<span class="source-line-no">086</span><span id="line-86">    for (var parent : space.parents()) paths = paths.add(computeOutputDirectoryForModules(parent));</span>
-<span class="source-line-no">087</span><span id="line-87">    var externalModules = bach.path().externalModules();</span>
-<span class="source-line-no">088</span><span id="line-88">    if (Files.isDirectory(externalModules)) paths = paths.add(externalModules);</span>
-<span class="source-line-no">089</span><span id="line-89">    return paths;</span>
-<span class="source-line-no">090</span><span id="line-90">  }</span>
-<span class="source-line-no">091</span><span id="line-91"></span>
-<span class="source-line-no">092</span><span id="line-92">  @Override</span>
-<span class="source-line-no">093</span><span id="line-93">  public void run() {</span>
-<span class="source-line-no">094</span><span id="line-94">    var modules = space.modules().values();</span>
-<span class="source-line-no">095</span><span id="line-95">    if (modules.isEmpty()) {</span>
-<span class="source-line-no">096</span><span id="line-96">      bach.logMessage("No %s module present".formatted(space.name()));</span>
-<span class="source-line-no">097</span><span id="line-97">      return;</span>
-<span class="source-line-no">098</span><span id="line-98">    }</span>
-<span class="source-line-no">099</span><span id="line-99">    var size = modules.size();</span>
-<span class="source-line-no">100</span><span id="line-100">    bach.logCaption("Compile %d %s module%s".formatted(size, space.name(), size == 1 ? "" : "s"));</span>
-<span class="source-line-no">101</span><span id="line-101"></span>
-<span class="source-line-no">102</span><span id="line-102">    var classesDirectory = computeOutputDirectoryForClasses();</span>
-<span class="source-line-no">103</span><span id="line-103">    var modulesDirectory = computeOutputDirectoryForModules(space);</span>
-<span class="source-line-no">104</span><span id="line-104">    bach.run(computeJavacCommand(classesDirectory));</span>
-<span class="source-line-no">105</span><span id="line-105">    // TODO Compile sources targeted to Java 8</span>
-<span class="source-line-no">106</span><span id="line-106">    // TODO Compile sources targeted to Java 9+</span>
-<span class="source-line-no">107</span><span id="line-107">    bach.run(Command.of("directories", "clean", modulesDirectory));</span>
-<span class="source-line-no">108</span><span id="line-108">    modules.stream()</span>
-<span class="source-line-no">109</span><span id="line-109">        .parallel()</span>
-<span class="source-line-no">110</span><span id="line-110">        .map(module -&gt; computeJarCommand(module, classesDirectory, modulesDirectory))</span>
-<span class="source-line-no">111</span><span id="line-111">        .forEach(bach::run);</span>
-<span class="source-line-no">112</span><span id="line-112">  }</span>
-<span class="source-line-no">113</span><span id="line-113">}</span>
+<span class="source-line-no">050</span><span id="line-50">    // multi-release</span>
+<span class="source-line-no">051</span><span id="line-51">    for (var release = 9; release &lt;= Runtime.version().feature(); release++) {</span>
+<span class="source-line-no">052</span><span id="line-52">      if (!folders.list(release, FolderType.SOURCES).isEmpty()) {</span>
+<span class="source-line-no">053</span><span id="line-53">        jar = jar.filesAdd(release, computeOutputDirectoryForClasses(name, release));</span>
+<span class="source-line-no">054</span><span id="line-54">      }</span>
+<span class="source-line-no">055</span><span id="line-55">      for (var resource : folders.list(release, FolderType.RESOURCES)) {</span>
+<span class="source-line-no">056</span><span id="line-56">        jar = jar.filesAdd(release, resource);</span>
+<span class="source-line-no">057</span><span id="line-57">      }</span>
+<span class="source-line-no">058</span><span id="line-58">    }</span>
+<span class="source-line-no">059</span><span id="line-59"></span>
+<span class="source-line-no">060</span><span id="line-60">    return jar;</span>
+<span class="source-line-no">061</span><span id="line-61">  }</span>
+<span class="source-line-no">062</span><span id="line-62"></span>
+<span class="source-line-no">063</span><span id="line-63">  protected Path computeOutputDirectoryForClasses() {</span>
+<span class="source-line-no">064</span><span id="line-64">    return bach.path().workspace(space.name(), "classes-" + computeRelease());</span>
+<span class="source-line-no">065</span><span id="line-65">  }</span>
+<span class="source-line-no">066</span><span id="line-66"></span>
+<span class="source-line-no">067</span><span id="line-67">  protected Path computeOutputDirectoryForClasses(String module, int release) {</span>
+<span class="source-line-no">068</span><span id="line-68">    return bach.path().workspace(space.name(), "classes-mr-" + release, module);</span>
+<span class="source-line-no">069</span><span id="line-69">  }</span>
+<span class="source-line-no">070</span><span id="line-70"></span>
+<span class="source-line-no">071</span><span id="line-71">  protected int computeRelease() {</span>
+<span class="source-line-no">072</span><span id="line-72">    return /*space.release().map(JavaRelease::feature).orElse*/ Runtime.version().feature();</span>
+<span class="source-line-no">073</span><span id="line-73">  }</span>
+<span class="source-line-no">074</span><span id="line-74"></span>
+<span class="source-line-no">075</span><span id="line-75">  @Override</span>
+<span class="source-line-no">076</span><span id="line-76">  public void run() {</span>
+<span class="source-line-no">077</span><span id="line-77">    var modules = space.modules().values();</span>
+<span class="source-line-no">078</span><span id="line-78">    if (modules.isEmpty()) {</span>
+<span class="source-line-no">079</span><span id="line-79">      bach.logMessage("No %s module present".formatted(space.name()));</span>
+<span class="source-line-no">080</span><span id="line-80">      return;</span>
+<span class="source-line-no">081</span><span id="line-81">    }</span>
+<span class="source-line-no">082</span><span id="line-82">    var size = modules.size();</span>
+<span class="source-line-no">083</span><span id="line-83">    bach.logCaption("Compile %d %s module%s".formatted(size, space.name(), size == 1 ? "" : "s"));</span>
+<span class="source-line-no">084</span><span id="line-84"></span>
+<span class="source-line-no">085</span><span id="line-85">    var classesDirectory = computeOutputDirectoryForClasses();</span>
+<span class="source-line-no">086</span><span id="line-86">    var modulesDirectory = computeOutputDirectoryForModules(space);</span>
+<span class="source-line-no">087</span><span id="line-87">    bach.run(computeJavacCommand(classesDirectory));</span>
+<span class="source-line-no">088</span><span id="line-88">    // TODO Compile sources targeted to Java 8</span>
+<span class="source-line-no">089</span><span id="line-89">    // TODO Compile sources targeted to Java 9+</span>
+<span class="source-line-no">090</span><span id="line-90">    bach.run(Command.of("directories", "clean", modulesDirectory));</span>
+<span class="source-line-no">091</span><span id="line-91">    modules.stream()</span>
+<span class="source-line-no">092</span><span id="line-92">        .parallel()</span>
+<span class="source-line-no">093</span><span id="line-93">        .map(module -&gt; computeJarCommand(module, classesDirectory, modulesDirectory))</span>
+<span class="source-line-no">094</span><span id="line-94">        .forEach(bach::run);</span>
+<span class="source-line-no">095</span><span id="line-95">  }</span>
+<span class="source-line-no">096</span><span id="line-96">}</span>
 
 
 
