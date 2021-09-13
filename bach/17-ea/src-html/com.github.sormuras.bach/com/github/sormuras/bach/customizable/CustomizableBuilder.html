@@ -14,34 +14,37 @@
 <pre><span class="source-line-no">001</span><span id="line-1">package com.github.sormuras.bach.customizable;</span>
 <span class="source-line-no">002</span><span id="line-2"></span>
 <span class="source-line-no">003</span><span id="line-3">import com.github.sormuras.bach.Bach;</span>
-<span class="source-line-no">004</span><span id="line-4">import com.github.sormuras.bach.Project;</span>
-<span class="source-line-no">005</span><span id="line-5">import com.github.sormuras.bach.command.Composer;</span>
-<span class="source-line-no">006</span><span id="line-6">import com.github.sormuras.bach.command.DefaultCommand;</span>
-<span class="source-line-no">007</span><span id="line-7">import com.github.sormuras.bach.project.ProjectSpace;</span>
-<span class="source-line-no">008</span><span id="line-8"></span>
-<span class="source-line-no">009</span><span id="line-9">/** A workflow-based builder of projects. */</span>
-<span class="source-line-no">010</span><span id="line-10">public record CustomizableBuilder(Bach bach, Project project) {</span>
-<span class="source-line-no">011</span><span id="line-11"></span>
-<span class="source-line-no">012</span><span id="line-12">  public void compile() {</span>
-<span class="source-line-no">013</span><span id="line-13">    for (var space : project.spaces()) compile(space);</span>
-<span class="source-line-no">014</span><span id="line-14">  }</span>
-<span class="source-line-no">015</span><span id="line-15"></span>
-<span class="source-line-no">016</span><span id="line-16">  public void compile(ProjectSpace space) {</span>
-<span class="source-line-no">017</span><span id="line-17">    runWorkflow(new CompileWorkflow(bach, project, space));</span>
-<span class="source-line-no">018</span><span id="line-18">  }</span>
-<span class="source-line-no">019</span><span id="line-19"></span>
-<span class="source-line-no">020</span><span id="line-20">  public void runModule(String module, Composer&lt;DefaultCommand&gt; composer) {</span>
-<span class="source-line-no">021</span><span id="line-21">    runModule(project.spaces().values().get(0), module, composer);</span>
-<span class="source-line-no">022</span><span id="line-22">  }</span>
-<span class="source-line-no">023</span><span id="line-23"></span>
-<span class="source-line-no">024</span><span id="line-24">  public void runModule(ProjectSpace space, String module, Composer&lt;DefaultCommand&gt; composer) {</span>
-<span class="source-line-no">025</span><span id="line-25">    // TODO runWorkflow(new RunModuleWorkflow(...));</span>
-<span class="source-line-no">026</span><span id="line-26">  }</span>
-<span class="source-line-no">027</span><span id="line-27"></span>
-<span class="source-line-no">028</span><span id="line-28">  public void runWorkflow(Workflow... workflows) {</span>
-<span class="source-line-no">029</span><span id="line-29">    for (var workflow : workflows) workflow.run();</span>
-<span class="source-line-no">030</span><span id="line-30">  }</span>
-<span class="source-line-no">031</span><span id="line-31">}</span>
+<span class="source-line-no">004</span><span id="line-4">import com.github.sormuras.bach.Command;</span>
+<span class="source-line-no">005</span><span id="line-5">import com.github.sormuras.bach.Project;</span>
+<span class="source-line-no">006</span><span id="line-6">import com.github.sormuras.bach.command.Composer;</span>
+<span class="source-line-no">007</span><span id="line-7">import com.github.sormuras.bach.command.DefaultCommand;</span>
+<span class="source-line-no">008</span><span id="line-8">import com.github.sormuras.bach.project.ProjectSpace;</span>
+<span class="source-line-no">009</span><span id="line-9"></span>
+<span class="source-line-no">010</span><span id="line-10">/** A workflow-based builder of projects. */</span>
+<span class="source-line-no">011</span><span id="line-11">public record CustomizableBuilder(Bach bach, Project project) {</span>
+<span class="source-line-no">012</span><span id="line-12"></span>
+<span class="source-line-no">013</span><span id="line-13">  public void compile() {</span>
+<span class="source-line-no">014</span><span id="line-14">    for (var space : project.spaces()) compile(space);</span>
+<span class="source-line-no">015</span><span id="line-15">  }</span>
+<span class="source-line-no">016</span><span id="line-16"></span>
+<span class="source-line-no">017</span><span id="line-17">  public void compile(ProjectSpace space) {</span>
+<span class="source-line-no">018</span><span id="line-18">    runWorkflow(new CompileWorkflow(bach, project, space));</span>
+<span class="source-line-no">019</span><span id="line-19">  }</span>
+<span class="source-line-no">020</span><span id="line-20"></span>
+<span class="source-line-no">021</span><span id="line-21">  public void runModule(String module, Object... arguments) {</span>
+<span class="source-line-no">022</span><span id="line-22">    var space = project.spaces().values().get(0);</span>
+<span class="source-line-no">023</span><span id="line-23">    runModule(space, module, command -&gt; command.addAll(arguments));</span>
+<span class="source-line-no">024</span><span id="line-24">  }</span>
+<span class="source-line-no">025</span><span id="line-25"></span>
+<span class="source-line-no">026</span><span id="line-26">  public void runModule(ProjectSpace space, String module, Composer&lt;DefaultCommand&gt; composer) {</span>
+<span class="source-line-no">027</span><span id="line-27">    var command = composer.apply(Command.of(module));</span>
+<span class="source-line-no">028</span><span id="line-28">    runWorkflow(new RunModuleWorkflow(bach, project, space, command));</span>
+<span class="source-line-no">029</span><span id="line-29">  }</span>
+<span class="source-line-no">030</span><span id="line-30"></span>
+<span class="source-line-no">031</span><span id="line-31">  public void runWorkflow(Workflow... workflows) {</span>
+<span class="source-line-no">032</span><span id="line-32">    for (var workflow : workflows) workflow.run();</span>
+<span class="source-line-no">033</span><span id="line-33">  }</span>
+<span class="source-line-no">034</span><span id="line-34">}</span>
 
 
 
