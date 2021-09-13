@@ -1,7 +1,7 @@
 module:com.github.sormuras.bach
 com.github.sormuras.bach
 com.github.sormuras.bach.command
-com.github.sormuras.bach.conventional
-com.github.sormuras.bach.customizable
 com.github.sormuras.bach.external
 com.github.sormuras.bach.project
+com.github.sormuras.bach.simple
+com.github.sormuras.bach.workflow
