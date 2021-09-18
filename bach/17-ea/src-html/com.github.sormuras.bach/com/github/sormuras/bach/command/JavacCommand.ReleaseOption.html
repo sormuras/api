@@ -154,8 +154,12 @@
 <span class="source-line-no">141</span><span id="line-141">    public static ReleaseOption empty() {</span>
 <span class="source-line-no">142</span><span id="line-142">      return new ReleaseOption(Optional.empty());</span>
 <span class="source-line-no">143</span><span id="line-143">    }</span>
-<span class="source-line-no">144</span><span id="line-144">  }</span>
-<span class="source-line-no">145</span><span id="line-145">}</span>
+<span class="source-line-no">144</span><span id="line-144"></span>
+<span class="source-line-no">145</span><span id="line-145">    public static ReleaseOption of(int feature) {</span>
+<span class="source-line-no">146</span><span id="line-146">      return feature == 0 ? empty() : new ReleaseOption(Optional.of(feature));</span>
+<span class="source-line-no">147</span><span id="line-147">    }</span>
+<span class="source-line-no">148</span><span id="line-148">  }</span>
+<span class="source-line-no">149</span><span id="line-149">}</span>
 
 
 
