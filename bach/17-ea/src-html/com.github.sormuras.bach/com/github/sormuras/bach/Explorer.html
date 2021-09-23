@@ -54,12 +54,12 @@
 <span class="source-line-no">041</span><span id="line-41">  }</span>
 <span class="source-line-no">042</span><span id="line-42"></span>
 <span class="source-line-no">043</span><span id="line-43">  public List&lt;String&gt; listMissingExternalModules(ModuleFinder finder, String... more) {</span>
-<span class="source-line-no">044</span><span id="line-44">    return listMissingExternalModules(List.of(finder), more);</span>
+<span class="source-line-no">044</span><span id="line-44">    return listMissingExternalModules(List.of(finder), Set.of(more));</span>
 <span class="source-line-no">045</span><span id="line-45">  }</span>
 <span class="source-line-no">046</span><span id="line-46"></span>
-<span class="source-line-no">047</span><span id="line-47">  public List&lt;String&gt; listMissingExternalModules(List&lt;ModuleFinder&gt; finders, String... more) {</span>
+<span class="source-line-no">047</span><span id="line-47">  public List&lt;String&gt; listMissingExternalModules(List&lt;ModuleFinder&gt; finders, Set&lt;String&gt; more) {</span>
 <span class="source-line-no">048</span><span id="line-48">    // Populate a set with all module names being in a "requires MODULE;" directive</span>
-<span class="source-line-no">049</span><span id="line-49">    var requires = new TreeSet&lt;&gt;(List.of(more)); // more required modules</span>
+<span class="source-line-no">049</span><span id="line-49">    var requires = new TreeSet&lt;&gt;(more); // more required modules</span>
 <span class="source-line-no">050</span><span id="line-50">    for (var finder : finders) requires.addAll(required(finder)); // main, test, and other modules</span>
 <span class="source-line-no">051</span><span id="line-51">    // Remove names of declared modules from various module finders</span>
 <span class="source-line-no">052</span><span id="line-52">    requires.removeAll(declared(ModuleFinder.ofSystem()));</span>

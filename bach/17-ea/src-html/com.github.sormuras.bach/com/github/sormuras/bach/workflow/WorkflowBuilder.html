@@ -23,36 +23,41 @@
 <span class="source-line-no">010</span><span id="line-10">/** A workflow-based builder of projects. */</span>
 <span class="source-line-no">011</span><span id="line-11">public record WorkflowBuilder(Bach bach, Project project) {</span>
 <span class="source-line-no">012</span><span id="line-12"></span>
-<span class="source-line-no">013</span><span id="line-13">  public void compile() {</span>
-<span class="source-line-no">014</span><span id="line-14">    for (var space : project.spaces()) compile(space);</span>
+<span class="source-line-no">013</span><span id="line-13">  public void grab() {</span>
+<span class="source-line-no">014</span><span id="line-14">    runWorkflow(new GrabExternalsWorkflow(bach, project));</span>
 <span class="source-line-no">015</span><span id="line-15">  }</span>
 <span class="source-line-no">016</span><span id="line-16"></span>
-<span class="source-line-no">017</span><span id="line-17">  public void compile(ProjectSpace space) {</span>
-<span class="source-line-no">018</span><span id="line-18">    runWorkflow(new CompileWorkflow(bach, project, space));</span>
+<span class="source-line-no">017</span><span id="line-17">  public void compile() {</span>
+<span class="source-line-no">018</span><span id="line-18">    for (var space : project.spaces()) compile(space);</span>
 <span class="source-line-no">019</span><span id="line-19">  }</span>
 <span class="source-line-no">020</span><span id="line-20"></span>
-<span class="source-line-no">021</span><span id="line-21">  public void runAllTests() {</span>
-<span class="source-line-no">022</span><span id="line-22">    runAllTests(project.space("test"));</span>
+<span class="source-line-no">021</span><span id="line-21">  public void compile(ProjectSpace space) {</span>
+<span class="source-line-no">022</span><span id="line-22">    runWorkflow(new CompileWorkflow(bach, project, space));</span>
 <span class="source-line-no">023</span><span id="line-23">  }</span>
 <span class="source-line-no">024</span><span id="line-24"></span>
-<span class="source-line-no">025</span><span id="line-25">  public void runAllTests(ProjectSpace space) {</span>
-<span class="source-line-no">026</span><span id="line-26">    runWorkflow(new RunAllTestsWorkflow(bach, project, space));</span>
-<span class="source-line-no">027</span><span id="line-27">  }</span>
-<span class="source-line-no">028</span><span id="line-28"></span>
-<span class="source-line-no">029</span><span id="line-29">  public void runModule(String module, Object... arguments) {</span>
-<span class="source-line-no">030</span><span id="line-30">    var space = project.spaces().values().get(0);</span>
-<span class="source-line-no">031</span><span id="line-31">    runModule(space, module, command -&gt; command.addAll(arguments));</span>
+<span class="source-line-no">025</span><span id="line-25">  public void runAllTests() {</span>
+<span class="source-line-no">026</span><span id="line-26">    var testSpace = project.spaces().find("test");</span>
+<span class="source-line-no">027</span><span id="line-27">    testSpace.ifPresent(this::runAllTests);</span>
+<span class="source-line-no">028</span><span id="line-28">  }</span>
+<span class="source-line-no">029</span><span id="line-29"></span>
+<span class="source-line-no">030</span><span id="line-30">  public void runAllTests(ProjectSpace space) {</span>
+<span class="source-line-no">031</span><span id="line-31">    runWorkflow(new RunAllTestsWorkflow(bach, project, space));</span>
 <span class="source-line-no">032</span><span id="line-32">  }</span>
 <span class="source-line-no">033</span><span id="line-33"></span>
-<span class="source-line-no">034</span><span id="line-34">  public void runModule(ProjectSpace space, String module, Composer&lt;DefaultCommand&gt; composer) {</span>
-<span class="source-line-no">035</span><span id="line-35">    var command = composer.apply(Command.of(module));</span>
-<span class="source-line-no">036</span><span id="line-36">    runWorkflow(new RunModuleWorkflow(bach, project, space, command));</span>
+<span class="source-line-no">034</span><span id="line-34">  public void runModule(String module, Object... arguments) {</span>
+<span class="source-line-no">035</span><span id="line-35">    var space = project.spaces().values().get(0);</span>
+<span class="source-line-no">036</span><span id="line-36">    runModule(space, module, command -&gt; command.addAll(arguments));</span>
 <span class="source-line-no">037</span><span id="line-37">  }</span>
 <span class="source-line-no">038</span><span id="line-38"></span>
-<span class="source-line-no">039</span><span id="line-39">  public void runWorkflow(Workflow... workflows) {</span>
-<span class="source-line-no">040</span><span id="line-40">    for (var workflow : workflows) workflow.run();</span>
-<span class="source-line-no">041</span><span id="line-41">  }</span>
-<span class="source-line-no">042</span><span id="line-42">}</span>
+<span class="source-line-no">039</span><span id="line-39">  public void runModule(ProjectSpace space, String module, Composer&lt;DefaultCommand&gt; composer) {</span>
+<span class="source-line-no">040</span><span id="line-40">    var command = composer.apply(Command.of(module));</span>
+<span class="source-line-no">041</span><span id="line-41">    runWorkflow(new RunModuleWorkflow(bach, project, space, command));</span>
+<span class="source-line-no">042</span><span id="line-42">  }</span>
+<span class="source-line-no">043</span><span id="line-43"></span>
+<span class="source-line-no">044</span><span id="line-44">  public void runWorkflow(Workflow... workflows) {</span>
+<span class="source-line-no">045</span><span id="line-45">    for (var workflow : workflows) workflow.run();</span>
+<span class="source-line-no">046</span><span id="line-46">  }</span>
+<span class="source-line-no">047</span><span id="line-47">}</span>
 
 
 
