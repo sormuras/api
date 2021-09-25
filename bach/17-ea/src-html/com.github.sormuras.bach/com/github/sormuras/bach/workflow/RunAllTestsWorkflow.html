@@ -16,40 +16,66 @@
 <span class="source-line-no">003</span><span id="line-3">import com.github.sormuras.bach.Bach;</span>
 <span class="source-line-no">004</span><span id="line-4">import com.github.sormuras.bach.Command;</span>
 <span class="source-line-no">005</span><span id="line-5">import com.github.sormuras.bach.Project;</span>
-<span class="source-line-no">006</span><span id="line-6">import com.github.sormuras.bach.internal.ModuleFinderSupport;</span>
-<span class="source-line-no">007</span><span id="line-7">import com.github.sormuras.bach.project.ProjectSpace;</span>
-<span class="source-line-no">008</span><span id="line-8">import java.lang.module.ModuleFinder;</span>
-<span class="source-line-no">009</span><span id="line-9">import java.nio.file.Path;</span>
-<span class="source-line-no">010</span><span id="line-10">import java.util.ArrayList;</span>
-<span class="source-line-no">011</span><span id="line-11"></span>
-<span class="source-line-no">012</span><span id="line-12">public class RunAllTestsWorkflow extends AbstractSpaceWorkflow {</span>
-<span class="source-line-no">013</span><span id="line-13"></span>
-<span class="source-line-no">014</span><span id="line-14">  public RunAllTestsWorkflow(Bach bach, Project project, ProjectSpace space) {</span>
-<span class="source-line-no">015</span><span id="line-15">    super(bach, project, space);</span>
-<span class="source-line-no">016</span><span id="line-16">  }</span>
-<span class="source-line-no">017</span><span id="line-17"></span>
-<span class="source-line-no">018</span><span id="line-18">  protected ModuleFinder computeRuntimeModuleFinder() {</span>
-<span class="source-line-no">019</span><span id="line-19">    var paths = new ArrayList&lt;Path&gt;();</span>
-<span class="source-line-no">020</span><span id="line-20">    paths.add(computeOutputDirectoryForModules(space));</span>
-<span class="source-line-no">021</span><span id="line-21">    paths.addAll(computeModulePathsOption().values());</span>
-<span class="source-line-no">022</span><span id="line-22">    return ModuleFinder.of(paths.toArray(Path[]::new));</span>
-<span class="source-line-no">023</span><span id="line-23">  }</span>
-<span class="source-line-no">024</span><span id="line-24"></span>
-<span class="source-line-no">025</span><span id="line-25">  @Override</span>
-<span class="source-line-no">026</span><span id="line-26">  public void run() {</span>
-<span class="source-line-no">027</span><span id="line-27">    bach.logCaption("Run all tests in %s space".formatted(space.name()));</span>
-<span class="source-line-no">028</span><span id="line-28">    var moduleFinder = computeRuntimeModuleFinder();</span>
-<span class="source-line-no">029</span><span id="line-29">    for (var module : space.modules()) {</span>
-<span class="source-line-no">030</span><span id="line-30">      var name = module.name();</span>
-<span class="source-line-no">031</span><span id="line-31">      if (ModuleFinderSupport.findMainClass(moduleFinder, name).isPresent()) {</span>
-<span class="source-line-no">032</span><span id="line-32">        new RunModuleWorkflow(bach, project, space, Command.of(name)).run();</span>
-<span class="source-line-no">033</span><span id="line-33">      }</span>
-<span class="source-line-no">034</span><span id="line-34">      //      var toolFinder = ToolFinder.of(moduleFinder, true, name);</span>
-<span class="source-line-no">035</span><span id="line-35">      //      runTool(toolFinder, "test", Composer.identity(), bach().printer()::print);</span>
-<span class="source-line-no">036</span><span id="line-36">      //      if (toolFinder.find("junit").isPresent()) runJUnit(toolFinder, name);</span>
-<span class="source-line-no">037</span><span id="line-37">    }</span>
-<span class="source-line-no">038</span><span id="line-38">  }</span>
-<span class="source-line-no">039</span><span id="line-39">}</span>
+<span class="source-line-no">006</span><span id="line-6">import com.github.sormuras.bach.ToolCall;</span>
+<span class="source-line-no">007</span><span id="line-7">import com.github.sormuras.bach.ToolFinder;</span>
+<span class="source-line-no">008</span><span id="line-8">import com.github.sormuras.bach.ToolRun;</span>
+<span class="source-line-no">009</span><span id="line-9">import com.github.sormuras.bach.internal.ModuleFinderSupport;</span>
+<span class="source-line-no">010</span><span id="line-10">import com.github.sormuras.bach.project.ProjectSpace;</span>
+<span class="source-line-no">011</span><span id="line-11">import java.lang.module.ModuleFinder;</span>
+<span class="source-line-no">012</span><span id="line-12">import java.nio.file.Path;</span>
+<span class="source-line-no">013</span><span id="line-13">import java.util.ArrayList;</span>
+<span class="source-line-no">014</span><span id="line-14"></span>
+<span class="source-line-no">015</span><span id="line-15">public class RunAllTestsWorkflow extends AbstractSpaceWorkflow {</span>
+<span class="source-line-no">016</span><span id="line-16"></span>
+<span class="source-line-no">017</span><span id="line-17">  public RunAllTestsWorkflow(Bach bach, Project project, ProjectSpace space) {</span>
+<span class="source-line-no">018</span><span id="line-18">    super(bach, project, space);</span>
+<span class="source-line-no">019</span><span id="line-19">  }</span>
+<span class="source-line-no">020</span><span id="line-20"></span>
+<span class="source-line-no">021</span><span id="line-21">  protected ModuleFinder computeRuntimeModuleFinder() {</span>
+<span class="source-line-no">022</span><span id="line-22">    var paths = new ArrayList&lt;Path&gt;();</span>
+<span class="source-line-no">023</span><span id="line-23">    paths.add(computeOutputDirectoryForModules(space));</span>
+<span class="source-line-no">024</span><span id="line-24">    paths.addAll(computeModulePathsOption().values());</span>
+<span class="source-line-no">025</span><span id="line-25">    return ModuleFinder.of(paths.toArray(Path[]::new));</span>
+<span class="source-line-no">026</span><span id="line-26">  }</span>
+<span class="source-line-no">027</span><span id="line-27"></span>
+<span class="source-line-no">028</span><span id="line-28">  @Override</span>
+<span class="source-line-no">029</span><span id="line-29">  public void run() {</span>
+<span class="source-line-no">030</span><span id="line-30">    bach.logCaption("Run all tests in %s space".formatted(space.name()));</span>
+<span class="source-line-no">031</span><span id="line-31">    var moduleFinder = computeRuntimeModuleFinder();</span>
+<span class="source-line-no">032</span><span id="line-32">    for (var module : space.modules()) {</span>
+<span class="source-line-no">033</span><span id="line-33">      var name = module.name();</span>
+<span class="source-line-no">034</span><span id="line-34">      if (ModuleFinderSupport.findMainClass(moduleFinder, name).isPresent()) {</span>
+<span class="source-line-no">035</span><span id="line-35">        new RunModuleWorkflow(bach, project, space, Command.of(name)).run();</span>
+<span class="source-line-no">036</span><span id="line-36">      }</span>
+<span class="source-line-no">037</span><span id="line-37">      var toolFinder = ToolFinder.of(moduleFinder, true, name);</span>
+<span class="source-line-no">038</span><span id="line-38">      runTool(toolFinder, "test", bach.printer()::print);</span>
+<span class="source-line-no">039</span><span id="line-39">      if (toolFinder.find("junit").isPresent()) {</span>
+<span class="source-line-no">040</span><span id="line-40">        runJUnit(toolFinder, name);</span>
+<span class="source-line-no">041</span><span id="line-41">      }</span>
+<span class="source-line-no">042</span><span id="line-42">    }</span>
+<span class="source-line-no">043</span><span id="line-43">  }</span>
+<span class="source-line-no">044</span><span id="line-44"></span>
+<span class="source-line-no">045</span><span id="line-45">  private void runTool(ToolFinder finder, String tool, ToolRun.Visitor visitor) {</span>
+<span class="source-line-no">046</span><span id="line-46">    for (var provider : finder.list(tool)) {</span>
+<span class="source-line-no">047</span><span id="line-47">      var singleton = ToolFinder.of(provider);</span>
+<span class="source-line-no">048</span><span id="line-48">      var call = ToolCall.of(singleton, Command.of(tool));</span>
+<span class="source-line-no">049</span><span id="line-49">      var run = bach.run(call);</span>
+<span class="source-line-no">050</span><span id="line-50">      visitor.accept(run);</span>
+<span class="source-line-no">051</span><span id="line-51">    }</span>
+<span class="source-line-no">052</span><span id="line-52">  }</span>
+<span class="source-line-no">053</span><span id="line-53"></span>
+<span class="source-line-no">054</span><span id="line-54">  private void runJUnit(ToolFinder finder, String module) {</span>
+<span class="source-line-no">055</span><span id="line-55">    runJUnit(finder, module, ToolRun.Visitor.noop());</span>
+<span class="source-line-no">056</span><span id="line-56">  }</span>
+<span class="source-line-no">057</span><span id="line-57"></span>
+<span class="source-line-no">058</span><span id="line-58">  private void runJUnit(ToolFinder finder, String module, ToolRun.Visitor visitor) {</span>
+<span class="source-line-no">059</span><span id="line-59">    var reports = computeOutputDirectoryForReports().resolve("junit").resolve(module);</span>
+<span class="source-line-no">060</span><span id="line-60">    var junit = Command.junit().add("--select-module", module).add("--reports-dir", reports);</span>
+<span class="source-line-no">061</span><span id="line-61">    var call = ToolCall.of(finder, junit);</span>
+<span class="source-line-no">062</span><span id="line-62">    var run = bach.run(call);</span>
+<span class="source-line-no">063</span><span id="line-63">    visitor.accept(run);</span>
+<span class="source-line-no">064</span><span id="line-64">  }</span>
+<span class="source-line-no">065</span><span id="line-65">}</span>
 
 
 
