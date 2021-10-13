@@ -149,46 +149,48 @@
 <span class="source-line-no">136</span><span id="line-136">  }</span>
 <span class="source-line-no">137</span><span id="line-137"></span>
 <span class="source-line-no">138</span><span id="line-138">  protected Path computeOutputDirectoryForClasses() {</span>
-<span class="source-line-no">139</span><span id="line-139">    return bach.path().workspace(space.name(), "classes-" + computeReleaseVersionFeatureNumber());</span>
-<span class="source-line-no">140</span><span id="line-140">  }</span>
-<span class="source-line-no">141</span><span id="line-141"></span>
-<span class="source-line-no">142</span><span id="line-142">  protected Path computeOutputDirectoryForClasses(String module, int release) {</span>
-<span class="source-line-no">143</span><span id="line-143">    return bach.path().workspace(space.name(), "classes-mr-" + release, module);</span>
-<span class="source-line-no">144</span><span id="line-144">  }</span>
-<span class="source-line-no">145</span><span id="line-145"></span>
-<span class="source-line-no">146</span><span id="line-146">  @Override</span>
-<span class="source-line-no">147</span><span id="line-147">  public void run() {</span>
-<span class="source-line-no">148</span><span id="line-148">    var modules = space.modules().values();</span>
-<span class="source-line-no">149</span><span id="line-149">    if (modules.isEmpty()) {</span>
-<span class="source-line-no">150</span><span id="line-150">      bach.logMessage("No %s module present".formatted(space.name()));</span>
-<span class="source-line-no">151</span><span id="line-151">      return;</span>
-<span class="source-line-no">152</span><span id="line-152">    }</span>
-<span class="source-line-no">153</span><span id="line-153">    var size = modules.size();</span>
-<span class="source-line-no">154</span><span id="line-154">    bach.logCaption("Compile %d %s module%s".formatted(size, space.name(), size == 1 ? "" : "s"));</span>
-<span class="source-line-no">155</span><span id="line-155"></span>
-<span class="source-line-no">156</span><span id="line-156">    var classesDirectory = computeOutputDirectoryForClasses();</span>
-<span class="source-line-no">157</span><span id="line-157">    var modulesDirectory = computeOutputDirectoryForModules(space);</span>
-<span class="source-line-no">158</span><span id="line-158"></span>
-<span class="source-line-no">159</span><span id="line-159">    if (space.release() == 8) {</span>
-<span class="source-line-no">160</span><span id="line-160">      bach.run(computeJavacCommand(9, classesDirectory));</span>
-<span class="source-line-no">161</span><span id="line-161">      computeRelease8JavacCommands(classesDirectory).stream().parallel().forEach(bach::run);</span>
-<span class="source-line-no">162</span><span id="line-162">    } else {</span>
-<span class="source-line-no">163</span><span id="line-163">      bach.run(computeJavacCommand(classesDirectory));</span>
-<span class="source-line-no">164</span><span id="line-164">    }</span>
-<span class="source-line-no">165</span><span id="line-165"></span>
-<span class="source-line-no">166</span><span id="line-166">    var multiReleases = computeMultiReleaseJavacCommands(classesDirectory);</span>
-<span class="source-line-no">167</span><span id="line-167">    if (multiReleases.size() &gt;= 1) {</span>
-<span class="source-line-no">168</span><span id="line-168">      bach.logCaption("Compile multi-release sources");</span>
-<span class="source-line-no">169</span><span id="line-169">      multiReleases.stream().parallel().forEach(bach::run);</span>
-<span class="source-line-no">170</span><span id="line-170">    }</span>
-<span class="source-line-no">171</span><span id="line-171"></span>
-<span class="source-line-no">172</span><span id="line-172">    bach.run(Command.of("directories", "clean", modulesDirectory));</span>
-<span class="source-line-no">173</span><span id="line-173">    modules.stream()</span>
-<span class="source-line-no">174</span><span id="line-174">        .parallel()</span>
-<span class="source-line-no">175</span><span id="line-175">        .map(module -&gt; computeJarCommand(module, classesDirectory, modulesDirectory))</span>
-<span class="source-line-no">176</span><span id="line-176">        .forEach(bach::run);</span>
-<span class="source-line-no">177</span><span id="line-177">  }</span>
-<span class="source-line-no">178</span><span id="line-178">}</span>
+<span class="source-line-no">139</span><span id="line-139">    var computedNumber = computeReleaseVersionFeatureNumber();</span>
+<span class="source-line-no">140</span><span id="line-140">    var release = computedNumber == 0 ? Runtime.version().feature() : computedNumber;</span>
+<span class="source-line-no">141</span><span id="line-141">    return bach.path().workspace(space.name(), "classes-" + release);</span>
+<span class="source-line-no">142</span><span id="line-142">  }</span>
+<span class="source-line-no">143</span><span id="line-143"></span>
+<span class="source-line-no">144</span><span id="line-144">  protected Path computeOutputDirectoryForClasses(String module, int release) {</span>
+<span class="source-line-no">145</span><span id="line-145">    return bach.path().workspace(space.name(), "classes-mr-" + release, module);</span>
+<span class="source-line-no">146</span><span id="line-146">  }</span>
+<span class="source-line-no">147</span><span id="line-147"></span>
+<span class="source-line-no">148</span><span id="line-148">  @Override</span>
+<span class="source-line-no">149</span><span id="line-149">  public void run() {</span>
+<span class="source-line-no">150</span><span id="line-150">    var modules = space.modules().values();</span>
+<span class="source-line-no">151</span><span id="line-151">    if (modules.isEmpty()) {</span>
+<span class="source-line-no">152</span><span id="line-152">      bach.logMessage("No %s module present".formatted(space.name()));</span>
+<span class="source-line-no">153</span><span id="line-153">      return;</span>
+<span class="source-line-no">154</span><span id="line-154">    }</span>
+<span class="source-line-no">155</span><span id="line-155">    var size = modules.size();</span>
+<span class="source-line-no">156</span><span id="line-156">    bach.logCaption("Compile %d %s module%s".formatted(size, space.name(), size == 1 ? "" : "s"));</span>
+<span class="source-line-no">157</span><span id="line-157"></span>
+<span class="source-line-no">158</span><span id="line-158">    var classesDirectory = computeOutputDirectoryForClasses();</span>
+<span class="source-line-no">159</span><span id="line-159">    var modulesDirectory = computeOutputDirectoryForModules(space);</span>
+<span class="source-line-no">160</span><span id="line-160"></span>
+<span class="source-line-no">161</span><span id="line-161">    if (space.release() == 8) {</span>
+<span class="source-line-no">162</span><span id="line-162">      bach.run(computeJavacCommand(9, classesDirectory));</span>
+<span class="source-line-no">163</span><span id="line-163">      computeRelease8JavacCommands(classesDirectory).stream().parallel().forEach(bach::run);</span>
+<span class="source-line-no">164</span><span id="line-164">    } else {</span>
+<span class="source-line-no">165</span><span id="line-165">      bach.run(computeJavacCommand(classesDirectory));</span>
+<span class="source-line-no">166</span><span id="line-166">    }</span>
+<span class="source-line-no">167</span><span id="line-167"></span>
+<span class="source-line-no">168</span><span id="line-168">    var multiReleases = computeMultiReleaseJavacCommands(classesDirectory);</span>
+<span class="source-line-no">169</span><span id="line-169">    if (multiReleases.size() &gt;= 1) {</span>
+<span class="source-line-no">170</span><span id="line-170">      bach.logCaption("Compile multi-release sources");</span>
+<span class="source-line-no">171</span><span id="line-171">      multiReleases.stream().parallel().forEach(bach::run);</span>
+<span class="source-line-no">172</span><span id="line-172">    }</span>
+<span class="source-line-no">173</span><span id="line-173"></span>
+<span class="source-line-no">174</span><span id="line-174">    bach.run(Command.of("directories", "clean", modulesDirectory));</span>
+<span class="source-line-no">175</span><span id="line-175">    modules.stream()</span>
+<span class="source-line-no">176</span><span id="line-176">        .parallel()</span>
+<span class="source-line-no">177</span><span id="line-177">        .map(module -&gt; computeJarCommand(module, classesDirectory, modulesDirectory))</span>
+<span class="source-line-no">178</span><span id="line-178">        .forEach(bach::run);</span>
+<span class="source-line-no">179</span><span id="line-179">  }</span>
+<span class="source-line-no">180</span><span id="line-180">}</span>
 
 
 

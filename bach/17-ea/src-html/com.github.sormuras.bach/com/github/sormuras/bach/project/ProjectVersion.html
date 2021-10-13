@@ -13,9 +13,10 @@
 <div class="source-container">
 <pre><span class="source-line-no">001</span><span id="line-1">package com.github.sormuras.bach.project;</span>
 <span class="source-line-no">002</span><span id="line-2"></span>
-<span class="source-line-no">003</span><span id="line-3">import java.lang.module.ModuleDescriptor;</span>
-<span class="source-line-no">004</span><span id="line-4"></span>
-<span class="source-line-no">005</span><span id="line-5">public record ProjectVersion(ModuleDescriptor.Version value) {}</span>
+<span class="source-line-no">003</span><span id="line-3">import com.github.sormuras.bach.Project;</span>
+<span class="source-line-no">004</span><span id="line-4">import java.lang.module.ModuleDescriptor;</span>
+<span class="source-line-no">005</span><span id="line-5"></span>
+<span class="source-line-no">006</span><span id="line-6">public record ProjectVersion(ModuleDescriptor.Version value) implements Project.Component {}</span>
 
 
 
