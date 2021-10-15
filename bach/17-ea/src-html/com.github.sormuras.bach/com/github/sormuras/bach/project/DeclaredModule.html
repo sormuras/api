@@ -22,7 +22,7 @@
 <span class="source-line-no">009</span><span id="line-9"></span>
 <span class="source-line-no">010</span><span id="line-10">/** A module declaration with its possibly targeted folders. */</span>
 <span class="source-line-no">011</span><span id="line-11">public record DeclaredModule(</span>
-<span class="source-line-no">012</span><span id="line-12">    ModuleDescriptor descriptor, Path info, Optional&lt;String&gt; mainClass, TargetedFolders folders)</span>
+<span class="source-line-no">012</span><span id="line-12">    ModuleDescriptor descriptor, Path info, Optional&lt;String&gt; mainClass, Folders folders)</span>
 <span class="source-line-no">013</span><span id="line-13">    implements Comparable&lt;DeclaredModule&gt; {</span>
 <span class="source-line-no">014</span><span id="line-14"></span>
 <span class="source-line-no">015</span><span id="line-15">  @FunctionalInterface</span>
@@ -30,61 +30,59 @@
 <span class="source-line-no">017</span><span id="line-17"></span>
 <span class="source-line-no">018</span><span id="line-18">  public record Tweak(ProjectSpace space, DeclaredModule module, Operator operator) {}</span>
 <span class="source-line-no">019</span><span id="line-19"></span>
-<span class="source-line-no">020</span><span id="line-20">  public static DeclaredModule of(String pathOfModuleInfoJavaFileOrItsParentDirectory) {</span>
-<span class="source-line-no">021</span><span id="line-21">    return DeclaredModule.of(Path.of(pathOfModuleInfoJavaFileOrItsParentDirectory));</span>
+<span class="source-line-no">020</span><span id="line-20">  public String name() {</span>
+<span class="source-line-no">021</span><span id="line-21">    return descriptor.name();</span>
 <span class="source-line-no">022</span><span id="line-22">  }</span>
 <span class="source-line-no">023</span><span id="line-23"></span>
-<span class="source-line-no">024</span><span id="line-24">  public static DeclaredModule of(Path pathOfModuleInfoJavaFileOrItsParentDirectory) {</span>
-<span class="source-line-no">025</span><span id="line-25">    var path = pathOfModuleInfoJavaFileOrItsParentDirectory.normalize();</span>
-<span class="source-line-no">026</span><span id="line-26">    if (Files.notExists(path)) throw new IllegalArgumentException("Path must exist: " + path);</span>
-<span class="source-line-no">027</span><span id="line-27">    var info = Files.isDirectory(path) ? path.resolve("module-info.java") : path;</span>
-<span class="source-line-no">028</span><span id="line-28">    if (Files.notExists(info)) throw new IllegalArgumentException("No module-info in: " + path);</span>
-<span class="source-line-no">029</span><span id="line-29">    var descriptor = ModuleDescriptorSupport.parse(info);</span>
-<span class="source-line-no">030</span><span id="line-30">    var parent = info.getParent();</span>
-<span class="source-line-no">031</span><span id="line-31">    var directory = parent != null ? parent : Path.of(".");</span>
-<span class="source-line-no">032</span><span id="line-32">    var types = FolderTypes.of(FolderType.SOURCES);</span>
-<span class="source-line-no">033</span><span id="line-33">    var folders = TargetedFolders.of(new TargetedFolder(directory, 0, types));</span>
-<span class="source-line-no">034</span><span id="line-34">    return new DeclaredModule(descriptor, info, Optional.empty(), folders);</span>
-<span class="source-line-no">035</span><span id="line-35">  }</span>
-<span class="source-line-no">036</span><span id="line-36"></span>
-<span class="source-line-no">037</span><span id="line-37">  public String name() {</span>
-<span class="source-line-no">038</span><span id="line-38">    return descriptor.name();</span>
-<span class="source-line-no">039</span><span id="line-39">  }</span>
-<span class="source-line-no">040</span><span id="line-40"></span>
-<span class="source-line-no">041</span><span id="line-41">  @Override</span>
-<span class="source-line-no">042</span><span id="line-42">  public int compareTo(DeclaredModule other) {</span>
-<span class="source-line-no">043</span><span id="line-43">    return name().compareTo(other.name());</span>
-<span class="source-line-no">044</span><span id="line-44">  }</span>
-<span class="source-line-no">045</span><span id="line-45"></span>
-<span class="source-line-no">046</span><span id="line-46">  DeclaredModule tweak(Tweak tweak) {</span>
-<span class="source-line-no">047</span><span id="line-47">    return this == tweak.module ? tweak.operator.apply(this) : this;</span>
-<span class="source-line-no">048</span><span id="line-48">  }</span>
-<span class="source-line-no">049</span><span id="line-49"></span>
-<span class="source-line-no">050</span><span id="line-50">  public DeclaredModule withMainClass(String name) {</span>
-<span class="source-line-no">051</span><span id="line-51">    return new DeclaredModule(descriptor, info, Optional.ofNullable(name), folders);</span>
-<span class="source-line-no">052</span><span id="line-52">  }</span>
-<span class="source-line-no">053</span><span id="line-53"></span>
-<span class="source-line-no">054</span><span id="line-54">  public DeclaredModule withSourcesFolder(String directory) {</span>
-<span class="source-line-no">055</span><span id="line-55">    return withSourcesFolder(directory, 0);</span>
-<span class="source-line-no">056</span><span id="line-56">  }</span>
-<span class="source-line-no">057</span><span id="line-57"></span>
-<span class="source-line-no">058</span><span id="line-58">  public DeclaredModule withSourcesFolder(String directory, int release) {</span>
-<span class="source-line-no">059</span><span id="line-59">    return withFolder(Path.of(directory), release, FolderType.SOURCES);</span>
-<span class="source-line-no">060</span><span id="line-60">  }</span>
-<span class="source-line-no">061</span><span id="line-61"></span>
-<span class="source-line-no">062</span><span id="line-62">  public DeclaredModule withResourcesFolder(String directory) {</span>
-<span class="source-line-no">063</span><span id="line-63">    return withResourcesFolder(directory, 0);</span>
-<span class="source-line-no">064</span><span id="line-64">  }</span>
-<span class="source-line-no">065</span><span id="line-65"></span>
-<span class="source-line-no">066</span><span id="line-66">  public DeclaredModule withResourcesFolder(String directory, int release) {</span>
-<span class="source-line-no">067</span><span id="line-67">    return withFolder(Path.of(directory), release, FolderType.RESOURCES);</span>
-<span class="source-line-no">068</span><span id="line-68">  }</span>
-<span class="source-line-no">069</span><span id="line-69"></span>
-<span class="source-line-no">070</span><span id="line-70">  public DeclaredModule withFolder(Path directory, int release, FolderType... types) {</span>
-<span class="source-line-no">071</span><span id="line-71">    var folder = new TargetedFolder(directory.normalize(), release, FolderTypes.of(types));</span>
-<span class="source-line-no">072</span><span id="line-72">    return new DeclaredModule(descriptor, info, mainClass, folders.add(folder));</span>
-<span class="source-line-no">073</span><span id="line-73">  }</span>
-<span class="source-line-no">074</span><span id="line-74">}</span>
+<span class="source-line-no">024</span><span id="line-24">  public static DeclaredModule of(Path pathOfModuleInfoJavaOrItsParentDirectory) {</span>
+<span class="source-line-no">025</span><span id="line-25">    return DeclaredModule.of(pathOfModuleInfoJavaOrItsParentDirectory, 0, FolderType.SOURCES);</span>
+<span class="source-line-no">026</span><span id="line-26">  }</span>
+<span class="source-line-no">027</span><span id="line-27"></span>
+<span class="source-line-no">028</span><span id="line-28">  public static DeclaredModule of(</span>
+<span class="source-line-no">029</span><span id="line-29">      Path pathOfModuleInfoJavaOrItsParentDirectory, int version, FolderType... types) {</span>
+<span class="source-line-no">030</span><span id="line-30">    var path = pathOfModuleInfoJavaOrItsParentDirectory.normalize();</span>
+<span class="source-line-no">031</span><span id="line-31">    if (Files.notExists(path)) throw new IllegalArgumentException("Path must exist: " + path);</span>
+<span class="source-line-no">032</span><span id="line-32">    var info = Files.isDirectory(path) ? path.resolve("module-info.java") : path;</span>
+<span class="source-line-no">033</span><span id="line-33">    if (Files.notExists(info)) throw new IllegalArgumentException("No module-info in: " + path);</span>
+<span class="source-line-no">034</span><span id="line-34">    var descriptor = ModuleDescriptorSupport.parse(info);</span>
+<span class="source-line-no">035</span><span id="line-35">    var folders = Folders.of(new Folder(info.getParent(), version, FolderTypes.of(types)));</span>
+<span class="source-line-no">036</span><span id="line-36">    return new DeclaredModule(descriptor, info, Optional.empty(), folders);</span>
+<span class="source-line-no">037</span><span id="line-37">  }</span>
+<span class="source-line-no">038</span><span id="line-38"></span>
+<span class="source-line-no">039</span><span id="line-39">  @Override</span>
+<span class="source-line-no">040</span><span id="line-40">  public int compareTo(DeclaredModule other) {</span>
+<span class="source-line-no">041</span><span id="line-41">    return name().compareTo(other.name());</span>
+<span class="source-line-no">042</span><span id="line-42">  }</span>
+<span class="source-line-no">043</span><span id="line-43"></span>
+<span class="source-line-no">044</span><span id="line-44">  DeclaredModule tweak(Tweak tweak) {</span>
+<span class="source-line-no">045</span><span id="line-45">    return this == tweak.module ? tweak.operator.apply(this) : this;</span>
+<span class="source-line-no">046</span><span id="line-46">  }</span>
+<span class="source-line-no">047</span><span id="line-47"></span>
+<span class="source-line-no">048</span><span id="line-48">  public DeclaredModule withMainClass(String name) {</span>
+<span class="source-line-no">049</span><span id="line-49">    return new DeclaredModule(descriptor, info, Optional.ofNullable(name), folders);</span>
+<span class="source-line-no">050</span><span id="line-50">  }</span>
+<span class="source-line-no">051</span><span id="line-51"></span>
+<span class="source-line-no">052</span><span id="line-52">  public DeclaredModule withSourcesFolder(String directory) {</span>
+<span class="source-line-no">053</span><span id="line-53">    return withSourcesFolder(directory, 0);</span>
+<span class="source-line-no">054</span><span id="line-54">  }</span>
+<span class="source-line-no">055</span><span id="line-55"></span>
+<span class="source-line-no">056</span><span id="line-56">  public DeclaredModule withSourcesFolder(String directory, int release) {</span>
+<span class="source-line-no">057</span><span id="line-57">    return withFolder(Path.of(directory), release, FolderType.SOURCES);</span>
+<span class="source-line-no">058</span><span id="line-58">  }</span>
+<span class="source-line-no">059</span><span id="line-59"></span>
+<span class="source-line-no">060</span><span id="line-60">  public DeclaredModule withResourcesFolder(String directory) {</span>
+<span class="source-line-no">061</span><span id="line-61">    return withResourcesFolder(directory, 0);</span>
+<span class="source-line-no">062</span><span id="line-62">  }</span>
+<span class="source-line-no">063</span><span id="line-63"></span>
+<span class="source-line-no">064</span><span id="line-64">  public DeclaredModule withResourcesFolder(String directory, int release) {</span>
+<span class="source-line-no">065</span><span id="line-65">    return withFolder(Path.of(directory), release, FolderType.RESOURCES);</span>
+<span class="source-line-no">066</span><span id="line-66">  }</span>
+<span class="source-line-no">067</span><span id="line-67"></span>
+<span class="source-line-no">068</span><span id="line-68">  public DeclaredModule withFolder(Path directory, int release, FolderType... types) {</span>
+<span class="source-line-no">069</span><span id="line-69">    var folder = new Folder(directory.normalize(), release, FolderTypes.of(types));</span>
+<span class="source-line-no">070</span><span id="line-70">    return new DeclaredModule(descriptor, info, mainClass, folders.add(folder));</span>
+<span class="source-line-no">071</span><span id="line-71">  }</span>
+<span class="source-line-no">072</span><span id="line-72">}</span>
 
 
 
